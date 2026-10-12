@@ -1,0 +1,57 @@
+
+> music-workbench@0.1.0 dist:win
+> npm run check:media && npm run typecheck && npm run build && electron-builder --config electron-builder.yml --win nsis
+
+
+> music-workbench@0.1.0 check:media
+> node scripts/check-media-runtime.ts
+
+Verified 9 media binaries: n9.0.2-22-g46d8f462ee-20261001, GPL-3.0-or-later; required audio encoders/filters present
+
+> music-workbench@0.1.0 typecheck
+> tsc --noEmit
+
+
+> music-workbench@0.1.0 build
+> electron-vite build
+
+vite v7.3.6 building ssr environment for production...
+transforming...
+✓ 38 modules transformed.
+rendering chunks...
+out/main/index.js  135.70 kB
+✓ built in 250ms
+vite v7.3.6 building ssr environment for production...
+transforming...
+✓ 104 modules transformed.
+rendering chunks...
+out/preload/index.js  214.51 kB
+✓ built in 381ms
+vite v7.3.6 building client environment for production...
+transforming...
+✓ 144 modules transformed.
+rendering chunks...
+../../out/renderer/index.html                   0.69 kB
+../../out/renderer/assets/index-cnvDOILn.css   23.23 kB
+../../out/renderer/assets/index-BGKFZGgr.js   951.23 kB
+✓ built in 2.07s
+  • electron-builder  version=26.15.3 os=10.0.26300
+  • loaded configuration  file=C:\Users\DELL\OneDrive\Desktop\funwork\electron-builder.yml
+  • executing @electron/rebuild  electronVersion=44.5.1 arch=x64 buildFromSource=false workspaceRoot=C:\Users\DELL\OneDrive\Desktop\funwork projectDir=./ appDir=./
+  • installing native dependencies  arch=x64
+  • completed installing native dependencies
+  • packaging       platform=win32 arch=x64 electron=44.5.1 appOutDir=release\win-unpacked
+  • using custom unpacked Electron distribution  electronDist=node_modules\electron\dist
+  • copying unpacked Electron  source=C:\Users\DELL\OneDrive\Desktop\funwork\node_modules\electron\dist destination=C:\Users\DELL\OneDrive\Desktop\funwork\release\win-unpacked
+  • searching for node modules  pm=npm searchDir=C:\Users\DELL\OneDrive\Desktop\funwork
+  • duplicate dependency references  dependencies=["debug@4.4.3","token-types@6.1.2","strtok3@10.3.5","token-types@6.1.2"]
+  • updating asar integrity executable resource  executablePath=release\win-unpacked\MusicWorkbench.exe
+  • signing with signtool.exe  path=release\win-unpacked\resources\resources\bin\ffmpeg.exe
+  • signing with signtool.exe  path=release\win-unpacked\resources\resources\bin\ffprobe.exe
+  • default Electron icon is used  reason=application icon is not set
+  • signing with signtool.exe  path=release\win-unpacked\MusicWorkbench.exe
+  • building        target=nsis file=release\MusicWorkbench-0.1.0-Setup.exe archs=x64 oneClick=false perMachine=false
+  • signing with signtool.exe  path=release\win-unpacked\resources\elevate.exe
+  • signing with signtool.exe  path=release\MusicWorkbench-0.1.0-Setup.__uninstaller.exe
+  • signing with signtool.exe  path=release\MusicWorkbench-0.1.0-Setup.exe
+  • building block map  blockMapFile=release\MusicWorkbench-0.1.0-Setup.exe.blockmap

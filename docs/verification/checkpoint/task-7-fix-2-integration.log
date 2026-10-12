@@ -1,0 +1,12 @@
+
+> music-workbench@0.1.0 test:integration
+> vitest run --passWithNoTests tests/integration
+
+
+ RUN  v5.0.3 C:/Users/DELL/OneDrive/Desktop/funwork
+
+
+ Test Files  7 passed (7)
+      Tests  67 passed (67)
+   Start at  09:03:01
+   Duration  33.36s (tests 96%, import 2%, transform 2%)

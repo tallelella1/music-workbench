@@ -1,0 +1,136 @@
+{
+  "kind": "observed",
+  "observedAt": "2026-10-12T06:52:07.021Z",
+  "providerId": "wy",
+  "query": {
+    "text": "周杰伦",
+    "page": 1,
+    "pageSize": 5,
+    "authRevision": "0"
+  },
+  "httpStatus": 200,
+  "contentType": "application/json;charset=UTF-8",
+  "response": {
+    "code": 200,
+    "data": {
+      "totalCount": 271,
+      "resources": [
+        {
+          "baseInfo": {
+            "simpleSongData": {
+              "id": 509781655,
+              "name": "想你就写信 (Live)",
+              "dt": 238698,
+              "ar": [
+                {
+                  "name": "周杰伦"
+                },
+                {
+                  "name": "李硕"
+                },
+                {
+                  "name": "张鑫"
+                }
+              ],
+              "al": {
+                "id": 36412633,
+                "name": "中国新歌声第二季 第13期"
+              }
+            }
+          }
+        },
+        {
+          "baseInfo": {
+            "simpleSongData": {
+              "id": 5257138,
+              "name": "屋顶",
+              "dt": 319039,
+              "ar": [
+                {
+                  "name": "周杰伦"
+                },
+                {
+                  "name": "温岚"
+                },
+                {
+                  "name": "吴宗宪"
+                }
+              ],
+              "al": {
+                "id": 512175,
+                "name": "男女情歌对唱冠军全记录"
+              }
+            }
+          }
+        },
+        {
+          "baseInfo": {
+            "simpleSongData": {
+              "id": 210049,
+              "name": "布拉格广场",
+              "dt": 294600,
+              "ar": [
+                {
+                  "name": "蔡依林"
+                },
+                {
+                  "name": "周杰伦"
+                }
+              ],
+              "al": {
+                "id": 21349,
+                "name": "看我72变"
+              }
+            }
+          }
+        },
+        {
+          "baseInfo": {
+            "simpleSongData": {
+              "id": 490595315,
+              "name": "因为爱情 (Live)",
+              "dt": 202051,
+              "ar": [
+                {
+                  "name": "周杰伦"
+                },
+                {
+                  "name": "那英"
+                }
+              ],
+              "al": {
+                "id": 35757091,
+                "name": "中国新歌声第二季 第1期"
+              }
+            }
+          }
+        },
+        {
+          "baseInfo": {
+            "simpleSongData": {
+              "id": 1888354230,
+              "name": "默 (Live)",
+              "dt": 133290,
+              "ar": [
+                {
+                  "name": "李荣浩"
+                },
+                {
+                  "name": "周杰伦"
+                }
+              ],
+              "al": {
+                "id": 135010288,
+                "name": "2021中国好声音 第1期"
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "status": "ok",
+  "count": 5,
+  "total": 271,
+  "fullPlayback": "尚未解析"
+}

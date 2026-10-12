@@ -1,0 +1,124 @@
+{
+  "kind": "observed",
+  "observedAt": "2026-10-04T10:38:23.236Z",
+  "providerId": "tx",
+  "query": {
+    "text": "周杰伦",
+    "page": 1,
+    "pageSize": 5,
+    "authRevision": "0"
+  },
+  "httpStatus": 200,
+  "contentType": "text/plain; charset=utf-8;",
+  "response": {
+    "code": 0,
+    "req": {
+      "code": 0,
+      "data": {
+        "meta": {
+          "sum": 999
+        },
+        "body": {
+          "song": {
+            "list": [
+              {
+                "mid": "0039MnYb0qxYhV",
+                "id": 97773,
+                "title": "晴天",
+                "interval": 269,
+                "singer": [
+                  {
+                    "name": "周杰伦"
+                  }
+                ],
+                "album": {
+                  "name": "叶惠美",
+                  "mid": "000MkMni19ClKG"
+                },
+                "file": {
+                  "media_mid": "003Qui1q2u1Zho"
+                }
+              },
+              {
+                "mid": "001Bbywq2gicae",
+                "id": 102065750,
+                "title": "搁浅",
+                "interval": 240,
+                "singer": [
+                  {
+                    "name": "周杰伦"
+                  }
+                ],
+                "album": {
+                  "name": "七里香",
+                  "mid": "003DFRzD192KKD"
+                },
+                "file": {
+                  "media_mid": "004UlK9x0jeuow"
+                }
+              },
+              {
+                "mid": "003aAYrm3GE0Ac",
+                "id": 449205,
+                "title": "稻香",
+                "interval": 223,
+                "singer": [
+                  {
+                    "name": "周杰伦"
+                  }
+                ],
+                "album": {
+                  "name": "魔杰座",
+                  "mid": "002Neh8l0uciQZ"
+                },
+                "file": {
+                  "media_mid": "0020wJDo3cx0j3"
+                }
+              },
+              {
+                "mid": "0027oMO61wWi55",
+                "id": 718475,
+                "title": "发如雪",
+                "interval": 299,
+                "singer": [
+                  {
+                    "name": "周杰伦"
+                  }
+                ],
+                "album": {
+                  "name": "十一月的萧邦",
+                  "mid": "0024bjiL2aocxT"
+                },
+                "file": {
+                  "media_mid": "002A6j2q1tdUUP"
+                }
+              },
+              {
+                "mid": "002qU5aY3Qu24y",
+                "id": 410316,
+                "title": "青花瓷",
+                "interval": 239,
+                "singer": [
+                  {
+                    "name": "周杰伦"
+                  }
+                ],
+                "album": {
+                  "name": "我很忙",
+                  "mid": "002eFUFm2XYZ7z"
+                },
+                "file": {
+                  "media_mid": "0015zR8B3gjJLl"
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  "status": "ok",
+  "count": 5,
+  "total": 999,
+  "fullPlayback": "尚未解析"
+}

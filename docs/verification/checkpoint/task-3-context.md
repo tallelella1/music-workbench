@@ -1,0 +1,13 @@
+# Task 3 integration context
+
+BASE: 48916f3b402bdca3ead8db2143126843a624a71b. Requirements live in task-3-brief.md, not here.
+
+- Existing AssetRegistry stores original file references and asset index in strict settings.json. Only main holds paths. Preserve that index when adding later preferences. Runtime/probe tools resolve resources/bin and are actual GPL-shared executables with adjacent DLLs; no PATH lookup needed.
+- Task 2 introduced music-asset protocol for artwork/audio reads. Reuse justified streaming helpers rather than independent divergent Range parsers. Deferred minor: bytes=-500 suffix Range must now work for media playback; maintain existing artwork CORS and exact trusted renderer origin. Playback resources themselves follow the brief's media:// opaque expiring handles.
+- File-backed original assets currently have no external-change revalidation. Playback and later hash-bound creative operations must check actual source bytes against registered hash before trusting immutable identity, reject a changed/missing source with actionable reimport status, and preserve original bytes. No background relocation feature is requested.
+- Existing Track.version is TrackVersion and versionDisplay is raw string | null, absent legacy field defaults null. src/shared/track-version.ts has provenTrackVersion: legacy enum alone is unproven. Keep this contract for later strict source matching.
+- Existing sandbox preload bundles CommonJS as one entry; electron-vite experimental isolatedEntries failed on non-TTY stdout.moveCursor. Keep current self-contained preload strategy. Dev HTML uses per-response nonce for Vite styles and a production strict CSP; keep real dev E2E regression.
+- Cross-task effect/export filter notes live in .superpowers/sdd/integration-notes.md and audio-filter-help.txt. Reverb IR must have one deterministic implementation that later offline export can reproduce; Nyquist availability is based on actual context rate.
+- Controller ruling: Step 4's human listening record must be explicitly pending until a human listens. Do not fabricate hearing. Provide actual timing, frequency/sample tests and usable audition UI. A wrong ruling may require later manual perceived-sound adjustment.
+- Ownership: Task 3 files from brief, relevant shared contracts/schemas, assets/protocol helpers, UI styles, tests/helper hooks as needed. Do not implement online providers, LX runtime, export service, AI, or visual features yet.
+- Known deferred noise (Zod PURE annotation/Playwright colors) belongs to final packaging/test-helper cleanup unless your task directly encounters it; don't suppress application errors.

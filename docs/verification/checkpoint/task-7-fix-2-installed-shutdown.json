@@ -1,0 +1,20 @@
+{
+  "executable": "C:\\Users\\DELL\\OneDrive\\Desktop\\funwork\\.superpowers\\sdd\\2026-10-03-music-player-implementation\\Installed application with spaces\\MusicWorkbench.exe",
+  "requestedVolume": 0.9,
+  "persistedVolume": 0.9,
+  "restartVolume": 0.9,
+  "events": [
+    {
+      "event": "rename-pending",
+      "at": 1791788579796
+    },
+    {
+      "event": "rename-committed",
+      "at": 1791788580811
+    },
+    {
+      "event": "will-quit",
+      "at": 1791788580818
+    }
+  ]
+}

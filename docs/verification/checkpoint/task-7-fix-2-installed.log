@@ -1,0 +1,17 @@
+
+> music-workbench@0.1.0 test:e2e
+> playwright test tests/e2e/installed-app.spec.ts
+
+
+Running 8 tests using 1 worker
+
+  ok 1 tests\e2e\installed-app.spec.ts:13:96 › actual installed binary aborts pending playback and waits owned cleanup (7.0s)
+  ok 2 tests\e2e\installed-app.spec.ts:13:96 › actual installed binary aborts pending source-test and waits owned cleanup (4.1s)
+  ok 3 tests\e2e\installed-app.spec.ts:13:96 › actual installed binary aborts pending search and waits owned cleanup (4.3s)
+  ok 4 tests\e2e\installed-app.spec.ts:13:96 › actual installed binary aborts pending decode and waits owned cleanup (5.1s)
+  ok 5 tests\e2e\installed-app.spec.ts:13:96 › actual installed binary aborts pending lx-network and waits owned cleanup (4.8s)
+  ok 6 tests\e2e\installed-app.spec.ts:23:5 › actual installed binary closes accepted import transactions and rejects writes past the close boundary (948ms)
+  ok 7 tests\e2e\installed-app.spec.ts:30:5 › actual installed binary drains accepted slow-IO preferences on normal close and restart (2.8s)
+  ok 8 tests\e2e\installed-app.spec.ts:37:5 › actual installed Windows binary imports, plays, seeks, persists settings, exports and starts shipped LX sandbox (12.8s)
+
+  8 passed (42.4s)

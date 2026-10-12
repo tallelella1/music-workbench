@@ -1,0 +1,97 @@
+
+> music-workbench@0.1.0 test
+> npm run test:unit && npm run test:integration && npm run test:e2e
+
+
+> music-workbench@0.1.0 test:unit
+> vitest run --exclude=tests/integration/**
+
+
+ RUN  v5.0.3 C:/Users/DELL/OneDrive/Desktop/funwork
+
+
+ Test Files  11 passed (11)
+      Tests  79 passed (79)
+   Start at  09:15:46
+   Duration  938ms (transform 34%, tests 32%, import 31%, worker 2%)
+
+
+> music-workbench@0.1.0 test:integration
+> vitest run --passWithNoTests tests/integration
+
+
+ RUN  v5.0.3 C:/Users/DELL/OneDrive/Desktop/funwork
+
+
+ Test Files  7 passed (7)
+      Tests  67 passed (67)
+   Start at  09:15:47
+   Duration  33.67s (tests 96%, import 2%, transform 1%)
+
+
+> music-workbench@0.1.0 test:e2e
+> playwright test
+
+
+Running 45 tests using 1 worker
+
+Network shutdown evidence: {"mode":"playback","executable":"built Electron","closeMs":381,"events":[{"event":"fetch-aborted","at":1791767785604},{"event":"will-quit","at":1791767785621}],"closedProcessIds":[2728,4784,9220,11380,4412],"remainingProcessCount":0,"temporaryMediaCount":0,"originalBytesPreserved":true}
+  ok  1 tests\e2e\app-regression.spec.ts:12:96 › normal close aborts pending playback resources and waits actual cleanup (4.5s)
+Network shutdown evidence: {"mode":"source-test","executable":"built Electron","closeMs":122,"events":[{"event":"fetch-aborted","at":1791767789982},{"event":"will-quit","at":1791767789998}],"closedProcessIds":[23660,17972,32740,29580,14924],"remainingProcessCount":0,"temporaryMediaCount":0,"originalBytesPreserved":true}
+  ok  2 tests\e2e\app-regression.spec.ts:12:96 › normal close aborts pending source-test resources and waits actual cleanup (4.0s)
+Network shutdown evidence: {"mode":"search","executable":"built Electron","closeMs":895,"events":[{"event":"fetch-aborted","at":1791767793481},{"event":"transport-cleanup-pending","at":1791767793483},{"event":"transport-cleanup-complete","at":1791767793798},{"event":"will-quit","at":1791767793809}],"closedProcessIds":[21736,2560,22792,23052],"remainingProcessCount":0,"temporaryMediaCount":0,"originalBytesPreserved":true}
+  ok  3 tests\e2e\app-regression.spec.ts:12:96 › normal close aborts pending search resources and waits actual cleanup (4.3s)
+Network shutdown evidence: {"mode":"decode","executable":"built Electron","closeMs":724,"events":[{"event":"decode-spawn","at":1791767796938,"pid":18272},{"event":"fetch-aborted","at":1791767798178},{"event":"decode-close","at":1791767798184,"pid":18272},{"event":"cleanup-pending","at":1791767798184},{"event":"cleanup-complete","at":1791767798497},{"event":"will-quit","at":1791767798508}],"closedProcessIds":[26948,9960,23660,16588,10068,18272,29640],"remainingProcessCount":0,"temporaryMediaCount":0,"originalBytesPreserved":true}
+  ok  4 tests\e2e\app-regression.spec.ts:12:96 › normal close aborts pending decode resources and waits actual cleanup (4.5s)
+Network shutdown evidence: {"mode":"lx-network","executable":"built Electron","closeMs":891,"events":[{"event":"fetch-aborted","at":1791767802771},{"event":"transport-cleanup-pending","at":1791767802775},{"event":"transport-cleanup-complete","at":1791767803088},{"event":"will-quit","at":1791767803097}],"closedProcessIds":[30672,9212,29024,30392,30256],"remainingProcessCount":0,"temporaryMediaCount":0,"originalBytesPreserved":true}
+  ok  5 tests\e2e\app-regression.spec.ts:12:96 › normal close aborts pending lx-network resources and waits actual cleanup (4.7s)
+Import shutdown evidence: {"executable":"built Electron","acceptedImportCompleted":true,"assetIndexCount":1,"libraryCount":1,"lateUpdateRejected":"应用正在关闭，拒绝新请求","persistedVolume":0.2,"originalBytesPreserved":true}
+  ok  6 tests\e2e\app-regression.spec.ts:18:5 › close completes an accepted import before its index transaction and rejects later preference writes (954ms)
+Settings shutdown evidence: {"executable":"built Electron","requestedVolume":0.9,"persistedVolume":0.9,"restartVolume":0.9,"events":[{"event":"rename-pending","at":1791767806692},{"event":"rename-committed","at":1791767807705},{"event":"will-quit","at":1791767807716}]}
+  ok  7 tests\e2e\app-regression.spec.ts:24:5 › normal main-window close drains an accepted preference whose atomic rename is still pending (2.9s)
+  ok  8 tests\e2e\app-regression.spec.ts:30:60 › an already open settings page updates source startup success without navigation or saving (2.6s)
+  ok  9 tests\e2e\app-regression.spec.ts:30:60 › an already open settings page updates source startup timeout without navigation or saving (5.7s)
+  ok 10 tests\e2e\app-regression.spec.ts:43:5 › settings persist across actual Electron restart and missing sources leave local editing usable (2.3s)
+  ok 11 tests\e2e\app-regression.spec.ts:59:55 › remembered throw source cannot block the main window or local playback/editor on startup (1.1s)
+  ok 12 tests\e2e\app-regression.spec.ts:59:55 › remembered hang source cannot block the main window or local playback/editor on startup (6.1s)
+  ok 13 tests\e2e\audio-editor.spec.ts:9:5 › real Electron editor trims, previews processed audio and exports through save dialog (4.7s)
+Realtime/offline parity measurements: [{"name":"原声","liveBody":0.07071067799086336,"offlineBody":0.0707113695135377,"liveTail":0,"offlineTail":0,"maxSampleError":0.000014513731002807617,"maxSpectrumError":9.771365748201255e-7},{"name":"温暖","liveBody":0.04418265391369102,"offlineBody":0.04418309739260315,"liveTail":0.000606569808028348,"offlineTail":0.0006065553290817998,"maxSampleError":0.00001516193151473999,"maxSpectrumError":0.0000015691252305329906},{"name":"人声","liveBody":0.07175117246492552,"offlineBody":0.07175186264623941,"liveTail":0.001545434342610784,"offlineTail":0.0015454643709953823,"maxSampleError":0.00001019984483718872,"maxSpectrumError":9.790536322912269e-7},{"name":"明亮","liveBody":0.058696013716606016,"offlineBody":0.05869658782445191,"liveTail":0.0004872213130301992,"offlineTail":0.00048722243984873154,"maxSampleError":0.000013716518878936768,"maxSpectrumError":8.111632711221839e-7},{"name":"wet50","liveBody":0.03456905158432913,"offlineBody":0.0345693913696824,"liveTail":0.005031733892882981,"offlineTail":0.005031783799538188,"maxSampleError":0.0000074319541454315186,"maxSpectrumError":4.777157522548037e-7}]
+Stereo convolution impulse maximum error: [2.3283064365386963e-9,2.7939677238464355e-9]
+  ok 14 tests\e2e\audio-editor.spec.ts:59:5 › same presets match actual Web Audio and FFmpeg spectra and unnormalized reverb (3.0s)
+export shutdown timeline: [{"event":"spawn","pid":18676},{"event":"worker-close","pid":18676,"code":null},{"event":"will-quit"}]
+  ok 15 tests\e2e\audio-export-lifecycle.spec.ts:9:56 › closing actual main window drains real export worker before Electron exits (17.4s)
+preview shutdown timeline: [{"event":"spawn","pid":28156},{"event":"worker-close","pid":28156,"code":null},{"event":"will-quit"}]
+  ok 16 tests\e2e\audio-export-lifecycle.spec.ts:9:56 › closing actual main window drains real preview worker before Electron exits (17.3s)
+  ok 17 tests\e2e\audio-export-lifecycle.spec.ts:73:5 › reopened editor reports a destination conflict while the earlier export continues in background (2.5s)
+  ok 18 tests\e2e\boot.spec.ts:7:5 › built desktop opens a Chinese library, fixed player and safe bridge (1.0s)
+  ok 19 tests\e2e\dev.spec.ts:7:5 › npm dev renders the real Electron library with CSP-approved styles (3.3s)
+  -  20 tests\e2e\installed-app.spec.ts:13:96 › actual installed binary aborts pending playback and waits owned cleanup
+  -  21 tests\e2e\installed-app.spec.ts:13:96 › actual installed binary aborts pending source-test and waits owned cleanup
+  -  22 tests\e2e\installed-app.spec.ts:13:96 › actual installed binary aborts pending search and waits owned cleanup
+  -  23 tests\e2e\installed-app.spec.ts:13:96 › actual installed binary aborts pending decode and waits owned cleanup
+  -  24 tests\e2e\installed-app.spec.ts:13:96 › actual installed binary aborts pending lx-network and waits owned cleanup
+  -  25 tests\e2e\installed-app.spec.ts:23:5 › actual installed binary closes accepted import transactions and rejects writes past the close boundary
+  -  26 tests\e2e\installed-app.spec.ts:30:5 › actual installed binary drains accepted slow-IO preferences on normal close and restart
+  -  27 tests\e2e\installed-app.spec.ts:37:5 › actual installed Windows binary imports, plays, seeks, persists settings, exports and starts shipped LX sandbox
+  ok 28 tests\e2e\library.spec.ts:12:5 › real desktop imports WAV, persists favorites and playlist ordering on restart (1.9s)
+  ok 29 tests\e2e\library.spec.ts:54:5 › real Electron folder dialog and webUtils File drop import local files (1.0s)
+  ok 30 tests\e2e\library.spec.ts:78:5 › real library shows raw explicit version evidence after desktop restart (1.4s)
+  ok 31 tests\e2e\lx-isolation.spec.ts:9:5 › hidden LX sandbox resolves real HTTP media, keeps local playback alive after infinite loops and isolates bridges (26.5s)
+  ok 32 tests\e2e\lx-lifecycle.spec.ts:64:5 › same hidden LX source survives online A to B cancellation and late replies; old watchers cannot kill re-enabled runtime (33.3s)
+  ok 33 tests\e2e\lx-lifecycle.spec.ts:91:5 › closing the actual main window exits Electron even while an LX hidden window is enabled (1.3s)
+  ok 34 tests\e2e\lx-lifecycle.spec.ts:100:5 › cancelled infinite-loop source still reaches its external watchdog while local playback and another source survive (16.9s)
+  ok 35 tests\e2e\playback-lifecycle.spec.ts:19:58 › late native ended from A cannot change B while resolving (1.5s)
+  ok 36 tests\e2e\playback-lifecycle.spec.ts:19:58 › late native error from A cannot change B while resolving (1.7s)
+  ok 37 tests\e2e\playback-lifecycle.spec.ts:52:5 › switch after load began ignores retired media events and completes the new selection (1.6s)
+  ok 38 tests\e2e\playback-lifecycle.spec.ts:86:5 › removing queued B lets real A finish into C (1.6s)
+  ok 39 tests\e2e\playback-lifecycle.spec.ts:102:5 › removing playing C stops its media and leaves surviving queue playable (1.8s)
+  ok 40 tests\e2e\playback.spec.ts:9:5 › real UI plays a local queue, pauses, seeks source time, controls effects and advances on ended (2.0s)
+Actual media timing and spectrum: [{"rate":0.5,"preservePitch":false,"elapsed":4.069100000000558,"frequency":222.65625,"peakDb":-26.70474624633789,"snapshot":{"trackId":"8a3cdec5-fa3f-471b-b386-8d4dfa93a47e","status":"paused","sourceSeconds":2,"durationSeconds":2,"rate":0.5,"preservePitch":false,"volume":0.75,"repeat":"off","shuffle":false,"actualQuality":"pcm_s16le · 44100 Hz · 16 bit","revisionId":"4b2e2d69-1b44-49e8-ac11-9d7308e94d39"}},{"rate":0.5,"preservePitch":true,"elapsed":3.9466000000005588,"frequency":439.453125,"peakDb":-25.84087562561035,"snapshot":{"trackId":"8a3cdec5-fa3f-471b-b386-8d4dfa93a47e","status":"paused","sourceSeconds":2,"durationSeconds":2,"rate":0.5,"preservePitch":true,"volume":0.75,"repeat":"off","shuffle":false,"actualQuality":"pcm_s16le · 44100 Hz · 16 bit","revisionId":"10437cae-3692-4185-abf4-6cd8be961793"}},{"rate":1,"preservePitch":false,"elapsed":1.9959000000003726,"frequency":439.453125,"peakDb":-25.840694427490234,"snapshot":{"trackId":"8a3cdec5-fa3f-471b-b386-8d4dfa93a47e","status":"paused","sourceSeconds":2,"durationSeconds":2,"rate":1,"preservePitch":false,"volume":0.75,"repeat":"off","shuffle":false,"actualQuality":"pcm_s16le · 44100 Hz · 16 bit","revisionId":"e59c1ec9-4c6d-47e1-8930-f044be8428d8"}},{"rate":1,"preservePitch":true,"elapsed":2.005700000000186,"frequency":439.453125,"peakDb":-25.840694427490234,"snapshot":{"trackId":"8a3cdec5-fa3f-471b-b386-8d4dfa93a47e","status":"paused","sourceSeconds":2,"durationSeconds":2,"rate":1,"preservePitch":true,"volume":0.75,"repeat":"off","shuffle":false,"actualQuality":"pcm_s16le · 44100 Hz · 16 bit","revisionId":"5b991538-6e66-4a9d-8739-996fb4f1859b"}},{"rate":2,"preservePitch":false,"elapsed":1.0067999999998138,"frequency":878.90625,"peakDb":-25.954782485961914,"snapshot":{"trackId":"8a3cdec5-fa3f-471b-b386-8d4dfa93a47e","status":"paused","sourceSeconds":2,"durationSeconds":2,"rate":2,"preservePitch":false,"volume":0.75,"repeat":"off","shuffle":false,"actualQuality":"pcm_s16le · 44100 Hz · 16 bit","revisionId":"80182b45-18f1-4001-a54e-b8d83278ede4"}},{"rate":2,"preservePitch":true,"elapsed":0.9762000000001863,"frequency":439.453125,"peakDb":-25.831317901611328,"snapshot":{"trackId":"8a3cdec5-fa3f-471b-b386-8d4dfa93a47e","status":"paused","sourceSeconds":2,"durationSeconds":2,"rate":2,"preservePitch":true,"volume":0.75,"repeat":"off","shuffle":false,"actualQuality":"pcm_s16le · 44100 Hz · 16 bit","revisionId":"701bae30-f6a8-4790-970d-b238c6d58b26"}}]
+  ok 41 tests\e2e\playback.spec.ts:49:5 › real HTMLMediaElement 440 Hz WAV measures 0.5/1/2 rate duration and preservePitch spectra (15.4s)
+  ok 42 tests\e2e\search.spec.ts:48:5 › real Electron search renders each source immediately, retries failures and paginates independently (9.2s)
+  ok 43 tests\e2e\search.spec.ts:79:5 › a late source completion cannot reset another source independently selected page (1.0s)
+  ok 44 tests\e2e\search.spec.ts:99:5 › switching queries and cancelling ignores late responses through the real bridge (1.1s)
+  ok 45 tests\e2e\search.spec.ts:122:5 › search includes imported local tracks and plays the local result (1.1s)
+
+  8 skipped
+  37 passed (3.6m)

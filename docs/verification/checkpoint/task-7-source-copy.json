@@ -1,0 +1,8 @@
+{
+  "Directory": "C:\\Users\\DELL\\OneDrive\\Desktop\\funwork\\release\\sources",
+  "Files": 263,
+  "TotalBytes": 2263171435.0,
+  "HashVerifiedFiles": 262,
+  "VerifiedOn": "2026-10-11",
+  "VerificationCommand": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File release/sources/verify-sources.ps1"
+}

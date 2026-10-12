@@ -1,0 +1,58 @@
+{
+  "version": "n9.0.2-22-g46d8f462ee-20261001",
+  "sourceUrl": "https://github.com/BtbN/FFmpeg-Builds/releases/download/autobuild-2026-10-01-13-06/ffmpeg-n9.0.2-22-g46d8f462ee-win64-gpl-shared-9.0.zip",
+  "officialDownloadPage": "https://ffmpeg.org/download.html",
+  "archiveSha256": "64f7d1460ce986804386582eeec3bd95117a4e84f7567ad416dd33f434fe8286",
+  "license": "GPL-3.0-or-later",
+  "notices": "notices/FFmpeg-LICENSE.txt",
+  "sourceCode": "https://github.com/FFmpeg/FFmpeg/archive/46d8f462ee.tar.gz",
+  "buildRecipe": "https://github.com/BtbN/FFmpeg-Builds",
+  "ffmpegSource": "https://github.com/FFmpeg/FFmpeg/tree/46d8f462ee",
+  "binaries": [
+    {
+      "file": "bin/avcodec-63.dll",
+      "byteLength": 119112704,
+      "sha256": "c87d35123120063609c981b1817eddd1dc55a49ed4738c54ba79894a07aa8f7c"
+    },
+    {
+      "file": "bin/avdevice-63.dll",
+      "byteLength": 4948480,
+      "sha256": "aabf0ab411b5daa650ee83637b1fe3dda57b49ad37a8cb9d255b1735430f11ec"
+    },
+    {
+      "file": "bin/avfilter-12.dll",
+      "byteLength": 37007360,
+      "sha256": "5f4a0adfa86ee7838f2ca21d7706d216a6481d42f85bf952e1f618f442cfbb12"
+    },
+    {
+      "file": "bin/avformat-63.dll",
+      "byteLength": 23009792,
+      "sha256": "34b7c59aa08ea91132a2afb1d0f1963fd62b881680f298f87f935f47c69379d0"
+    },
+    {
+      "file": "bin/avutil-61.dll",
+      "byteLength": 3016704,
+      "sha256": "3d6012bdb033b00bdb360e507750ff57b112b7b637d6b8d3339806a079331831"
+    },
+    {
+      "file": "bin/ffmpeg.exe",
+      "byteLength": 540160,
+      "sha256": "45674e8d691c502275ac7a25ebae7390d77bf36e3a6e28e69910387ab37af8a1"
+    },
+    {
+      "file": "bin/ffprobe.exe",
+      "byteLength": 229888,
+      "sha256": "df142d7def31803feed77a41f3a94418fe5b65db2032257b94a865b5d36f33fd"
+    },
+    {
+      "file": "bin/swresample-7.dll",
+      "byteLength": 734720,
+      "sha256": "12ad6049592cb7f0ca13d9d8b3fa901a2ba94fe81ce1b083524af70350a7a0aa"
+    },
+    {
+      "file": "bin/swscale-10.dll",
+      "byteLength": 2332160,
+      "sha256": "745672f775070fdef273e652b94fe28908272c91d085b511211beb752e1f2272"
+    }
+  ]
+}

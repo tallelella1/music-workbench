@@ -1,0 +1,23 @@
+{
+  "Installer": "C:\\Users\\DELL\\OneDrive\\Desktop\\funwork\\release\\MusicWorkbench-0.1.0-Setup.exe",
+  "InstallerSha256": "9cb17c0cddc23161fff1f54bf3888a2032792183b04c6f6aa521ffcbe8ed12fe",
+  "PreviousInstallerSha256": "21d292947632a95096a597af7f73289571a59b3cab5a8314ceffca8110c54724",
+  "InstallPath": "C:\\Users\\DELL\\OneDrive\\Desktop\\funwork\\.superpowers\\sdd\\2026-10-03-music-player-implementation\\Installed application with spaces",
+  "InstallerExit": 0,
+  "ExistingIdentityBefore": [
+    {
+      "PSChildName": "f4428f25-3c04-5cb1-9206-67001552b59f",
+      "DisplayName": "音乐工作台 0.1.0",
+      "UninstallString": "\"C:\\Users\\DELL\\OneDrive\\Desktop\\funwork\\.superpowers\\sdd\\2026-10-03-music-player-implementation\\Installed application with spaces\\Uninstall MusicWorkbench.exe\" /currentuser"
+    }
+  ],
+  "IdentityAfter": [
+    {
+      "PSChildName": "f4428f25-3c04-5cb1-9206-67001552b59f",
+      "DisplayName": "音乐工作台 0.1.0",
+      "UninstallString": "\"C:\\Users\\DELL\\OneDrive\\Desktop\\funwork\\.superpowers\\sdd\\2026-10-03-music-player-implementation\\Installed application with spaces\\Uninstall MusicWorkbench.exe\" /currentuser"
+    }
+  ],
+  "Signed": "NotSigned",
+  "InstalledExecutableSha256": "a8fb4a060ab18b0c5c30719ba9422367d248e9dc96ac914b13202ac552e91106"
+}

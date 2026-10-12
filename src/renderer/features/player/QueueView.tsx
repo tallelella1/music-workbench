@@ -1,0 +1,4 @@
+import type { Track } from '../../../shared/contracts'
+export function QueueView({ tracks, currentId, onSelect, onClose }: { tracks: Track[]; currentId: string | null; onSelect(track: Track, index: number): void; onClose(): void }) {
+  return <aside className="queue-panel" aria-label="播放队列"><div className="effects-heading"><h2>播放队列 <small>{tracks.length} 首</small></h2><button type="button" className="icon-button" aria-label="关闭播放队列" onClick={onClose}>×</button></div>{tracks.length ? <ol>{tracks.map((track, index) => <li key={`${index}-${track.id}`}><button type="button" className={currentId === track.id ? 'queue-current' : ''} onClick={() => onSelect(track, index)}><strong>{track.title}</strong><small>{track.artists.join(' / ') || '未知艺人'}</small></button></li>)}</ol> : <p>选择歌曲后，播放队列会显示在这里。</p>}</aside>
+}

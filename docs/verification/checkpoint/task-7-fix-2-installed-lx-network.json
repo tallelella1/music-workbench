@@ -1,0 +1,33 @@
+{
+  "mode": "lx-network",
+  "executable": "C:\\Users\\DELL\\OneDrive\\Desktop\\funwork\\.superpowers\\sdd\\2026-10-03-music-player-implementation\\Installed application with spaces\\MusicWorkbench.exe",
+  "closeMs": 900,
+  "events": [
+    {
+      "event": "fetch-aborted",
+      "at": 1791788575838
+    },
+    {
+      "event": "transport-cleanup-pending",
+      "at": 1791788575842
+    },
+    {
+      "event": "transport-cleanup-complete",
+      "at": 1791788576158
+    },
+    {
+      "event": "will-quit",
+      "at": 1791788576166
+    }
+  ],
+  "closedProcessIds": [
+    33336,
+    28200,
+    11792,
+    28364,
+    13636
+  ],
+  "remainingProcessCount": 0,
+  "temporaryMediaCount": 0,
+  "originalBytesPreserved": true
+}

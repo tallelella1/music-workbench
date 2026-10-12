@@ -1,0 +1,10 @@
+node_modules/
+out/
+release/
+test-results/
+playwright-report/
+coverage/
+*.log
+.cache/
+.superpowers/
+resources/bin/

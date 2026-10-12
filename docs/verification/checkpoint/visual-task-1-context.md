@@ -1,0 +1,11 @@
+# Visual Task 1 integration context
+
+Requirements are task-1-brief.md. The user reference and latest vertical-only motion contract are in the spec and brief; no additional rotating/turning workflow.
+
+- Base assets/repositories and creative revisions are the reviewed final interfaces. Use controlled image assets and derived files, with actual image dimensions/hash; original paths and raw filesystem access stay in main. Scene state is accepted only after this task registers its concrete runtime schema with CreativeProjectService.
+- An image format's alpha channel does not prove it has transparent subject pixels. Opaque PNG and ordinary RGB photos remain intact inputs requiring explicit crop/mask work; do not claim automatic background removal. Keep original/crop/mask/cutout provenance and saved derived resources recoverable through history.
+- Normalize EXIF before interpreting crop/mask coordinates. Pointer coordinates must be mapped from the displayed canvas to actual image/scene pixels, including scaling/letterboxing. Reject out-of-bounds shapes instead of accidentally selecting outside source pixels.
+- The preview and future export both consume the same scene compositor. Background, text and subject remain independent layers; lock snapshots are lossless RGBA assets applied last. Store the frozen pixels, not only a rectangle or a prompt. Later edits respect saved locks instead of silently changing them.
+- New Sharp dependency must use a verified maintained version and lockfile. It is a native production dependency; retain its actual bundled/license information for final Windows packaging and prove ordinary Node tests plus real Electron image import, not just a mocked image loader.
+- No Gemini configuration exists. Image import, manual crop/mask, templates, layer/lock controls and saving/reopening are local capabilities; the whole VisualStudio must remain accessible without remote image capability. AI edits are separate, gated actions in the later task.
+- Official Sharp Windows/native packaging follow-up is docs/research/2026-10-05-image-runtime.md. It records current 0.35.5 and Node-API/optional dependency/externalize/ASAR requirements; verify the exact registry package before installation and prove actual Electron plus final installed image import. This does not replace package/license/runtime acceptance.

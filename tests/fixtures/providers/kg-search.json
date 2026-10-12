@@ -1,0 +1,100 @@
+{
+  "kind": "observed",
+  "observedAt": "2026-10-04T10:38:23.217Z",
+  "providerId": "kg",
+  "query": {
+    "text": "周杰伦",
+    "page": 1,
+    "pageSize": 5,
+    "authRevision": "0"
+  },
+  "httpStatus": 200,
+  "contentType": "text/plain; charset=utf-8",
+  "response": {
+    "error_code": 0,
+    "data": {
+      "total": 480,
+      "lists": [
+        {
+          "Audioid": 20505418,
+          "OriSongName": "晴天",
+          "Suffix": "",
+          "AlbumName": "叶惠美",
+          "AlbumID": "966846",
+          "Duration": 269,
+          "FileHash": "B3A52A7A958BF0AED0EBFBA2E9A818B7",
+          "MixSongID": "32100650",
+          "Singers": [
+            {
+              "name": "周杰伦"
+            }
+          ]
+        },
+        {
+          "Audioid": 332453,
+          "OriSongName": "稻香",
+          "Suffix": "",
+          "AlbumName": "魔杰座",
+          "AlbumID": "960399",
+          "Duration": 223,
+          "FileHash": "8909E1809908CD8E3BF6CF85D98B93F0",
+          "MixSongID": "32042828",
+          "Singers": [
+            {
+              "name": "周杰伦"
+            }
+          ]
+        },
+        {
+          "Audioid": 254112,
+          "OriSongName": "搁浅",
+          "Suffix": "",
+          "AlbumName": "七里香",
+          "AlbumID": "971783",
+          "Duration": 240,
+          "FileHash": "8141FAA45AAD5BCFF5FF9873B89709E3",
+          "MixSongID": "32144422",
+          "Singers": [
+            {
+              "name": "周杰伦"
+            }
+          ]
+        },
+        {
+          "Audioid": 339796,
+          "OriSongName": "青花瓷",
+          "Suffix": "",
+          "AlbumName": "我很忙",
+          "AlbumID": "979856",
+          "Duration": 239,
+          "FileHash": "37A8F50A9EC3B267C3CC6BEC633D9C4A",
+          "MixSongID": "32218352",
+          "Singers": [
+            {
+              "name": "周杰伦"
+            }
+          ]
+        },
+        {
+          "Audioid": 338638,
+          "OriSongName": "夜曲",
+          "Suffix": "",
+          "AlbumName": "十一月的萧邦",
+          "AlbumID": "958909",
+          "Duration": 226,
+          "FileHash": "16C8AB298231370293D16BCF9E5FF9B6",
+          "MixSongID": "32029511",
+          "Singers": [
+            {
+              "name": "周杰伦"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "status": "ok",
+  "count": 5,
+  "total": 480,
+  "fullPlayback": "尚未解析"
+}

@@ -1,0 +1,36 @@
+
+> music-workbench@0.1.0 test:unit
+> vitest run --exclude=tests/integration/** tests/unit/search-service.test.ts
+
+
+ RUN  v5.0.3 C:/Users/DELL/OneDrive/Desktop/funwork
+
+ ❯ tests/unit/search-service.test.ts (9 tests | 1 failed) 57ms
+   × cancelled searches wait for owned transport cleanup without waiting for arbitrary provider promises 38ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/unit/search-service.test.ts > cancelled searches wait for owned transport cleanup without waiting for arbitrary provider promises
+AssertionError: expected true to be false // Object.is equality
+
+- Expected
++ Received
+
+- false
++ true
+
+ ❯ tests/unit/search-service.test.ts:30:74
+     28|   void pending.catch(() => {})
+     29|   await started; abort.abort()
+     30|   try { await new Promise(done => setTimeout(done, 25)); expect(settle…
+       |                                                                          ^
+     31|   finally { cleaned() }
+     32|   await expect(pending).rejects.toMatchObject({ name: 'AbortError' })
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 8 passed (9)
+   Start at  08:54:13
+   Duration  3.24s (import 89%, transform 7%, tests 3%, worker 1%)

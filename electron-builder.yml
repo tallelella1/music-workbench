@@ -1,0 +1,28 @@
+appId: com.musicworkbench.desktop
+productName: 音乐工作台
+artifactName: MusicWorkbench-${version}-Setup.${ext}
+asar: true
+electronDist: node_modules/electron/dist
+directories:
+  output: release
+files:
+  - out/**
+  - package.json
+  - THIRD_PARTY_NOTICES.md
+extraResources:
+  - from: resources
+    to: resources
+win:
+  target:
+    - target: nsis
+      arch: [x64]
+  executableName: MusicWorkbench
+nsis:
+  oneClick: false
+  perMachine: false
+  allowElevation: false
+  allowToChangeInstallationDirectory: true
+  deleteAppDataOnUninstall: false
+  createDesktopShortcut: false
+  createStartMenuShortcut: false
+  runAfterFinish: false

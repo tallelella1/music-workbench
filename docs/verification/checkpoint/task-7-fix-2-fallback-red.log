@@ -1,0 +1,31 @@
+
+> music-workbench@0.1.0 test:integration
+> vitest run --passWithNoTests tests/integration tests/integration/resolver.test.ts -t fallback cancellation waits
+
+
+ RUN  v5.0.3 C:/Users/DELL/OneDrive/Desktop/funwork
+
+ ❯ tests/integration/resolver.test.ts (11 tests | 1 failed | 10 skipped) 416ms
+   × fallback cancellation waits for the owned search transport cleanup 84ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/integration/resolver.test.ts > fallback cancellation waits for the owned search transport cleanup
+AssertionError: expected true to be false // Object.is equality
+
+- Expected
++ Received
+
+- false
++ true
+
+ ❯ tests/integration/resolver.test.ts:115:74
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed | 6 skipped (7)
+      Tests  1 failed | 66 skipped (67)
+   Start at  09:00:20
+   Duration  1.03s (import 48%, transform 40%, tests 11%, worker 1%)

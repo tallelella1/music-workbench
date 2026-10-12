@@ -1,0 +1,9 @@
+# Visual Task 4 integration context
+
+Requirements are the visual plan's task-4-brief.md; this task produces the final all-module Windows package.
+
+- Reuse the final reviewed base and creative interfaces, shared compositor, bounce transform and hash-bound audio binding. Audio already rendered with crop/rate/effects is not processed twice. Persistent manual BeatMap corrections are part of the scene/export timing.
+- The base AudioExportService publication lifecycle was independently reviewed through Task 6 fix round 2. Stable parent+basename and existing resolved-target reservations persist through actual publication and cleanup; pre-commit cancellation aborts/drains before removal, while post-commit cancellation cannot misreport saved output as cancelled. Both audio and the new visual exporter need a shared host reservation boundary if they can publish to the same chosen destination.
+- Hidden renderer/preload must be separately bundled and actually started in the sandbox; earlier electron-vite isolatedEntries/non-TTY failure is documented in integration-notes.md. Keep at most the brief's pending-frame limit and propagate backpressure/abort; quit drains the renderer/encoder and cleans only test-owned temporary resources.
+- Final dist:win and actual installed acceptance must cover audio analysis/history/manual edits, image import/native Sharp, templates/masks, synchronized preview and all output formats as well as core import/play/settings/export. Reuse Task 7 acceptance tooling, update its package-content/native dependency inspection and copy/re-verify the prepared sources adjacent to the rebuilt installer.
+- Gemini and real third-party LX configuration remain unavailable under the accepted user scope. Keep these real-service acceptance items explicit; finish all local capabilities and distinguish fixture handling from actual remote-model behavior. Keep unsigned status, actual native/runtime licenses and source-delivery limitations accurate.

@@ -1,0 +1,43 @@
+[
+  {
+    "atMs": 304,
+    "stdout": "STARTUP_DIAGNOSTIC before-quit\n"
+  },
+  {
+    "atMs": 304,
+    "stdout": "STARTUP_DIAGNOSTIC window-all-closed\n"
+  },
+  {
+    "atMs": 304,
+    "stdout": "STARTUP_DIAGNOSTIC before-quit\nSTARTUP_DIAGNOSTIC will-quit\n"
+  },
+  {
+    "atMs": 304,
+    "stdout": "STARTUP_DIAGNOSTIC quit\n"
+  },
+  {
+    "atMs": 313,
+    "stdout": "STARTUP_DIAGNOSTIC browser-window-created\n"
+  },
+  {
+    "atMs": 323,
+    "window": ""
+  },
+  {
+    "atMs": 323,
+    "windowClosed": ""
+  },
+  {
+    "atMs": 324,
+    "stderr": "Waiting for the debugger to disconnect...\r\n"
+  },
+  {
+    "atMs": 750,
+    "processExit": 0,
+    "signal": null
+  },
+  {
+    "windows": [],
+    "exitCode": 0
+  }
+]

@@ -1,0 +1,25 @@
+{
+  "mode": "source-test",
+  "executable": "C:\\Users\\DELL\\OneDrive\\Desktop\\funwork\\.superpowers\\sdd\\2026-10-03-music-player-implementation\\Installed application with spaces\\MusicWorkbench.exe",
+  "closeMs": 123,
+  "events": [
+    {
+      "event": "fetch-aborted",
+      "at": 1791788562459
+    },
+    {
+      "event": "will-quit",
+      "at": 1791788562473
+    }
+  ],
+  "closedProcessIds": [
+    30412,
+    1728,
+    22492,
+    4252,
+    2612
+  ],
+  "remainingProcessCount": 0,
+  "temporaryMediaCount": 0,
+  "originalBytesPreserved": true
+}

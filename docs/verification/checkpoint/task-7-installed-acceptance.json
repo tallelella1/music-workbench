@@ -1,0 +1,48 @@
+{
+  "identity": {
+    "executable": "C:\\Users\\DELL\\OneDrive\\Desktop\\funwork\\.superpowers\\sdd\\2026-10-03-music-player-implementation\\Installed application with spaces\\MusicWorkbench.exe",
+    "packaged": true,
+    "appPath": "C:\\Users\\DELL\\OneDrive\\Desktop\\funwork\\.superpowers\\sdd\\2026-10-03-music-player-implementation\\Installed application with spaces\\resources\\app.asar",
+    "resourcesPath": "C:\\Users\\DELL\\OneDrive\\Desktop\\funwork\\.superpowers\\sdd\\2026-10-03-music-player-implementation\\Installed application with spaces\\resources"
+  },
+  "testData": "C:\\Users\\DELL\\OneDrive\\Desktop\\funwork\\.superpowers\\sdd\\2026-10-03-music-player-implementation\\Installed acceptance with spaces\\test user data qWYpD0",
+  "fixture": "C:\\Users\\DELL\\OneDrive\\Desktop\\funwork\\.superpowers\\sdd\\2026-10-03-music-player-implementation\\Installed acceptance with spaces\\安装版旋律 🎵.wav",
+  "output": "C:\\Users\\DELL\\OneDrive\\Desktop\\funwork\\.superpowers\\sdd\\2026-10-03-music-player-implementation\\Installed acceptance with spaces\\安装成品 🎵.flac",
+  "extensionId": "7f591fe1-9461-47e7-a034-ac7d08fb1811",
+  "shippedLX": true,
+  "restartEnabled": true,
+  "startupTimesMs": [
+    270,
+    287,
+    274,
+    294
+  ],
+  "failedStartup": {
+    "enabledPreferencePreserved": true,
+    "runtimeEnabled": false,
+    "message": "音源脚本初始化失败",
+    "localPlaybackAndEditorUsable": true
+  },
+  "hungStartup": {
+    "enabledPreferencePreserved": true,
+    "runtimeEnabled": false,
+    "message": "音源脚本初始化超时（5 秒）",
+    "localPlaybackAndEditorUsable": true
+  },
+  "settings": {
+    "volume": 0.4,
+    "rate": 1.25,
+    "format": "flac"
+  },
+  "originalBytesPreserved": true,
+  "closedProcessIds": [
+    26520,
+    16572,
+    19824,
+    2084,
+    32444,
+    24156
+  ],
+  "remainingProcessCount": 0,
+  "errors": []
+}

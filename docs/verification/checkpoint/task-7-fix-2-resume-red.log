@@ -1,0 +1,44 @@
+
+> music-workbench@0.1.0 test:e2e
+> playwright test tests/e2e/app-regression.spec.ts --grep normal close aborts pending playback
+
+
+Running 1 test using 1 worker
+
+  x  1 tests\e2e\app-regression.spec.ts:12:82 › normal close aborts pending playback resources and waits actual cleanup (29.7s)
+
+
+  1) tests\e2e\app-regression.spec.ts:12:82 › normal close aborts pending playback resources and waits actual cleanup
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: true
+    Received: false
+
+    Call Log:
+    - Timeout 3000ms exceeded while waiting on the predicate
+
+       at ..\helpers\network-shutdown.ts:71
+
+      69 |     const started = Date.now()
+      70 |     await app.evaluate(({ BrowserWindow }) => BrowserWindow.getAllWindows().find(window => window.webContents.getURL().includes('/renderer/index.html'))!.close()).catch(() => {})
+    > 71 |     await expect.poll(async () => (await readFile(timeline, 'utf8').catch(() => '')).includes(mode === 'decode' ? 'cleanup-complete' : 'fetch-aborted'), { timeout: 3000, intervals: [10, 25, 50] }).toBe(true)
+         |                                                                                                                                                                                                      ^
+      72 |     await expect.poll(() => child.exitCode, { timeout: 3000 }).toBe(0); app = undefined
+      73 |     const closeMs = Date.now() - started; expect(closeMs).toBeLessThan(3000)
+      74 |     const events = (await readFile(timeline, 'utf8')).trim().split('\n').map(line => JSON.parse(line)); const quit = events.findIndex(row => row.event === 'will-quit')
+        at pendingNetworkShutdown (C:\Users\DELL\OneDrive\Desktop\funwork\tests\helpers\network-shutdown.ts:71:198)
+        at C:\Users\DELL\OneDrive\Desktop\funwork\tests\e2e\app-regression.spec.ts:14:66
+
+    Error Context: test-results\app-regression-normal-clos-c58f2-es-and-waits-actual-cleanup\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\app-regression-normal-clos-c58f2-es-and-waits-actual-cleanup\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\app-regression-normal-clos-c58f2-es-and-waits-actual-cleanup\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    tests\e2e\app-regression.spec.ts:12:82 › normal close aborts pending playback resources and waits actual cleanup
