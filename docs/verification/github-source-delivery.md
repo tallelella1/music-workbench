@@ -26,7 +26,7 @@ GitHub 的[普通 Git 文件限制](https://docs.github.com/en/repositories/work
 
 冻结产品为本地 `6d36f7e`，最终实际安装包 SHA256 为 `d125c98f96dfd1eeca94728b5d72b45010697d3fa051e0a2022fff5dbad243f5`。最初无父源码提交 `33f66a1a5f2c6b48da1f53f5720c856c5223fc7a` 包含 250 个文件；排除 9 个媒体二进制及一个历史 scratch 报告，其余 tree 与已审查本地提交一致。
 
-私有 `main` 已普通快进至 `9492eaa091e77ae9940c1f07e42a5f50de6d2ded`，对应本地交付提交 `e172d31f7636625adfbc9166240eb96c0e2e21f5`。中间提交 `9cf9bc477a8d4100c727b82dc175f21cff0248b8` 只包含已审查 CI 顺序、fixture canonical path 与记录更新；最新提交只增加 CI 的 `--publish never` 及失败记录。更新脚本实际确认应用源码、锁文件和打包配置相对于冻结产品没有变化，并确认原分支未移动。原始本地开发历史与运行时文件继续保留。
+私有 `main` 首版普通快进至 `9492eaa091e77ae9940c1f07e42a5f50de6d2ded`，对应本地交付提交 `e172d31f7636625adfbc9166240eb96c0e2e21f5`，发行标签继续固定于此。中间提交 `9cf9bc477a8d4100c727b82dc175f21cff0248b8` 只包含已审查 CI 顺序、fixture canonical path 与记录更新。发布后两个 UI fixture、受约束复验和显式 Electron 准备修正已快进至验证源码 `9f1dc534e607ae3c5754aa9b3290650b818b26dd`，对应本地 `97f68a173bf21398605b7a0b8967ff389d25d515`。更新脚本与最终 CI 范围检查均实际确认应用源码、锁文件、媒体与打包配置未变；原始本地开发历史与运行时文件继续保留。
 
 首次与第二次远端失败及环境修正见 [CI 记录](checkpoint/ci-delivery-fix.md)。不把本地验收结果称为远端通过。受保护存储中的 GitHub 凭据只在内存用于对应官方 API，不写入项目或发布材料。
 
@@ -35,3 +35,5 @@ GitHub 的[普通 Git 文件限制](https://docs.github.com/en/repositories/work
 [v0.1.0](https://github.com/tallelella1/music-workbench/releases/tag/v0.1.0) 已于 2026-10-13 正式发布，release ID `410666352`，`draft=false`，标签经 API 核实指向源码 `9492eaa091e77ae9940c1f07e42a5f50de6d2ded`。安装包、三份媒体源码分卷和校验清单全部上传成功，服务器状态、大小与 SHA256 已逐份核对，发布前再次检查全部摘要。该安装包就是通过 8/8 实际安装验收的最终包，没有重新构建或替换它。
 
 原始元数据在 [发布记录](github/2026-10-13/release.json)、[仓库隐私记录](github/2026-10-13/repository.json)、[源码初始快照](github/2026-10-13/source-snapshot.json)、[最后一次 CI 源码快进](github/2026-10-13/source-ci-update.json)、[发行说明](github/2026-10-13/release-body.md)与[附件 SHA256](github/2026-10-13/SHA256SUMS.txt)。`main` 的最后交付文档更新保持标签和产品源码不变，不再触发重复 CI。
+
+[Fixture 修正快进](github/2026-10-13/source-fixture-update.json)、[运行时准备快进](github/2026-10-13/source-runtime-setup-update.json)及[最终成功 CI](github/2026-10-13/ci-final.json)记录发布后仅测试/CI/文档的变化。最终远端只复验三项受影响界面检查，并保留类型/构建/媒体/资源/归档检查，复用其余已通过结果。实际 3/3（13.4 秒）通过；不声称重新执行过全套远端测试。最后发布 API 核查继续确认私有仓库、正式标签及全部五个附件的摘要不变。本轮交付完成。

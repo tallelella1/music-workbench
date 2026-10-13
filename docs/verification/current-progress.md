@@ -21,14 +21,16 @@
 
 ## GitHub 交付
 
-[私有仓库](https://github.com/tallelella1/music-workbench) 已确认账号和隐私属性，源码 `9492eaa091e77ae9940c1f07e42a5f50de6d2ded` 已快进推送至 `main`。[正式发行版](https://github.com/tallelella1/music-workbench/releases/tag/v0.1.0) 返回 `draft=false`，标签固定到该源码提交。最终安装包、三个媒体源码分卷与 `SHA256SUMS.txt` 五个附件全部 `uploaded`，服务器大小与 SHA256 均匹配。原始发布证据见 [release.json](github/2026-10-13/release.json)。
+[私有仓库](https://github.com/tallelella1/music-workbench) 已确认账号和隐私属性。[正式发行版](https://github.com/tallelella1/music-workbench/releases/tag/v0.1.0) 返回 `draft=false`，标签固定到首版源码 `9492eaa091e77ae9940c1f07e42a5f50de6d2ded`。随后 CI 环境与 fixture 修正已快进推送，最后验证的源码为 `9f1dc534e607ae3c5754aa9b3290650b818b26dd`，产品仍为 `6d36f7e`。最终安装包、三个媒体源码分卷与 `SHA256SUMS.txt` 五个附件全部 `uploaded`，服务器大小与 SHA256 均匹配。原始发布证据见 [release.json](github/2026-10-13/release.json)。
 
 固定媒体 DLL 超过普通 Git 单文件限制，源码快照保留本地全部开发历史，克隆后由 `scripts/setup-media.ps1` 恢复核验过的媒体运行时；[GitHub 源码交付](github-source-delivery.md) 保存对应关系。发布后对 `main` 的记录更新不改变 `v0.1.0` 标签和已验收附件。
 
-远端首次 CI 的构建顺序与临时路径别名问题已修正；第二次 CI 的 electron-builder 自动发布问题已通过 `--publish never` 修正。第三次运行 unit 79/79、integration 67/67、类型/构建/资源检查通过，界面 35 passed / 2 failed；两项失败为测试前提的短等待。启动检查改为直接验证窗口创建顺序，队列 fixture 等待真实导入并在失败时清理。本地只复验相关三项，3/3（17.4 秒）通过；产品与已发布安装包未改，完整本地测试未重跑。原始失败日志均保留，最终远端结果待记录。
+远端首次 CI 的构建顺序与临时路径别名问题已修正，第二次自动发布问题通过 `--publish never` 修正。第三次运行 unit 79/79、integration 67/67、类型/构建/资源检查和 35 项界面检查通过；两项 fixture 前提失败已修正并通过独立静态复审。本地仅复验相关三项，3/3（17.4 秒）通过。
 
-## 交付记录收尾
+最后的[受约束远端复验](https://github.com/tallelella1/music-workbench/actions/runs/38332583220)为 **success**：实际范围检查确认产品未变，显式 Electron 准备、类型/编译/打包、资源检查、三项界面复验（3/3，13.4 秒）和 CI 构建归档均通过。该运行复用此前 79/67/其余 35 项已通过结果，明确不是全套远端重跑。第四次暴露的隐式 Electron 准备依赖及全部原始失败日志均保留；[最终 CI 元数据](github/2026-10-13/ci-final.json)保存实际结果。完整本地测试与已验收安装包均未重跑或重建。
 
-安装包和源码发布已完成，等待当前远端 CI 的最终结果并提交发布记录。验收入口为 [播放器验收记录](music-player.md)，已通过本地验证不再重复。
+## 本轮完成
+
+基础播放器首版的实施、独立审查、必要验证、私有源码推送、正式安装包与源码材料发布全部完成，本轮没有待实施或待验证事项。真实用户 LX 音源和个人试听保留原有配置/验收边界，AI 音频编辑与模板动效属于后续独立范围。验收入口为 [播放器验收记录](music-player.md)。
 
 准确任务与提交状态分别保存在 [基础 ledger](checkpoint/player-progress.md)、[音频 ledger](checkpoint/audio-progress.md)、[视觉 ledger](checkpoint/visual-progress.md)。[2026-10-06 暂停记录](pause-2026-10-06.md) 仅保留历史交接，本轮继续执行。

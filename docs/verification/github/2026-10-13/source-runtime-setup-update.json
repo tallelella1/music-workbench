@@ -1,0 +1,24 @@
+{
+  "changes": [
+    ".github/workflows/windows.yml",
+    "docs/verification/checkpoint/ci-delivery-fix.md",
+    "docs/verification/checkpoint/github-ci-fourth.log",
+    "docs/verification/github/2026-10-13/source-fixture-update.json"
+  ],
+  "legacyCommit": "97f68a173bf21398605b7a0b8967ff389d25d515",
+  "excluded": [
+    "D\t.superpowers/sdd/2026-10-03-music-player-implementation/task-6-report.md",
+    "D\tresources/bin/avcodec-63.dll",
+    "D\tresources/bin/avdevice-63.dll",
+    "D\tresources/bin/avfilter-12.dll",
+    "D\tresources/bin/avformat-63.dll",
+    "D\tresources/bin/avutil-61.dll",
+    "D\tresources/bin/ffmpeg.exe",
+    "D\tresources/bin/ffprobe.exe",
+    "D\tresources/bin/swresample-7.dll",
+    "D\tresources/bin/swscale-10.dll"
+  ],
+  "sourceParent": "a7812df85a8d867d71b155eb54bc9af5b1ce9ac3",
+  "sourceCommit": "9f1dc534e607ae3c5754aa9b3290650b818b26dd",
+  "sourceTree": "755b5f80aeed3a2ef17a9453691573e02e0140f2"
+}

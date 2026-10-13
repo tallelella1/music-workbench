@@ -38,6 +38,8 @@ d125c98f96dfd1eeca94728b5d72b45010697d3fa051e0a2022fff5dbad243f5
 
 普通 Git 源码快照排除超限媒体 DLL，保留本地全部开发历史；克隆后通过固定版本与 SHA256 核验的恢复脚本获得 9 个媒体文件。[源码快照](github/2026-10-13/source-snapshot.json)与[CI 源码更新](github/2026-10-13/source-ci-update.json)保留 tree 对应关系。详见 [源码交付](github-source-delivery.md)。
 
-第三次 [Windows CI](https://github.com/tallelella1/music-workbench/actions/runs/38329912973) 的 unit 79/79、integration 67/67、类型/构建/资源检查通过，界面为 35 passed / 2 failed / 8 installed-only skipped。两项测试前提已修正：启动直接验证主窗口先于 LX 创建，队列 fixture 等待三个真实导入并清理失败资源。本地仅复验相关三项，3/3（17.4 秒）通过；下一次远端结果待记录。[CI 记录](checkpoint/ci-delivery-fix.md)保留全部失败与修正，未将失败或尚未结束的运行称为通过。
+第三次 [Windows CI](https://github.com/tallelella1/music-workbench/actions/runs/38329912973) 的 unit 79/79、integration 67/67、类型/构建/资源检查通过，界面为 35 passed / 2 failed / 8 installed-only skipped。两项测试前提已修正：启动直接验证主窗口先于 LX 创建，队列 fixture 等待三个真实导入并清理失败资源；独立静态复审 Approved。本地仅复验相关三项，3/3（17.4 秒）通过。
+
+最后的[受约束远端复验](https://github.com/tallelella1/music-workbench/actions/runs/38332583220)已完成且 **success**，源码 `9f1dc534e607ae3c5754aa9b3290650b818b26dd`。范围检查实际拒绝产品/依赖等变动，显式 Electron 准备、媒体/类型/编译/打包/资源检查、三项界面复验（3/3，13.4 秒）及 artifact 归档通过。该运行没有重复此前已通过的 79 单元、67 集成和其余 35 项界面检查，不将局部复验称为全套远端重跑。[最终 CI 元数据](github/2026-10-13/ci-final.json)、[实际成功日志](checkpoint/github-ci-final.log)与[CI 修正记录](checkpoint/ci-delivery-fix.md)保存全部通过、失败及修正。所有首版交付门槛已完成。
 
 媒体源码 262 文件已核验，三个发行分卷完整性检查通过。材料继续披露构建时 cargo update cc 后准确 build-helper lock 未留存及实际链接闭包未完全确认的限制，不承诺字节一致重建；见 [媒体源码材料记录](../research/2026-10-04-media-source-delivery.md)。
