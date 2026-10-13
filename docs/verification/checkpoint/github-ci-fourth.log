@@ -1,0 +1,260 @@
+﻿2026-10-13T01:27:05.1875332Z Current runner version: '2.337.0'
+2026-10-13T01:27:05.1909535Z ##[group]Runner Image Provisioner
+2026-10-13T01:27:05.1910818Z Hosted Compute Agent
+2026-10-13T01:27:05.1911705Z Version: 20260901.588
+2026-10-13T01:27:05.1912936Z Commit: f88ec8081b781fac6c440065ac7ff9e710ce3d0b
+2026-10-13T01:27:05.1914127Z Build Date: 2026-09-01T19:56:44Z
+2026-10-13T01:27:05.1915175Z Worker ID: {73343e85-fa6b-455c-8f56-d00a50b7a75c}
+2026-10-13T01:27:05.1916319Z Azure Region: eastus
+2026-10-13T01:27:05.1917216Z ##[endgroup]
+2026-10-13T01:27:05.1919254Z ##[group]Operating System
+2026-10-13T01:27:05.1920271Z Microsoft Windows Server 2025
+2026-10-13T01:27:05.1921217Z 10.0.26100
+2026-10-13T01:27:05.1922015Z Datacenter
+2026-10-13T01:27:05.1922801Z ##[endgroup]
+2026-10-13T01:27:05.1923611Z ##[group]Runner Image
+2026-10-13T01:27:05.1924652Z Image: windows-2025-vs2026
+2026-10-13T01:27:05.1925971Z Version: 20260925.250.1
+2026-10-13T01:27:05.1928331Z Included Software: https://github.com/actions/runner-images/blob/win25-vs2026/20260925.250/images/windows/Windows2025-VS2026-Readme.md
+2026-10-13T01:27:05.1931142Z Image Release: https://github.com/actions/runner-images/releases/tag/win25-vs2026%2F20260925.250
+2026-10-13T01:27:05.1932831Z ##[endgroup]
+2026-10-13T01:27:05.1934538Z ##[group]GITHUB_TOKEN Permissions
+2026-10-13T01:27:05.1937280Z Contents: read
+2026-10-13T01:27:05.1938161Z Metadata: read
+2026-10-13T01:27:05.1939020Z ##[endgroup]
+2026-10-13T01:27:05.1941806Z Secret source: Actions
+2026-10-13T01:27:05.1943156Z Cache mode: write
+2026-10-13T01:27:05.1944260Z Prepare workflow directory
+2026-10-13T01:27:05.2540260Z Prepare all required actions
+2026-10-13T01:27:05.2614240Z Getting action download info
+2026-10-13T01:27:05.4521287Z Download action repository 'actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+2026-10-13T01:27:05.6354190Z Download action repository 'actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1' (SHA:949feb2413d6458794dcd2491c4babbbce0c15c1)
+2026-10-13T01:27:05.9514507Z Download action repository 'actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9' (SHA:cf430e030ddbb5b0abf93d22962f4752f3646cd9)
+2026-10-13T01:27:06.3079618Z Complete job name: verify
+2026-10-13T01:27:06.4893800Z ##[group]Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+2026-10-13T01:27:06.4895047Z with:
+2026-10-13T01:27:06.4895488Z   repository: tallelella1/music-workbench
+2026-10-13T01:27:06.4899354Z   token: ***
+2026-10-13T01:27:06.4899778Z   ssh-strict: true
+2026-10-13T01:27:06.4900189Z   ssh-user: git
+2026-10-13T01:27:06.4900618Z   persist-credentials: true
+2026-10-13T01:27:06.4901081Z   clean: true
+2026-10-13T01:27:06.4901518Z   sparse-checkout-cone-mode: true
+2026-10-13T01:27:06.4902014Z   fetch-depth: 1
+2026-10-13T01:27:06.4902418Z   fetch-tags: false
+2026-10-13T01:27:06.4902913Z   show-progress: true
+2026-10-13T01:27:06.4903522Z   lfs: false
+2026-10-13T01:27:06.4903919Z   submodules: false
+2026-10-13T01:27:06.4904353Z   set-safe-directory: true
+2026-10-13T01:27:06.4904861Z   allow-unsafe-pr-checkout: false
+2026-10-13T01:27:06.4905612Z ##[endgroup]
+2026-10-13T01:27:07.4745847Z Syncing repository: tallelella1/music-workbench
+2026-10-13T01:27:07.4748573Z ##[group]Getting Git version info
+2026-10-13T01:27:07.4750486Z Working directory is 'D:\a\music-workbench\music-workbench'
+2026-10-13T01:27:07.5438817Z [command]"C:\Program Files\Git\bin\git.exe" version
+2026-10-13T01:27:07.5440134Z git version 2.55.0.windows.5
+2026-10-13T01:27:07.5444305Z ##[endgroup]
+2026-10-13T01:27:07.5450749Z Temporarily overriding HOME='D:\a\_temp\b6470e5c-60cf-4ddb-be09-9f77e4977031' before making global git config changes
+2026-10-13T01:27:07.5452743Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-13T01:27:07.5454638Z [command]"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory D:\a\music-workbench\music-workbench
+2026-10-13T01:27:07.5458069Z Deleting the contents of 'D:\a\music-workbench\music-workbench'
+2026-10-13T01:27:07.5462934Z ##[group]Determining repository object format
+2026-10-13T01:27:07.5463857Z ##[endgroup]
+2026-10-13T01:27:07.5465166Z ##[group]Initializing the repository
+2026-10-13T01:27:07.5466555Z [command]"C:\Program Files\Git\bin\git.exe" init D:\a\music-workbench\music-workbench
+2026-10-13T01:27:07.5468178Z Initialized empty Git repository in D:/a/music-workbench/music-workbench/.git/
+2026-10-13T01:27:07.5472127Z [command]"C:\Program Files\Git\bin\git.exe" remote add origin https://github.com/tallelella1/music-workbench
+2026-10-13T01:27:07.5475487Z ##[endgroup]
+2026-10-13T01:27:07.5476809Z ##[group]Disabling automatic garbage collection
+2026-10-13T01:27:07.5478109Z [command]"C:\Program Files\Git\bin\git.exe" config --local gc.auto 0
+2026-10-13T01:27:07.5481398Z ##[endgroup]
+2026-10-13T01:27:07.5482688Z ##[group]Setting up auth
+2026-10-13T01:27:07.5483703Z Removing SSH command configuration
+2026-10-13T01:27:07.5485090Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+2026-10-13T01:27:07.5488988Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+2026-10-13T01:27:08.9435554Z Removing HTTP extra header
+2026-10-13T01:27:08.9439225Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-13T01:27:08.9761407Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+2026-10-13T01:27:09.6416771Z Removing includeIf entries pointing to credentials config files
+2026-10-13T01:27:09.6427685Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-13T01:27:09.6762159Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
+2026-10-13T01:27:10.2913057Z [command]"C:\Program Files\Git\bin\git.exe" config --file D:\a\_temp\git-credentials-802e9cbc-029a-445f-803a-d4ed8a969caf.config http.https://github.com/.extraheader "AUTHORIZATION: basic ***"
+2026-10-13T01:27:10.3238524Z [command]"C:\Program Files\Git\bin\git.exe" config --local includeIf.gitdir:D:/a/music-workbench/music-workbench/.git.path D:\a\_temp\git-credentials-802e9cbc-029a-445f-803a-d4ed8a969caf.config
+2026-10-13T01:27:10.3571248Z [command]"C:\Program Files\Git\bin\git.exe" config --local includeIf.gitdir:D:/a/music-workbench/music-workbench/.git/worktrees/*.path D:\a\_temp\git-credentials-802e9cbc-029a-445f-803a-d4ed8a969caf.config
+2026-10-13T01:27:10.3934006Z [command]"C:\Program Files\Git\bin\git.exe" config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-802e9cbc-029a-445f-803a-d4ed8a969caf.config
+2026-10-13T01:27:10.4442299Z [command]"C:\Program Files\Git\bin\git.exe" config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-802e9cbc-029a-445f-803a-d4ed8a969caf.config
+2026-10-13T01:27:10.4829176Z ##[endgroup]
+2026-10-13T01:27:10.4829889Z ##[group]Fetching the repository
+2026-10-13T01:27:10.4831534Z [command]"C:\Program Files\Git\bin\git.exe" -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +a7812df85a8d867d71b155eb54bc9af5b1ce9ac3:refs/remotes/origin/main
+2026-10-13T01:27:11.4116552Z From https://github.com/tallelella1/music-workbench
+2026-10-13T01:27:11.4118331Z  * [new ref]         a7812df85a8d867d71b155eb54bc9af5b1ce9ac3 -> origin/main
+2026-10-13T01:27:11.4228554Z [command]"C:\Program Files\Git\bin\git.exe" branch --list --remote origin/main
+2026-10-13T01:27:11.4697534Z   origin/main
+2026-10-13T01:27:11.4747274Z [command]"C:\Program Files\Git\bin\git.exe" rev-parse refs/remotes/origin/main
+2026-10-13T01:27:11.5037134Z a7812df85a8d867d71b155eb54bc9af5b1ce9ac3
+2026-10-13T01:27:11.5075006Z ##[endgroup]
+2026-10-13T01:27:11.5075913Z ##[group]Determining the checkout info
+2026-10-13T01:27:11.5076973Z ##[endgroup]
+2026-10-13T01:27:11.5086544Z [command]"C:\Program Files\Git\bin\git.exe" sparse-checkout disable
+2026-10-13T01:27:11.5548377Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset-all extensions.worktreeConfig
+2026-10-13T01:27:11.5875714Z ##[group]Checking out the ref
+2026-10-13T01:27:11.5886753Z [command]"C:\Program Files\Git\bin\git.exe" checkout --progress --force -B main refs/remotes/origin/main
+2026-10-13T01:27:11.7648372Z Switched to a new branch 'main'
+2026-10-13T01:27:11.7711401Z branch 'main' set up to track 'origin/main'.
+2026-10-13T01:27:11.8007611Z ##[endgroup]
+2026-10-13T01:27:11.8434750Z [command]"C:\Program Files\Git\bin\git.exe" log -1 --format=%H
+2026-10-13T01:27:11.8770297Z a7812df85a8d867d71b155eb54bc9af5b1ce9ac3
+2026-10-13T01:27:11.9405698Z ##[group]Run actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1
+2026-10-13T01:27:11.9406205Z with:
+2026-10-13T01:27:11.9406407Z   node-version: 24.11.1
+2026-10-13T01:27:11.9406631Z   cache: npm
+2026-10-13T01:27:11.9406856Z   check-latest: false
+2026-10-13T01:27:11.9409303Z   token: ***
+2026-10-13T01:27:11.9409510Z   package-manager-cache: true
+2026-10-13T01:27:11.9409743Z ##[endgroup]
+2026-10-13T01:27:12.1197933Z Attempting to download 24.11.1...
+2026-10-13T01:27:12.6984569Z Acquiring 24.11.1 - x64 from https://github.com/actions/node-versions/releases/download/24.11.1-19282993875/node-24.11.1-win32-x64.7z
+2026-10-13T01:27:13.1807509Z Extracting ...
+2026-10-13T01:27:15.8146019Z Adding to the cache ...
+2026-10-13T01:27:20.9064516Z ##[group]Environment details
+2026-10-13T01:27:22.6524154Z node: v24.11.1
+2026-10-13T01:27:22.6525349Z npm: 11.6.2
+2026-10-13T01:27:22.6525899Z yarn: 1.22.22
+2026-10-13T01:27:22.6526819Z ##[endgroup]
+2026-10-13T01:27:22.7614748Z [command]C:\Windows\system32\cmd.exe /D /S /C "C:\hostedtoolcache\windows\node\24.11.1\x64\npm.cmd config get cache"
+2026-10-13T01:27:23.0812009Z C:\npm\cache
+2026-10-13T01:27:23.4113872Z npm cache is not found
+2026-10-13T01:27:23.4565520Z ##[group]Run ./scripts/setup-media.ps1
+2026-10-13T01:27:23.4566084Z [36;1m./scripts/setup-media.ps1[0m
+2026-10-13T01:27:23.5637577Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+2026-10-13T01:27:23.5637958Z ##[endgroup]
+2026-10-13T01:27:24.3551237Z Downloading fixed media runtime: n9.0.2-22-g46d8f462ee-20261001
+2026-10-13T01:27:27.6411096Z Installed 9 hash-verified media binaries: n9.0.2-22-g46d8f462ee-20261001 (GPL-3.0-or-later)
+2026-10-13T01:27:27.8237055Z ##[group]Run npm ci
+2026-10-13T01:27:27.8237498Z [36;1mnpm ci[0m
+2026-10-13T01:27:27.8314422Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+2026-10-13T01:27:27.8314786Z ##[endgroup]
+2026-10-13T01:27:35.3053169Z npm warn deprecated rimraf@2.6.3: Rimraf versions prior to v4 are no longer supported
+2026-10-13T01:27:35.6167474Z npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+2026-10-13T01:27:36.1488212Z npm warn deprecated glob@7.2.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+2026-10-13T01:27:40.6651069Z npm warn deprecated boolean@3.2.0: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
+2026-10-13T01:27:47.2624960Z
+2026-10-13T01:27:47.2641175Z added 381 packages, and audited 382 packages in 18s
+2026-10-13T01:27:47.2644742Z
+2026-10-13T01:27:47.2649254Z 71 packages are looking for funding
+2026-10-13T01:27:47.2650507Z   run `npm fund` for details
+2026-10-13T01:27:47.2903663Z
+2026-10-13T01:27:47.2905604Z 9 vulnerabilities (8 moderate, 1 high)
+2026-10-13T01:27:47.2923303Z
+2026-10-13T01:27:47.2924315Z To address issues that do not require attention, run:
+2026-10-13T01:27:47.2925101Z   npm audit fix
+2026-10-13T01:27:47.2925473Z
+2026-10-13T01:27:47.2925993Z To address all issues (including breaking changes), run:
+2026-10-13T01:27:47.2926746Z   npm audit fix --force
+2026-10-13T01:27:47.2927004Z
+2026-10-13T01:27:47.2927379Z Run `npm audit` for details.
+2026-10-13T01:27:49.0925251Z ##[group]Run $baseline = '9492eaa091e77ae9940c1f07e42a5f50de6d2ded'
+2026-10-13T01:27:49.0925813Z [36;1m$baseline = '9492eaa091e77ae9940c1f07e42a5f50de6d2ded'[0m
+2026-10-13T01:27:49.0926225Z [36;1mgit fetch --no-tags --depth=1 origin $baseline[0m
+2026-10-13T01:27:49.0926956Z [36;1mif ($LASTEXITCODE -ne 0) { throw 'Unable to fetch the already verified CI baseline' }[0m
+2026-10-13T01:27:49.0927482Z [36;1m$changes = @(git diff --no-renames --name-only $baseline HEAD)[0m
+2026-10-13T01:27:49.0927980Z [36;1mif ($LASTEXITCODE -ne 0) { throw 'Unable to compare the CI repair scope' }[0m
+2026-10-13T01:27:49.0928584Z [36;1mforeach ($entry in $changes) {[0m
+2026-10-13T01:27:49.0929152Z [36;1m  if ($entry -notmatch '^(docs/|\.github/workflows/windows\.yml$|tests/e2e/(app-regression|playback-lifecycle)\.spec\.ts$)') {[0m
+2026-10-13T01:27:49.0929824Z [36;1m    throw "Fixture-only verification cannot cover this change: $entry"[0m
+2026-10-13T01:27:49.0930236Z [36;1m  }[0m
+2026-10-13T01:27:49.0930403Z [36;1m}[0m
+2026-10-13T01:27:49.1001972Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+2026-10-13T01:27:49.1002318Z ##[endgroup]
+2026-10-13T01:27:49.8234037Z From https://github.com/tallelella1/music-workbench
+2026-10-13T01:27:49.8235088Z  * branch            9492eaa091e77ae9940c1f07e42a5f50de6d2ded -> FETCH_HEAD
+2026-10-13T01:27:50.0364034Z ##[group]Run npm run dist:win -- --publish never
+2026-10-13T01:27:50.0364491Z [36;1mnpm run dist:win -- --publish never[0m
+2026-10-13T01:27:50.0445017Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+2026-10-13T01:27:50.0445376Z ##[endgroup]
+2026-10-13T01:27:50.9215677Z
+2026-10-13T01:27:50.9216604Z > music-workbench@0.1.0 dist:win
+2026-10-13T01:27:50.9218273Z > npm run check:media && npm run typecheck && npm run build && electron-builder --config electron-builder.yml --win nsis --publish never
+2026-10-13T01:27:50.9219459Z
+2026-10-13T01:27:51.2444050Z
+2026-10-13T01:27:51.2445024Z > music-workbench@0.1.0 check:media
+2026-10-13T01:27:51.2445987Z > node scripts/check-media-runtime.ts
+2026-10-13T01:27:51.2446596Z
+2026-10-13T01:27:51.9276315Z Verified 9 media binaries: n9.0.2-22-g46d8f462ee-20261001, GPL-3.0-or-later; required audio encoders/filters present
+2026-10-13T01:27:52.2720955Z
+2026-10-13T01:27:52.2721879Z > music-workbench@0.1.0 typecheck
+2026-10-13T01:27:52.2722711Z > tsc --noEmit
+2026-10-13T01:27:52.2763669Z
+2026-10-13T01:27:55.0046944Z
+2026-10-13T01:27:55.0047659Z > music-workbench@0.1.0 build
+2026-10-13T01:27:55.0048222Z > electron-vite build
+2026-10-13T01:27:55.0048467Z
+2026-10-13T01:27:55.8412902Z [36mvite v7.3.6 [32mbuilding ssr environment for production...[36m[39m
+2026-10-13T01:27:55.9375942Z transforming...
+2026-10-13T01:27:56.4083861Z [32m✓[39m 38 modules transformed.
+2026-10-13T01:27:56.4805058Z rendering chunks...
+2026-10-13T01:27:56.5107564Z [2mout/main/[22m[36mindex.js  [39m[1m[2m135.70 kB[22m[1m[22m
+2026-10-13T01:27:56.5108735Z [32m✓ built in 621ms[39m
+2026-10-13T01:27:56.5109614Z [36mvite v7.3.6 [32mbuilding ssr environment for production...[36m[39m
+2026-10-13T01:27:56.5255792Z transforming...
+2026-10-13T01:27:57.4336019Z [32m✓[39m 104 modules transformed.
+2026-10-13T01:27:57.5174676Z rendering chunks...
+2026-10-13T01:27:57.5199762Z [2mout/preload/[22m[36mindex.js  [39m[1m[2m214.51 kB[22m[1m[22m
+2026-10-13T01:27:57.6165053Z [32m✓ built in 1.12s[39m
+2026-10-13T01:27:57.6235852Z [36mvite v7.3.6 [32mbuilding client environment for production...[36m[39m
+2026-10-13T01:27:57.6490198Z transforming...
+2026-10-13T01:28:00.2206304Z [32m✓[39m 144 modules transformed.
+2026-10-13T01:28:00.4300566Z rendering chunks...
+2026-10-13T01:28:00.4445938Z [2m../../out/renderer/[22m[32mindex.html                 [39m[1m[2m  0.70 kB[22m[1m[22m
+2026-10-13T01:28:00.4447553Z [2m../../out/renderer/[22m[35massets/index-Dkd22UjO.css  [39m[1m[2m 23.44 kB[22m[1m[22m
+2026-10-13T01:28:00.4463914Z [2m../../out/renderer/[22m[36massets/index-DcwZNuPj.js   [39m[1m[33m951.23 kB[39m[22m
+2026-10-13T01:28:00.4474830Z [32m✓ built in 2.82s[39m
+2026-10-13T01:28:01.2852817Z   • electron-builder  version=26.15.3 os=10.0.26100
+2026-10-13T01:28:01.2963838Z   • loaded configuration  file=D:\a\music-workbench\music-workbench\electron-builder.yml
+2026-10-13T01:28:02.4757668Z   • executing @electron/rebuild  electronVersion=44.5.1 arch=x64 buildFromSource=false workspaceRoot=D:\a\music-workbench\music-workbench projectDir=./ appDir=./
+2026-10-13T01:28:02.4759586Z   • installing native dependencies  arch=x64
+2026-10-13T01:28:02.7488394Z   • completed installing native dependencies
+2026-10-13T01:28:02.7560686Z   • packaging       platform=win32 arch=x64 electron=44.5.1 appOutDir=release\win-unpacked
+2026-10-13T01:28:02.7841508Z   ⨯ The specified electronDist does not exist: D:\a\music-workbench\music-workbench\node_modules\electron\dist. Please provide a valid path to the Electron zip file, cache directory, or electron build directory.  failedTask=build stackTrace=Error: The specified electronDist does not exist: D:\a\music-workbench\music-workbench\node_modules\electron\dist. Please provide a valid path to the Electron zip file, cache directory, or electron build directory.
+2026-10-13T01:28:02.7850696Z     at selectElectron (D:\a\music-workbench\music-workbench\node_modules\app-builder-lib\src\electron\ElectronFramework.ts:193:13)
+2026-10-13T01:28:02.7853008Z     at ElectronFramework.prepareApplicationStageDirectory (D:\a\music-workbench\music-workbench\node_modules\app-builder-lib\src\electron\ElectronFramework.ts:152:27)
+2026-10-13T01:28:02.7854909Z     at WinPackager.doPack (D:\a\music-workbench\music-workbench\node_modules\app-builder-lib\src\platformPackager.ts:257:5)
+2026-10-13T01:28:02.7856626Z     at WinPackager.pack (D:\a\music-workbench\music-workbench\node_modules\app-builder-lib\src\platformPackager.ts:163:5)
+2026-10-13T01:28:02.7880617Z     at Packager.doBuild (D:\a\music-workbench\music-workbench\node_modules\app-builder-lib\src\packager.ts:530:11)
+2026-10-13T01:28:02.7882277Z     at executeFinally (D:\a\music-workbench\music-workbench\node_modules\builder-util\src\promise.ts:12:14)
+2026-10-13T01:28:02.7883861Z     at Packager.build (D:\a\music-workbench\music-workbench\node_modules\app-builder-lib\src\packager.ts:450:31)
+2026-10-13T01:28:02.7885445Z     at executeFinally (D:\a\music-workbench\music-workbench\node_modules\builder-util\src\promise.ts:12:14)
+2026-10-13T01:28:02.8559404Z ##[error]Process completed with exit code 1.
+2026-10-13T01:28:02.8934473Z Post job cleanup.
+2026-10-13T01:28:03.1712000Z [command]"C:\Program Files\Git\bin\git.exe" version
+2026-10-13T01:28:03.2041333Z git version 2.55.0.windows.5
+2026-10-13T01:28:03.2141194Z Temporarily overriding HOME='D:\a\_temp\d42189f0-94ea-43dc-9309-d6cb78370c95' before making global git config changes
+2026-10-13T01:28:03.2142668Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-13T01:28:03.2153561Z [command]"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory D:\a\music-workbench\music-workbench
+2026-10-13T01:28:03.2508855Z Removing SSH command configuration
+2026-10-13T01:28:03.2522058Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+2026-10-13T01:28:03.2869740Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+2026-10-13T01:28:04.0146464Z Removing HTTP extra header
+2026-10-13T01:28:04.0159059Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-13T01:28:04.0517147Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+2026-10-13T01:28:04.6667183Z Removing includeIf entries pointing to credentials config files
+2026-10-13T01:28:04.6679825Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-13T01:28:04.6969133Z includeif.gitdir:D:/a/music-workbench/music-workbench/.git.path
+2026-10-13T01:28:04.6970474Z includeif.gitdir:D:/a/music-workbench/music-workbench/.git/worktrees/*.path
+2026-10-13T01:28:04.6973668Z includeif.gitdir:/github/workspace/.git.path
+2026-10-13T01:28:04.6975683Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-10-13T01:28:04.7018004Z [command]"C:\Program Files\Git\bin\git.exe" config --local --get-all includeif.gitdir:D:/a/music-workbench/music-workbench/.git.path
+2026-10-13T01:28:04.7327567Z D:\a\_temp\git-credentials-802e9cbc-029a-445f-803a-d4ed8a969caf.config
+2026-10-13T01:28:04.7383062Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset includeif.gitdir:D:/a/music-workbench/music-workbench/.git.path D\:\\a\\_temp\\git\-credentials\-802e9cbc\-029a\-445f\-803a\-d4ed8a969caf\.config
+2026-10-13T01:28:04.7729803Z [command]"C:\Program Files\Git\bin\git.exe" config --local --get-all includeif.gitdir:D:/a/music-workbench/music-workbench/.git/worktrees/*.path
+2026-10-13T01:28:04.8026333Z D:\a\_temp\git-credentials-802e9cbc-029a-445f-803a-d4ed8a969caf.config
+2026-10-13T01:28:04.8076905Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset includeif.gitdir:D:/a/music-workbench/music-workbench/.git/worktrees/*.path D\:\\a\\_temp\\git\-credentials\-802e9cbc\-029a\-445f\-803a\-d4ed8a969caf\.config
+2026-10-13T01:28:04.8439987Z [command]"C:\Program Files\Git\bin\git.exe" config --local --get-all includeif.gitdir:/github/workspace/.git.path
+2026-10-13T01:28:04.8735035Z /github/runner_temp/git-credentials-802e9cbc-029a-445f-803a-d4ed8a969caf.config
+2026-10-13T01:28:04.8782264Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-802e9cbc\-029a\-445f\-803a\-d4ed8a969caf\.config
+2026-10-13T01:28:04.9117318Z [command]"C:\Program Files\Git\bin\git.exe" config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-10-13T01:28:04.9516319Z /github/runner_temp/git-credentials-802e9cbc-029a-445f-803a-d4ed8a969caf.config
+2026-10-13T01:28:04.9653575Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-802e9cbc\-029a\-445f\-803a\-d4ed8a969caf\.config
+2026-10-13T01:28:05.0100879Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
+2026-10-13T01:28:05.6724473Z Removing credentials config 'D:\a\_temp\git-credentials-802e9cbc-029a-445f-803a-d4ed8a969caf.config'
+2026-10-13T01:28:05.6950607Z Cleaning up orphan processes

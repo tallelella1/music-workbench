@@ -47,6 +47,8 @@ jobs:
               throw "Fixture-only verification cannot cover this change: $entry"
             }
           }
+      - name: Prepare pinned Electron runtime
+        run: node -e "console.log(require('electron'))"
       - run: npm run test:unit
         if: ${{ !inputs.fixture_repair_only }}
       - name: Build Windows installer and check types

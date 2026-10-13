@@ -1,0 +1,38 @@
+{
+  "sourceCommit": "a7812df85a8d867d71b155eb54bc9af5b1ce9ac3",
+  "legacyCommit": "4ca6957887a13095617de1f2b9ff011fdc2130c3",
+  "changes": [
+    ".github/workflows/windows.yml",
+    "docs/verification/checkpoint/ci-delivery-fix.md",
+    "docs/verification/checkpoint/ci-fixture-review.md",
+    "docs/verification/checkpoint/github-ci-third.log",
+    "docs/verification/checkpoint/player-progress.md",
+    "docs/verification/current-progress.md",
+    "docs/verification/github-source-delivery.md",
+    "docs/verification/github/2026-10-13/SHA256SUMS.txt",
+    "docs/verification/github/2026-10-13/ci-before-fixture-fix.json",
+    "docs/verification/github/2026-10-13/ci-fixture-scoped-result.json",
+    "docs/verification/github/2026-10-13/release-body.md",
+    "docs/verification/github/2026-10-13/release.json",
+    "docs/verification/github/2026-10-13/repository.json",
+    "docs/verification/github/2026-10-13/source-ci-update.json",
+    "docs/verification/github/2026-10-13/source-snapshot.json",
+    "docs/verification/music-player.md",
+    "tests/e2e/app-regression.spec.ts",
+    "tests/e2e/playback-lifecycle.spec.ts"
+  ],
+  "excluded": [
+    "D\t.superpowers/sdd/2026-10-03-music-player-implementation/task-6-report.md",
+    "D\tresources/bin/avcodec-63.dll",
+    "D\tresources/bin/avdevice-63.dll",
+    "D\tresources/bin/avfilter-12.dll",
+    "D\tresources/bin/avformat-63.dll",
+    "D\tresources/bin/avutil-61.dll",
+    "D\tresources/bin/ffmpeg.exe",
+    "D\tresources/bin/ffprobe.exe",
+    "D\tresources/bin/swresample-7.dll",
+    "D\tresources/bin/swscale-10.dll"
+  ],
+  "sourceParent": "9492eaa091e77ae9940c1f07e42a5f50de6d2ded",
+  "sourceTree": "3be4f5ce88fb8bf49022a72f65916b87b25cc32e"
+}
