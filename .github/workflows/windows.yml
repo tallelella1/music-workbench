@@ -30,7 +30,7 @@ jobs:
       - run: npm ci
       - run: npm run test:unit
       - name: Build Windows installer and check types
-        run: npm run dist:win
+        run: npm run dist:win -- --publish never
       - name: Verify packaged resources
         run: node scripts/check-package.ts
       - run: npm run test:integration
