@@ -10,10 +10,14 @@ async function fixture() {
   const directory = await mkdtemp(join(tmpdir(), 'music-player-lifecycle-'))
   const paths = await Promise.all(['A', 'B', 'C'].map((name, index) => makeAudioFile({ directory, name: `${name}.wav`, durationSeconds: index ? 3 : 0.3, toneHz: 440 * (index + 1) })))
   const desktop = await launchApp(join(directory, 'data'))
-  await desktop.app.evaluate(({ dialog }, selected) => { dialog.showOpenDialog = async () => ({ canceled: false, filePaths: selected }) }, paths)
-  await desktop.page.getByRole('button', { name: '添加音乐', exact: true }).click()
-  await expect(desktop.page.getByRole('button', { name: '播放 C', exact: true })).toBeVisible()
-  return { ...desktop, paths, close: async () => { await desktop.app.close(); await rm(directory, { recursive: true, force: true }) } }
+  const close = async () => { await desktop.app.close(); await rm(directory, { recursive: true, force: true }) }
+  try {
+    await desktop.app.evaluate(({ dialog }, selected) => { dialog.showOpenDialog = async () => ({ canceled: false, filePaths: selected }) }, paths)
+    await desktop.page.getByRole('button', { name: '添加音乐', exact: true }).click()
+    // Three real ffprobe imports are fixture setup; queue behavior is asserted below.
+    await expect(desktop.page.getByRole('button', { name: '播放 C', exact: true })).toBeVisible({ timeout: 15_000 })
+    return { ...desktop, paths, close }
+  } catch (error) { await close(); throw error }
 }
 
 for (const eventType of ['ended', 'error'] as const) test(`late native ${eventType} from A cannot change B while resolving`, async () => {

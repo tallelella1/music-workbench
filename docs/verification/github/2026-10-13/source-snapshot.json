@@ -1,0 +1,47 @@
+{
+  "legacyBranch": "codex/music-player",
+  "sourceFiles": 250,
+  "sourceTree": "b4c4b2151da1ef82e70ef3edbaed83ef13ec3908",
+  "legacyCommit": "41505b7c60058a74fabd36131a3d8eb33861b436",
+  "largest": [
+    {
+      "blob": "04c7ca0d5f3b598bfb5a1ed6a5307e408e9a9923",
+      "path": "docs/superpowers/references/default-music-visual.gif",
+      "bytes": 3323461
+    },
+    {
+      "blob": "2feacbfd65b6ffb8d224cec4cff25510bfcdb331",
+      "path": "package-lock.json",
+      "bytes": 235268
+    },
+    {
+      "blob": "080de70250f6fa7c24aa5ca4dceba38028bca68d",
+      "path": "docs/verification/checkpoint/task-1-ui.png",
+      "bytes": 160500
+    },
+    {
+      "blob": "aea4efb1e61436555236d14f0b01f1d9449f016b",
+      "path": "docs/verification/screenshots/audio-export.png",
+      "bytes": 128990
+    },
+    {
+      "blob": "7e168c8fe091113d6913f763ba70537aaaa527b9",
+      "path": "docs/verification/screenshots/task-7-fix-2-installed-export.png",
+      "bytes": 126634
+    }
+  ],
+  "sourceBranch": "codex/release-v0.1.0",
+  "sourceCommit": "33f66a1a5f2c6b48da1f53f5720c856c5223fc7a",
+  "excluded": [
+    "D\t.superpowers/sdd/2026-10-03-music-player-implementation/task-6-report.md",
+    "D\tresources/bin/avcodec-63.dll",
+    "D\tresources/bin/avdevice-63.dll",
+    "D\tresources/bin/avfilter-12.dll",
+    "D\tresources/bin/avformat-63.dll",
+    "D\tresources/bin/avutil-61.dll",
+    "D\tresources/bin/ffmpeg.exe",
+    "D\tresources/bin/ffprobe.exe",
+    "D\tresources/bin/swresample-7.dll",
+    "D\tresources/bin/swscale-10.dll"
+  ]
+}

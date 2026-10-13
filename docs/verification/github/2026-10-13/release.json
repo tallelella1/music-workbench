@@ -1,0 +1,45 @@
+{
+  "tagCommit": "9492eaa091e77ae9940c1f07e42a5f50de6d2ded",
+  "tag": "v0.1.0",
+  "assets": [
+    {
+      "digest": "sha256:0c610555e96a4cca2b04edb5cffd9b7aac7a9ec8e53b44e23c909bbcae2c828e",
+      "size": 1073741824,
+      "url": "https://github.com/tallelella1/music-workbench/releases/download/v0.1.0/MusicWorkbench-0.1.0-media-sources.7z.001",
+      "name": "MusicWorkbench-0.1.0-media-sources.7z.001",
+      "state": "uploaded"
+    },
+    {
+      "digest": "sha256:d931de3cd81233715b443510f6ca536a178cf60d0e8f15c2ae1789c68e8ffb8a",
+      "size": 1073741824,
+      "url": "https://github.com/tallelella1/music-workbench/releases/download/v0.1.0/MusicWorkbench-0.1.0-media-sources.7z.002",
+      "name": "MusicWorkbench-0.1.0-media-sources.7z.002",
+      "state": "uploaded"
+    },
+    {
+      "digest": "sha256:3ad2982011bd7338a54de704d6de346a20e8c4fcf3530b7c4012564574cc5325",
+      "size": 115693201,
+      "url": "https://github.com/tallelella1/music-workbench/releases/download/v0.1.0/MusicWorkbench-0.1.0-media-sources.7z.003",
+      "name": "MusicWorkbench-0.1.0-media-sources.7z.003",
+      "state": "uploaded"
+    },
+    {
+      "digest": "sha256:d125c98f96dfd1eeca94728b5d72b45010697d3fa051e0a2022fff5dbad243f5",
+      "size": 167004250,
+      "url": "https://github.com/tallelella1/music-workbench/releases/download/v0.1.0/MusicWorkbench-0.1.0-Setup.exe",
+      "name": "MusicWorkbench-0.1.0-Setup.exe",
+      "state": "uploaded"
+    },
+    {
+      "digest": "sha256:929208ddb46d0dad9f4911d964b436c3962e0fc4c34fd4c5c6017b483c7ea99c",
+      "size": 425,
+      "url": "https://github.com/tallelella1/music-workbench/releases/download/v0.1.0/SHA256SUMS.txt",
+      "name": "SHA256SUMS.txt",
+      "state": "uploaded"
+    }
+  ],
+  "url": "https://github.com/tallelella1/music-workbench/releases/tag/v0.1.0",
+  "draft": false,
+  "id": 410666352,
+  "targetCommitish": "9492eaa091e77ae9940c1f07e42a5f50de6d2ded"
+}

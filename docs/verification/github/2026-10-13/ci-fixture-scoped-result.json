@@ -1,0 +1,33 @@
+{
+  "startupWindowOrders": [
+    [
+      "音乐工作台",
+      ""
+    ],
+    [
+      "音乐工作台",
+      ""
+    ]
+  ],
+  "tests": [
+    {
+      "name": "remembered throw source",
+      "durationSeconds": 5.3
+    },
+    {
+      "name": "remembered hang source",
+      "durationSeconds": 6.1
+    },
+    {
+      "name": "removing queued B",
+      "durationSeconds": 2.1
+    }
+  ],
+  "productCommit": "6d36f7e",
+  "durationSeconds": 17.4,
+  "observedStdout": "3 passed (17.4s)",
+  "exitCode": 0,
+  "command": "npm run test:e2e -- --grep \"remembered (throw|hang) source|removing queued B\"",
+  "passed": 3,
+  "installerRebuilt": false
+}

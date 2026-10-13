@@ -6,6 +6,11 @@ on:
     paths-ignore: ['docs/**', 'README.md']
   pull_request:
   workflow_dispatch:
+    inputs:
+      fixture_repair_only:
+        description: 'Recheck the three repaired v0.1.0 UI fixture cases'
+        type: boolean
+        default: false
 
 permissions:
   contents: read
@@ -28,13 +33,33 @@ jobs:
         shell: pwsh
         run: ./scripts/setup-media.ps1
       - run: npm ci
+      - name: Guard the scope of the v0.1.0 fixture repair
+        if: ${{ inputs.fixture_repair_only }}
+        shell: pwsh
+        run: |
+          $baseline = '9492eaa091e77ae9940c1f07e42a5f50de6d2ded'
+          git fetch --no-tags --depth=1 origin $baseline
+          if ($LASTEXITCODE -ne 0) { throw 'Unable to fetch the already verified CI baseline' }
+          $changes = @(git diff --no-renames --name-only $baseline HEAD)
+          if ($LASTEXITCODE -ne 0) { throw 'Unable to compare the CI repair scope' }
+          foreach ($entry in $changes) {
+            if ($entry -notmatch '^(docs/|\.github/workflows/windows\.yml$|tests/e2e/(app-regression|playback-lifecycle)\.spec\.ts$)') {
+              throw "Fixture-only verification cannot cover this change: $entry"
+            }
+          }
       - run: npm run test:unit
+        if: ${{ !inputs.fixture_repair_only }}
       - name: Build Windows installer and check types
         run: npm run dist:win -- --publish never
       - name: Verify packaged resources
         run: node scripts/check-package.ts
       - run: npm run test:integration
+        if: ${{ !inputs.fixture_repair_only }}
       - run: npm run test:e2e
+        if: ${{ !inputs.fixture_repair_only }}
+      - name: Recheck repaired v0.1.0 UI fixtures
+        if: ${{ inputs.fixture_repair_only }}
+        run: npm run test:e2e -- --grep "remembered (throw|hang) source|removing queued B"
       - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7
         with:
           name: MusicWorkbench-Windows-x64

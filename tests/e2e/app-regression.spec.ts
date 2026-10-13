@@ -63,9 +63,21 @@ for (const failure of ['throw', 'hang'] as const) test(`remembered ${failure} so
     await writeFile(join(data, 'settings.json'), JSON.stringify({ schemaVersion: 1, assets: [], preferences: { ...defaultSettings(), enabledSources: ['wy', 'kg', 'tx', id] } }))
     await writeFile(join(data, 'extensions.json'), JSON.stringify([{ manifest: { id, name: 'Startup failure', version: '', contractMajor: 1, platformIds: ['wy'], qualities: ['128k'], enabled: true, compatibilityError: null }, script: { name: 'Startup failure', version: '', description: '', author: '', homepage: '', rawScript: failure === 'throw' ? "throw new Error('startup fixture')" : 'while (true) {}' } }]))
     const path = await makeAudioFile({ directory, name: '启动本地音乐.wav', durationSeconds: 20, toneHz: 440 })
-    app = await _electron.launch({ args: [resolve('out/main/index.js')], env: { ...process.env, MUSIC_APP_USER_DATA_DIR: data } })
-    await expect.poll(() => app!.windows().some(page => page.url().includes('/renderer/index.html')), { timeout: 3000 }).toBe(true)
-    const page = app.windows().find(page => page.url().includes('/renderer/index.html'))!; await page.waitForLoadState('domcontentloaded')
+    const bootstrap = join(directory, 'observe-startup.cjs')
+    await writeFile(bootstrap, [
+      "const { app } = require('electron')",
+      'globalThis.startupWindowOrder = []',
+      "app.on('browser-window-created', (_event, window) => globalThis.startupWindowOrder.push(window.getTitle()))",
+      `require(${JSON.stringify(resolve('out/main/index.js'))})`
+    ].join('\n'))
+    app = await _electron.launch({ args: [bootstrap], env: { ...process.env, MUSIC_APP_USER_DATA_DIR: data } })
+    const windowOrder = () => app!.evaluate(() => (globalThis as typeof globalThis & { startupWindowOrder: string[] }).startupWindowOrder)
+    await expect.poll(async () => (await windowOrder()).length).toBeGreaterThan(1)
+    // Creation order proves that LX initialization cannot delay the main window,
+    // independently of the CI machine's renderer loading speed.
+    expect((await windowOrder())[0]).toBe('音乐工作台')
+    const page = await app.firstWindow(); await page.waitForURL(/\/renderer\/index\.html$/); await page.waitForLoadState('domcontentloaded')
+    console.log('Startup window order:', JSON.stringify(await windowOrder()))
     await app.evaluate(({ dialog }, path) => { dialog.showOpenDialog = async () => ({ canceled: false, filePaths: [path] }) }, path)
     await page.getByRole('button', { name: '添加音乐', exact: true }).click(); await page.getByRole('button', { name: '播放 启动本地音乐', exact: true }).click(); await expect(page.locator('.player-bar')).toHaveAttribute('data-status', 'playing')
     await page.getByRole('button', { name: '编辑当前歌曲', exact: true }).click(); await expect(page.getByRole('dialog', { name: '音频编辑' })).toBeVisible()

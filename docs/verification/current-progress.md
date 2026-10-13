@@ -1,6 +1,6 @@
 # 项目实施进度
 
-更新时间：2026-10-12，Asia/Hong_Kong。用户已要求接管并继续，恢复自 Task 7 Fix 2 可复现退出回归检查点；[2026-10-11 暂停交接](pause-2026-10-11.md) 保留历史。本轮范围仍为播放器首版与私有仓库 `tallelella1/music-workbench`；AI 音频编辑和模板动效保留后续。沿用已有规格和 `codex/music-player`，不重新实施已审查任务。
+更新时间：2026-10-13，Asia/Hong_Kong。本轮基础播放器已完成产品验收和最终独立审查，源码已推送至私有仓库 `tallelella1/music-workbench`，首版 `v0.1.0` 已正式发布。[2026-10-11 暂停交接](pause-2026-10-11.md) 保留历史。AI 音频编辑和模板动效保留为后续独立范围，不属于本轮首版交付。
 
 用户尚未提供真实 LX 音源或 Gemini 配置。真实第三方整曲和模型请求保持未配置，安装版实际运行的本机测试音源与实时平台搜索分别记录，不互相替代。个人试听仍待用户完成。
 
@@ -21,10 +21,14 @@
 
 ## GitHub 交付
 
-[私有仓库](https://github.com/tallelella1/music-workbench) 已创建并确认账号和隐私属性。源码尚未推送，安装版发行附件尚未发布。固定媒体 DLL 超过 GitHub 普通 Git 单文件限制，采用保留本地全部历史的源码快照，克隆后由 `scripts/setup-media.ps1` 恢复核验过的媒体运行时；策略与已执行检查见 [GitHub 源码交付](github-source-delivery.md)。安装构建未签名，完整媒体源码材料已准备为三个发行分卷。
+[私有仓库](https://github.com/tallelella1/music-workbench) 已确认账号和隐私属性，源码 `9492eaa091e77ae9940c1f07e42a5f50de6d2ded` 已快进推送至 `main`。[正式发行版](https://github.com/tallelella1/music-workbench/releases/tag/v0.1.0) 返回 `draft=false`，标签固定到该源码提交。最终安装包、三个媒体源码分卷与 `SHA256SUMS.txt` 五个附件全部 `uploaded`，服务器大小与 SHA256 均匹配。原始发布证据见 [release.json](github/2026-10-13/release.json)。
 
-## 待完成
+固定媒体 DLL 超过普通 Git 单文件限制，源码快照保留本地全部开发历史，克隆后由 `scripts/setup-media.ps1` 恢复核验过的媒体运行时；[GitHub 源码交付](github-source-delivery.md) 保存对应关系。发布后对 `main` 的记录更新不改变 `v0.1.0` 标签和已验收附件。
 
-合并独立审查已通过，直接推送私有仓库并发布已核验的新安装程序与媒体源码材料。准确下次顺序见 [暂停交接](pause-2026-10-11.md)。验收入口为 [播放器验收记录](music-player.md)。
+远端首次 CI 的构建顺序与临时路径别名问题已修正；第二次 CI 的 electron-builder 自动发布问题已通过 `--publish never` 修正。第三次运行 unit 79/79、integration 67/67、类型/构建/资源检查通过，界面 35 passed / 2 failed；两项失败为测试前提的短等待。启动检查改为直接验证窗口创建顺序，队列 fixture 等待真实导入并在失败时清理。本地只复验相关三项，3/3（17.4 秒）通过；产品与已发布安装包未改，完整本地测试未重跑。原始失败日志均保留，最终远端结果待记录。
+
+## 交付记录收尾
+
+安装包和源码发布已完成，等待当前远端 CI 的最终结果并提交发布记录。验收入口为 [播放器验收记录](music-player.md)，已通过本地验证不再重复。
 
 准确任务与提交状态分别保存在 [基础 ledger](checkpoint/player-progress.md)、[音频 ledger](checkpoint/audio-progress.md)、[视觉 ledger](checkpoint/visual-progress.md)。[2026-10-06 暂停记录](pause-2026-10-06.md) 仅保留历史交接，本轮继续执行。

@@ -1,6 +1,6 @@
 # 音乐工作台 v0.1.0 验收
 
-日期：2026-10-12，Asia/Hong_Kong。本轮交付基础播放器并推送私有仓库；AI 音频编辑与模板动效保留为后续独立范围。用户最新要求尽快结束并减少非必要测试，已通过的完整测试不再重跑。
+验收日期：2026-10-12；发布日期：2026-10-13，Asia/Hong_Kong。本轮基础播放器已完成验收并发布至私有仓库；AI 音频编辑与模板动效保留为后续独立范围。用户要求尽快结束并减少非必要测试，已通过的本地完整测试不再重跑。
 
 ## 功能与实际安装
 
@@ -32,6 +32,12 @@ d125c98f96dfd1eeca94728b5d72b45010697d3fa051e0a2022fff5dbad243f5
 
 ## 源码与发布
 
-[私有仓库](https://github.com/tallelella1/music-workbench) 已创建；[最终合并独立审查](checkpoint/base-final-review-2026-10-12.md)已通过，无阻断项；远端交付正在执行。普通 Git 源码快照排除超限媒体 DLL，保留本地全部开发历史；克隆后通过固定版本与 SHA256 核验的恢复脚本获得 9 个媒体文件。详见 [源码交付](github-source-delivery.md)。
+[私有仓库](https://github.com/tallelella1/music-workbench) 源码已推送，[正式发行版 v0.1.0](https://github.com/tallelella1/music-workbench/releases/tag/v0.1.0) 已发布，release ID `410666352`，`draft=false`。标签经 GitHub API 核对为 `9492eaa091e77ae9940c1f07e42a5f50de6d2ded`，对应冻结产品 `6d36f7e`；后续只有 CI 环境、fixture 和交付记录变化，应用源码及依赖未改。[最终合并独立审查](checkpoint/base-final-review-2026-10-12.md)通过，无阻断项。
+
+安装包 `167004250` bytes、媒体分卷 `.001`/`.002` 各 `1073741824` bytes、`.003` 为 `115693201` bytes，以及 `425` bytes 的 `SHA256SUMS.txt`，五个附件均为 `uploaded`。每次上传均验证服务器大小、状态和 SHA256，正式发布再次核对全部五个摘要；[发布 API 记录](github/2026-10-13/release.json)及[校验清单](github/2026-10-13/SHA256SUMS.txt)保存结果。发布的是通过实际安装验收的原安装包，没有用 CI 的另一构建替换附件。
+
+普通 Git 源码快照排除超限媒体 DLL，保留本地全部开发历史；克隆后通过固定版本与 SHA256 核验的恢复脚本获得 9 个媒体文件。[源码快照](github/2026-10-13/source-snapshot.json)与[CI 源码更新](github/2026-10-13/source-ci-update.json)保留 tree 对应关系。详见 [源码交付](github-source-delivery.md)。
+
+第三次 [Windows CI](https://github.com/tallelella1/music-workbench/actions/runs/38329912973) 的 unit 79/79、integration 67/67、类型/构建/资源检查通过，界面为 35 passed / 2 failed / 8 installed-only skipped。两项测试前提已修正：启动直接验证主窗口先于 LX 创建，队列 fixture 等待三个真实导入并清理失败资源。本地仅复验相关三项，3/3（17.4 秒）通过；下一次远端结果待记录。[CI 记录](checkpoint/ci-delivery-fix.md)保留全部失败与修正，未将失败或尚未结束的运行称为通过。
 
 媒体源码 262 文件已核验，三个发行分卷完整性检查通过。材料继续披露构建时 cargo update cc 后准确 build-helper lock 未留存及实际链接闭包未完全确认的限制，不承诺字节一致重建；见 [媒体源码材料记录](../research/2026-10-04-media-source-delivery.md)。

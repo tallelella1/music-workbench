@@ -1,0 +1,576 @@
+﻿2026-10-13T00:59:05.3961257Z Current runner version: '2.337.0'
+2026-10-13T00:59:05.4001624Z ##[group]Runner Image Provisioner
+2026-10-13T00:59:05.4002896Z Hosted Compute Agent
+2026-10-13T00:59:05.4003845Z Version: 20260901.588
+2026-10-13T00:59:05.4004732Z Commit: f88ec8081b781fac6c440065ac7ff9e710ce3d0b
+2026-10-13T00:59:05.4005630Z Build Date: 2026-09-01T19:56:44Z
+2026-10-13T00:59:05.4006606Z Worker ID: {db69257a-f0ca-42c6-afb5-e78860fca1c9}
+2026-10-13T00:59:05.4007674Z Azure Region: southcentralus
+2026-10-13T00:59:05.4008488Z ##[endgroup]
+2026-10-13T00:59:05.4011036Z ##[group]Operating System
+2026-10-13T00:59:05.4012104Z Microsoft Windows Server 2025
+2026-10-13T00:59:05.4013004Z 10.0.26100
+2026-10-13T00:59:05.4013737Z Datacenter
+2026-10-13T00:59:05.4014523Z ##[endgroup]
+2026-10-13T00:59:05.4015225Z ##[group]Runner Image
+2026-10-13T00:59:05.4016066Z Image: windows-2025-vs2026
+2026-10-13T00:59:05.4016873Z Version: 20260925.250.1
+2026-10-13T00:59:05.4019122Z Included Software: https://github.com/actions/runner-images/blob/win25-vs2026/20260925.250/images/windows/Windows2025-VS2026-Readme.md
+2026-10-13T00:59:05.4021588Z Image Release: https://github.com/actions/runner-images/releases/tag/win25-vs2026%2F20260925.250
+2026-10-13T00:59:05.4023075Z ##[endgroup]
+2026-10-13T00:59:05.4025095Z ##[group]GITHUB_TOKEN Permissions
+2026-10-13T00:59:05.4027897Z Contents: read
+2026-10-13T00:59:05.4028797Z Metadata: read
+2026-10-13T00:59:05.4029598Z ##[endgroup]
+2026-10-13T00:59:05.4033909Z Secret source: Actions
+2026-10-13T00:59:05.4035358Z Cache mode: write
+2026-10-13T00:59:05.4036858Z Prepare workflow directory
+2026-10-13T00:59:05.4654818Z Prepare all required actions
+2026-10-13T00:59:05.4729645Z Getting action download info
+2026-10-13T00:59:05.7439811Z Download action repository 'actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+2026-10-13T00:59:05.8939578Z Download action repository 'actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1' (SHA:949feb2413d6458794dcd2491c4babbbce0c15c1)
+2026-10-13T00:59:06.4435930Z Download action repository 'actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9' (SHA:cf430e030ddbb5b0abf93d22962f4752f3646cd9)
+2026-10-13T00:59:07.0710265Z Complete job name: verify
+2026-10-13T00:59:07.2608334Z ##[group]Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+2026-10-13T00:59:07.2610554Z with:
+2026-10-13T00:59:07.2611463Z   repository: tallelella1/music-workbench
+2026-10-13T00:59:07.2618357Z   token: ***
+2026-10-13T00:59:07.2619121Z   ssh-strict: true
+2026-10-13T00:59:07.2619918Z   ssh-user: git
+2026-10-13T00:59:07.2620757Z   persist-credentials: true
+2026-10-13T00:59:07.2621653Z   clean: true
+2026-10-13T00:59:07.2622447Z   sparse-checkout-cone-mode: true
+2026-10-13T00:59:07.2623390Z   fetch-depth: 1
+2026-10-13T00:59:07.2624188Z   fetch-tags: false
+2026-10-13T00:59:07.2624998Z   show-progress: true
+2026-10-13T00:59:07.2625858Z   lfs: false
+2026-10-13T00:59:07.2626698Z   submodules: false
+2026-10-13T00:59:07.2627893Z   set-safe-directory: true
+2026-10-13T00:59:07.2628914Z   allow-unsafe-pr-checkout: false
+2026-10-13T00:59:07.2630302Z ##[endgroup]
+2026-10-13T00:59:08.2098995Z Syncing repository: tallelella1/music-workbench
+2026-10-13T00:59:08.2101862Z ##[group]Getting Git version info
+2026-10-13T00:59:08.2103157Z Working directory is 'D:\a\music-workbench\music-workbench'
+2026-10-13T00:59:08.2105046Z [command]"C:\Program Files\Git\bin\git.exe" version
+2026-10-13T00:59:08.2106036Z git version 2.55.0.windows.5
+2026-10-13T00:59:08.2109549Z ##[endgroup]
+2026-10-13T00:59:08.2117823Z Temporarily overriding HOME='D:\a\_temp\2a357d85-d4c9-4fad-895f-5ce61721533a' before making global git config changes
+2026-10-13T00:59:08.2119771Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-13T00:59:08.2121776Z [command]"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory D:\a\music-workbench\music-workbench
+2026-10-13T00:59:08.2126895Z Deleting the contents of 'D:\a\music-workbench\music-workbench'
+2026-10-13T00:59:08.2131810Z ##[group]Determining repository object format
+2026-10-13T00:59:08.2133779Z ##[endgroup]
+2026-10-13T00:59:08.2135127Z ##[group]Initializing the repository
+2026-10-13T00:59:08.2136667Z [command]"C:\Program Files\Git\bin\git.exe" init D:\a\music-workbench\music-workbench
+2026-10-13T00:59:08.2285324Z Initialized empty Git repository in D:/a/music-workbench/music-workbench/.git/
+2026-10-13T00:59:08.2347164Z [command]"C:\Program Files\Git\bin\git.exe" remote add origin https://github.com/tallelella1/music-workbench
+2026-10-13T00:59:08.3363107Z ##[endgroup]
+2026-10-13T00:59:08.3364675Z ##[group]Disabling automatic garbage collection
+2026-10-13T00:59:08.3365971Z [command]"C:\Program Files\Git\bin\git.exe" config --local gc.auto 0
+2026-10-13T00:59:09.2007375Z ##[endgroup]
+2026-10-13T00:59:09.2008225Z ##[group]Setting up auth
+2026-10-13T00:59:09.2008986Z Removing SSH command configuration
+2026-10-13T00:59:09.2009797Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+2026-10-13T00:59:09.2012121Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+2026-10-13T00:59:10.1329636Z Removing HTTP extra header
+2026-10-13T00:59:10.1341398Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-13T00:59:10.1669523Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+2026-10-13T00:59:10.8327597Z Removing includeIf entries pointing to credentials config files
+2026-10-13T00:59:10.8355400Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-13T00:59:10.8674175Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
+2026-10-13T00:59:11.4432496Z [command]"C:\Program Files\Git\bin\git.exe" config --file D:\a\_temp\git-credentials-837dc978-b1d6-4a8e-ad01-b186d630e62b.config http.https://github.com/.extraheader "AUTHORIZATION: basic ***"
+2026-10-13T00:59:11.4754370Z [command]"C:\Program Files\Git\bin\git.exe" config --local includeIf.gitdir:D:/a/music-workbench/music-workbench/.git.path D:\a\_temp\git-credentials-837dc978-b1d6-4a8e-ad01-b186d630e62b.config
+2026-10-13T00:59:11.5227706Z [command]"C:\Program Files\Git\bin\git.exe" config --local includeIf.gitdir:D:/a/music-workbench/music-workbench/.git/worktrees/*.path D:\a\_temp\git-credentials-837dc978-b1d6-4a8e-ad01-b186d630e62b.config
+2026-10-13T00:59:11.5645407Z [command]"C:\Program Files\Git\bin\git.exe" config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-837dc978-b1d6-4a8e-ad01-b186d630e62b.config
+2026-10-13T00:59:11.6152087Z [command]"C:\Program Files\Git\bin\git.exe" config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-837dc978-b1d6-4a8e-ad01-b186d630e62b.config
+2026-10-13T00:59:11.6435354Z ##[endgroup]
+2026-10-13T00:59:11.6436255Z ##[group]Fetching the repository
+2026-10-13T00:59:11.6449819Z [command]"C:\Program Files\Git\bin\git.exe" -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +9492eaa091e77ae9940c1f07e42a5f50de6d2ded:refs/remotes/origin/main
+2026-10-13T00:59:13.0369997Z From https://github.com/tallelella1/music-workbench
+2026-10-13T00:59:13.0371261Z  * [new ref]         9492eaa091e77ae9940c1f07e42a5f50de6d2ded -> origin/main
+2026-10-13T00:59:13.0452520Z [command]"C:\Program Files\Git\bin\git.exe" branch --list --remote origin/main
+2026-10-13T00:59:13.0887910Z   origin/main
+2026-10-13T00:59:13.0945158Z [command]"C:\Program Files\Git\bin\git.exe" rev-parse refs/remotes/origin/main
+2026-10-13T00:59:13.1234845Z 9492eaa091e77ae9940c1f07e42a5f50de6d2ded
+2026-10-13T00:59:13.1276930Z ##[endgroup]
+2026-10-13T00:59:13.1277875Z ##[group]Determining the checkout info
+2026-10-13T00:59:13.1278769Z ##[endgroup]
+2026-10-13T00:59:13.1288500Z [command]"C:\Program Files\Git\bin\git.exe" sparse-checkout disable
+2026-10-13T00:59:13.1768676Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset-all extensions.worktreeConfig
+2026-10-13T00:59:13.2132577Z ##[group]Checking out the ref
+2026-10-13T00:59:13.2140440Z [command]"C:\Program Files\Git\bin\git.exe" checkout --progress --force -B main refs/remotes/origin/main
+2026-10-13T00:59:13.3783350Z Switched to a new branch 'main'
+2026-10-13T00:59:13.3859555Z branch 'main' set up to track 'origin/main'.
+2026-10-13T00:59:13.3927182Z ##[endgroup]
+2026-10-13T00:59:13.4385986Z [command]"C:\Program Files\Git\bin\git.exe" log -1 --format=%H
+2026-10-13T00:59:13.4684716Z 9492eaa091e77ae9940c1f07e42a5f50de6d2ded
+2026-10-13T00:59:13.5243202Z ##[group]Run actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1
+2026-10-13T00:59:13.5243869Z with:
+2026-10-13T00:59:13.5244184Z   node-version: 24.11.1
+2026-10-13T00:59:13.5244549Z   cache: npm
+2026-10-13T00:59:13.5244851Z   check-latest: false
+2026-10-13T00:59:13.5247264Z   token: ***
+2026-10-13T00:59:13.5247584Z   package-manager-cache: true
+2026-10-13T00:59:13.5247922Z ##[endgroup]
+2026-10-13T00:59:13.7105466Z Attempting to download 24.11.1...
+2026-10-13T00:59:14.5140017Z Acquiring 24.11.1 - x64 from https://github.com/actions/node-versions/releases/download/24.11.1-19282993875/node-24.11.1-win32-x64.7z
+2026-10-13T00:59:15.0502131Z Extracting ...
+2026-10-13T00:59:17.6352657Z Adding to the cache ...
+2026-10-13T00:59:24.6259785Z ##[group]Environment details
+2026-10-13T00:59:26.5102399Z node: v24.11.1
+2026-10-13T00:59:26.5103332Z npm: 11.6.2
+2026-10-13T00:59:26.5103927Z yarn: 1.22.22
+2026-10-13T00:59:26.5104967Z ##[endgroup]
+2026-10-13T00:59:26.5670143Z [command]C:\Windows\system32\cmd.exe /D /S /C "C:\hostedtoolcache\windows\node\24.11.1\x64\npm.cmd config get cache"
+2026-10-13T00:59:26.8657638Z C:\npm\cache
+2026-10-13T00:59:27.2457309Z npm cache is not found
+2026-10-13T00:59:27.2864249Z ##[group]Run ./scripts/setup-media.ps1
+2026-10-13T00:59:27.2865002Z [36;1m./scripts/setup-media.ps1[0m
+2026-10-13T00:59:27.3443473Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+2026-10-13T00:59:27.3444315Z ##[endgroup]
+2026-10-13T00:59:27.9891562Z Downloading fixed media runtime: n9.0.2-22-g46d8f462ee-20261001
+2026-10-13T00:59:31.8391263Z Installed 9 hash-verified media binaries: n9.0.2-22-g46d8f462ee-20261001 (GPL-3.0-or-later)
+2026-10-13T00:59:31.9971058Z ##[group]Run npm ci
+2026-10-13T00:59:31.9971666Z [36;1mnpm ci[0m
+2026-10-13T00:59:32.0040701Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+2026-10-13T00:59:32.0041053Z ##[endgroup]
+2026-10-13T00:59:40.1394882Z npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+2026-10-13T00:59:40.6096248Z npm warn deprecated rimraf@2.6.3: Rimraf versions prior to v4 are no longer supported
+2026-10-13T00:59:40.6171286Z npm warn deprecated glob@7.2.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+2026-10-13T00:59:42.9436843Z npm warn deprecated boolean@3.2.0: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
+2026-10-13T00:59:54.3309783Z
+2026-10-13T00:59:54.3311140Z added 381 packages, and audited 382 packages in 21s
+2026-10-13T00:59:54.3312064Z
+2026-10-13T00:59:54.3312767Z 71 packages are looking for funding
+2026-10-13T00:59:54.3321053Z   run `npm fund` for details
+2026-10-13T00:59:54.3549949Z
+2026-10-13T00:59:54.3551805Z 9 vulnerabilities (8 moderate, 1 high)
+2026-10-13T00:59:54.3552461Z
+2026-10-13T00:59:54.3553361Z To address issues that do not require attention, run:
+2026-10-13T00:59:54.3563555Z   npm audit fix
+2026-10-13T00:59:54.3570855Z
+2026-10-13T00:59:54.3571870Z To address all issues (including breaking changes), run:
+2026-10-13T00:59:54.3572800Z   npm audit fix --force
+2026-10-13T00:59:54.3573576Z
+2026-10-13T00:59:54.3574194Z Run `npm audit` for details.
+2026-10-13T00:59:55.8377001Z ##[group]Run npm run test:unit
+2026-10-13T00:59:55.8377525Z [36;1mnpm run test:unit[0m
+2026-10-13T00:59:55.8452462Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+2026-10-13T00:59:55.8452913Z ##[endgroup]
+2026-10-13T00:59:56.6713687Z
+2026-10-13T00:59:56.6773084Z > music-workbench@0.1.0 test:unit
+2026-10-13T00:59:56.6790270Z > vitest run --exclude=tests/integration/**
+2026-10-13T00:59:56.6797321Z
+2026-10-13T00:59:57.3150461Z
+2026-10-13T00:59:57.3190278Z [1m[30m[46m RUN [49m[39m[22m [36mv5.0.3 [39m[90mD:/a/music-workbench/music-workbench[39m
+2026-10-13T00:59:57.3203878Z
+2026-10-13T00:59:58.0390359Z  [32m✓[39m tests/unit/search-service.test.ts [2m([22m[2m10 tests[22m[2m)[22m[32m 110[2mms[22m[39m
+2026-10-13T00:59:58.3542025Z  [32m✓[39m tests/unit/contracts.test.ts [2m([22m[2m15 tests[22m[2m)[22m[32m 34[2mms[22m[39m
+2026-10-13T00:59:59.3933325Z  [32m✓[39m tests/unit/settings.test.ts [2m([22m[2m13 tests[22m[2m)[22m[33m 663[2mms[22m[39m
+2026-10-13T00:59:59.3935306Z    [33m[2m✓[22m[39m concurrent actual imports retain preferences and complete asset index[33m 526[2mms[22m[39m
+2026-10-13T00:59:59.8501870Z  [32m✓[39m tests/unit/storage.test.ts [2m([22m[2m7 tests[22m[2m)[22m[32m 182[2mms[22m[39m
+2026-10-13T01:00:00.2020002Z  [32m✓[39m tests/unit/player-queue.test.ts [2m([22m[2m6 tests[22m[2m)[22m[32m 171[2mms[22m[39m
+2026-10-13T01:00:00.6155746Z  [32m✓[39m tests/unit/filter-builder.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 145[2mms[22m[39m
+2026-10-13T01:00:00.9322833Z  [32m✓[39m tests/unit/track-version.test.ts [2m([22m[2m19 tests[22m[2m)[22m[32m 13[2mms[22m[39m
+2026-10-13T01:00:05.8095144Z [90mstdout[2m | tests/unit/lx-contracts.test.ts
+2026-10-13T01:00:05.8096278Z [22m[39mDownloading Electron binary...
+2026-10-13T01:00:05.8127583Z
+2026-10-13T01:00:05.9886646Z  [32m✓[39m tests/unit/lx-contracts.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+2026-10-13T01:00:06.1906430Z  [32m✓[39m tests/unit/matcher.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 19[2mms[22m[39m
+2026-10-13T01:00:06.4277055Z  [32m✓[39m tests/unit/playback-renewal.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 59[2mms[22m[39m
+2026-10-13T01:00:06.6115161Z  [32m✓[39m tests/unit/source-diagnostics.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 4[2mms[22m[39m
+2026-10-13T01:00:06.6219726Z
+2026-10-13T01:00:06.6221587Z [2m Test Files [22m [1m[32m11 passed[39m[22m[90m (11)[39m
+2026-10-13T01:00:06.6222637Z [2m      Tests [22m [1m[32m79 passed[39m[22m[90m (79)[39m
+2026-10-13T01:00:06.6223451Z [2m   Start at [22m 00:59:57
+2026-10-13T01:00:06.6224497Z [2m   Duration [22m 9.29s[2m (import 73%, tests 19%, transform 8%, worker 1%)[22m
+2026-10-13T01:00:06.6225078Z
+2026-10-13T01:00:06.6225943Z [2m     Import [22m [33m50 modules were evaluated 70 times[39m[2m · 5.45s total, 73% of tracked time[22m
+2026-10-13T01:00:06.6227604Z [2m            [22m [2m~1.56s faster with [22m[33misolate: false[39m[2m — shared modules are evaluated once per worker instead of once per file[22m
+2026-10-13T01:00:06.6229492Z [2m            [22m [2mlearn more: https://vitest.dev/guide/improving-performance#test-isolation[22m
+2026-10-13T01:00:06.6230181Z
+2026-10-13T01:00:06.7640406Z ##[group]Run npm run dist:win -- --publish never
+2026-10-13T01:00:06.7641067Z [36;1mnpm run dist:win -- --publish never[0m
+2026-10-13T01:00:06.7708166Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+2026-10-13T01:00:06.7708673Z ##[endgroup]
+2026-10-13T01:00:07.6099956Z
+2026-10-13T01:00:07.6101311Z > music-workbench@0.1.0 dist:win
+2026-10-13T01:00:07.6114197Z > npm run check:media && npm run typecheck && npm run build && electron-builder --config electron-builder.yml --win nsis --publish never
+2026-10-13T01:00:07.6117171Z
+2026-10-13T01:00:07.9157831Z
+2026-10-13T01:00:07.9159021Z > music-workbench@0.1.0 check:media
+2026-10-13T01:00:07.9160049Z > node scripts/check-media-runtime.ts
+2026-10-13T01:00:07.9160517Z
+2026-10-13T01:00:08.5127949Z Verified 9 media binaries: n9.0.2-22-g46d8f462ee-20261001, GPL-3.0-or-later; required audio encoders/filters present
+2026-10-13T01:00:08.8143438Z
+2026-10-13T01:00:08.8144560Z > music-workbench@0.1.0 typecheck
+2026-10-13T01:00:08.8145731Z > tsc --noEmit
+2026-10-13T01:00:08.8146108Z
+2026-10-13T01:00:11.2455293Z
+2026-10-13T01:00:11.2456677Z > music-workbench@0.1.0 build
+2026-10-13T01:00:11.2457543Z > electron-vite build
+2026-10-13T01:00:11.2457996Z
+2026-10-13T01:00:11.9103785Z [36mvite v7.3.6 [32mbuilding ssr environment for production...[36m[39m
+2026-10-13T01:00:11.9955378Z transforming...
+2026-10-13T01:00:12.3967332Z [32m✓[39m 38 modules transformed.
+2026-10-13T01:00:12.4637365Z rendering chunks...
+2026-10-13T01:00:12.4691281Z [2mout/main/[22m[36mindex.js  [39m[1m[2m135.70 kB[22m[1m[22m
+2026-10-13T01:00:12.4692793Z [32m✓ built in 533ms[39m
+2026-10-13T01:00:12.4747427Z [36mvite v7.3.6 [32mbuilding ssr environment for production...[36m[39m
+2026-10-13T01:00:12.4836291Z transforming...
+2026-10-13T01:00:13.2759793Z [32m✓[39m 104 modules transformed.
+2026-10-13T01:00:13.3497220Z rendering chunks...
+2026-10-13T01:00:13.3499475Z [2mout/preload/[22m[36mindex.js  [39m[1m[2m214.51 kB[22m[1m[22m
+2026-10-13T01:00:13.4634437Z [32m✓ built in 988ms[39m
+2026-10-13T01:00:13.4688590Z [36mvite v7.3.6 [32mbuilding client environment for production...[36m[39m
+2026-10-13T01:00:13.5003511Z transforming...
+2026-10-13T01:00:15.8300366Z [32m✓[39m 144 modules transformed.
+2026-10-13T01:00:16.0322728Z rendering chunks...
+2026-10-13T01:00:16.0510302Z [2m../../out/renderer/[22m[32mindex.html                 [39m[1m[2m  0.70 kB[22m[1m[22m
+2026-10-13T01:00:16.0511742Z [2m../../out/renderer/[22m[35massets/index-Dkd22UjO.css  [39m[1m[2m 23.44 kB[22m[1m[22m
+2026-10-13T01:00:16.0520797Z [2m../../out/renderer/[22m[36massets/index-DcwZNuPj.js   [39m[1m[33m951.23 kB[39m[22m
+2026-10-13T01:00:16.0531333Z [32m✓ built in 2.58s[39m
+2026-10-13T01:00:17.3222380Z   • electron-builder  version=26.15.3 os=10.0.26100
+2026-10-13T01:00:17.3223386Z   • loaded configuration  file=D:\a\music-workbench\music-workbench\electron-builder.yml
+2026-10-13T01:00:17.9622097Z   • executing @electron/rebuild  electronVersion=44.5.1 arch=x64 buildFromSource=false workspaceRoot=D:\a\music-workbench\music-workbench projectDir=./ appDir=./
+2026-10-13T01:00:17.9624880Z   • installing native dependencies  arch=x64
+2026-10-13T01:00:18.1704415Z   • completed installing native dependencies
+2026-10-13T01:00:18.1788458Z   • packaging       platform=win32 arch=x64 electron=44.5.1 appOutDir=release\win-unpacked
+2026-10-13T01:00:18.1800701Z   • using custom unpacked Electron distribution  electronDist=node_modules\electron\dist
+2026-10-13T01:00:18.1803066Z   • copying unpacked Electron  source=D:\a\music-workbench\music-workbench\node_modules\electron\dist destination=D:\a\music-workbench\music-workbench\release\win-unpacked
+2026-10-13T01:00:18.5512492Z   • searching for node modules  pm=npm searchDir=D:\a\music-workbench\music-workbench
+2026-10-13T01:00:22.6586834Z   • duplicate dependency references  dependencies=["debug@4.4.3","token-types@6.1.2","strtok3@10.3.5","token-types@6.1.2"]
+2026-10-13T01:00:25.5781895Z   • updating asar integrity executable resource  executablePath=release\win-unpacked\MusicWorkbench.exe
+2026-10-13T01:00:25.6548932Z   • signing with signtool.exe  path=release\win-unpacked\resources\resources\bin\ffmpeg.exe
+2026-10-13T01:00:25.6629286Z   • signing with signtool.exe  path=release\win-unpacked\resources\resources\bin\ffprobe.exe
+2026-10-13T01:00:25.6959993Z   • default Electron icon is used  reason=application icon is not set
+2026-10-13T01:00:26.3767713Z   • signing with signtool.exe  path=release\win-unpacked\MusicWorkbench.exe
+2026-10-13T01:00:26.3788129Z   • building        target=nsis file=release\MusicWorkbench-0.1.0-Setup.exe archs=x64 oneClick=false perMachine=false
+2026-10-13T01:00:26.5455579Z   • downloaded      label=nsis-3.0.4.1.7z progress=100%
+2026-10-13T01:00:26.7495586Z   • downloaded      label=7zip-win-x64.tar.gz progress=100%
+2026-10-13T01:00:27.6377168Z   • signing with signtool.exe  path=release\win-unpacked\resources\elevate.exe
+2026-10-13T01:02:39.5874053Z   • downloaded      label=nsis-resources-3.4.1.7z progress=100%
+2026-10-13T01:02:41.1497211Z   • signing with signtool.exe  path=release\MusicWorkbench-0.1.0-Setup.__uninstaller.exe
+2026-10-13T01:02:44.2323945Z   • signing with signtool.exe  path=release\MusicWorkbench-0.1.0-Setup.exe
+2026-10-13T01:02:44.2326995Z   • building block map  blockMapFile=release\MusicWorkbench-0.1.0-Setup.exe.blockmap
+2026-10-13T01:02:50.9726553Z ##[group]Run node scripts/check-package.ts
+2026-10-13T01:02:50.9727364Z [36;1mnode scripts/check-package.ts[0m
+2026-10-13T01:02:50.9844012Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+2026-10-13T01:02:50.9844744Z ##[endgroup]
+2026-10-13T01:02:51.5330978Z Verified ASAR (1074 entries, 5 app JS) and all extra/unpacked resources; no builder/download-cache code shipped
+2026-10-13T01:02:51.6886396Z ##[group]Run npm run test:integration
+2026-10-13T01:02:51.6886955Z [36;1mnpm run test:integration[0m
+2026-10-13T01:02:51.6958130Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+2026-10-13T01:02:51.6958582Z ##[endgroup]
+2026-10-13T01:02:52.4908841Z
+2026-10-13T01:02:52.4910163Z > music-workbench@0.1.0 test:integration
+2026-10-13T01:02:52.4911291Z > vitest run --passWithNoTests tests/integration
+2026-10-13T01:02:52.4911867Z
+2026-10-13T01:02:53.0585172Z
+2026-10-13T01:02:53.0588338Z [1m[30m[46m RUN [49m[39m[22m [36mv5.0.3 [39m[90mD:/a/music-workbench/music-workbench[39m
+2026-10-13T01:02:53.0589283Z
+2026-10-13T01:02:55.4668886Z [90mstdout[2m | tests/integration/audio-export-lifecycle.test.ts[2m > [22m[2mfile symlink replacement keeps destination and resolved target reserved through cleanup, then releases both
+2026-10-13T01:02:55.4680783Z [22m[39mFile alias mode: actual filesystem symlink
+2026-10-13T01:02:55.4682025Z
+2026-10-13T01:02:55.7064598Z [90mstdout[2m | tests/integration/audio-export-lifecycle.test.ts[2m > [22m[2mfile symlink replacement keeps destination and resolved target reserved through cleanup, then releases both
+2026-10-13T01:02:55.7067468Z [22m[39mAlias state: D resolves T before commit; actual rename replaced D; D resolves D while first job remains running in cleanup
+2026-10-13T01:02:55.7068964Z
+2026-10-13T01:02:56.9186062Z [90mstdout[2m | tests/integration/audio-export-lifecycle.test.ts[2m > [22m[2mfile symlink replacement rejects an earlier save choice whose realpath finishes after first commit
+2026-10-13T01:02:56.9188082Z [22m[39mFile alias mode: actual filesystem symlink
+2026-10-13T01:02:56.9188773Z
+2026-10-13T01:02:57.1699821Z [90mstdout[2m | tests/integration/audio-export-lifecycle.test.ts[2m > [22m[2mfile symlink replacement rejects an earlier save choice whose realpath finishes after first commit
+2026-10-13T01:02:57.1702436Z [22m[39mAlias race: second save selected old D→T; target realpath resumed after first rename; first job still held in cleanup
+2026-10-13T01:02:57.1703401Z
+2026-10-13T01:02:58.1654537Z [90mstdout[2m | tests/integration/audio-export-lifecycle.test.ts[2m > [22m[2mfile alias reservations release both keys after rename failure
+2026-10-13T01:02:58.1658114Z [22m[39mFile alias mode: actual filesystem symlink
+2026-10-13T01:02:58.1660025Z
+2026-10-13T01:02:59.0513163Z [90mstdout[2m | tests/integration/audio-export-lifecycle.test.ts[2m > [22m[2mfile alias reservations release both keys after queued cancellation
+2026-10-13T01:02:59.0515032Z [22m[39mFile alias mode: actual filesystem symlink
+2026-10-13T01:02:59.0515452Z
+2026-10-13T01:02:59.8078323Z [90mstdout[2m | tests/integration/audio-export-lifecycle.test.ts[2m > [22m[2mfile alias reservations release both keys after processing cancellation
+2026-10-13T01:02:59.8080716Z [22m[39mFile alias mode: actual filesystem symlink
+2026-10-13T01:02:59.8081511Z
+2026-10-13T01:03:00.7130224Z [90mstdout[2m | tests/integration/audio-export-lifecycle.test.ts[2m > [22m[2mfile alias reservations release both keys after cleanup warning
+2026-10-13T01:03:00.7133090Z [22m[39mFile alias mode: actual filesystem symlink
+2026-10-13T01:03:00.7134090Z
+2026-10-13T01:03:07.1664783Z  [32m✓[39m tests/integration/audio-export-lifecycle.test.ts [2m([22m[2m19 tests[22m[2m)[22m[33m 13411[2mms[22m[39m
+2026-10-13T01:03:07.1667118Z    [33m[2m✓[22m[39m cancel during rename retains committed destination and completed result[33m 819[2mms[22m[39m
+2026-10-13T01:03:07.1669061Z    [33m[2m✓[22m[39m cancel during cleanup retains committed destination and completed result[33m 754[2mms[22m[39m
+2026-10-13T01:03:07.1673288Z    [33m[2m✓[22m[39m file symlink replacement keeps destination and resolved target reserved through cleanup, then releases both[33m 1455[2mms[22m[39m
+2026-10-13T01:03:07.1702337Z    [33m[2m✓[22m[39m file symlink replacement rejects an earlier save choice whose realpath finishes after first commit[33m 1235[2mms[22m[39m
+2026-10-13T01:03:07.1704366Z    [33m[2m✓[22m[39m file alias reservations release both keys after rename failure[33m 898[2mms[22m[39m
+2026-10-13T01:03:07.1706387Z    [33m[2m✓[22m[39m file alias reservations release both keys after queued cancellation[33m 747[2mms[22m[39m
+2026-10-13T01:03:07.1707970Z    [33m[2m✓[22m[39m file alias reservations release both keys after processing cancellation[33m 920[2mms[22m[39m
+2026-10-13T01:03:07.1709368Z    [33m[2m✓[22m[39m file alias reservations release both keys after cleanup warning[33m 902[2mms[22m[39m
+2026-10-13T01:03:07.1711018Z    [33m[2m✓[22m[39m canonical destination conflict is rejected across Windows case and parent junction aliases, then released[33m 619[2mms[22m[39m
+2026-10-13T01:03:07.1712794Z    [33m[2m✓[22m[39m shutdown aborts uncommitted operations, waits cleanup, and refuses new export or preview[33m 713[2mms[22m[39m
+2026-10-13T01:03:07.1715071Z    [33m[2m✓[22m[39m cleanup failure at output still attempts all resources with safe completed warning and private diagnostics[33m 602[2mms[22m[39m
+2026-10-13T01:03:07.1717425Z    [33m[2m✓[22m[39m cleanup failure at ir still attempts all resources with safe completed warning and private diagnostics[33m 602[2mms[22m[39m
+2026-10-13T01:03:07.1719568Z    [33m[2m✓[22m[39m cleanup failure at snapshot still attempts all resources with safe completed warning and private diagnostics[33m 622[2mms[22m[39m
+2026-10-13T01:03:07.1721491Z    [33m[2m✓[22m[39m failed publication preserves previous bytes, reports safe error and releases the canonical destination[33m 797[2mms[22m[39m
+2026-10-13T01:03:07.1723196Z    [33m[2m✓[22m[39m queued cancellation releases its reservation although processing never starts[33m 385[2mms[22m[39m
+2026-10-13T01:03:07.1725565Z    [33m[2m✓[22m[39m shutdown drains pre-processing even while the native save dialog remains pending[33m 365[2mms[22m[39m
+2026-10-13T01:03:07.1727386Z    [33m[2m✓[22m[39m preview commit finishes registration despite a late cancel and shutdown, without deleting the result[33m 693[2mms[22m[39m
+2026-10-13T01:03:16.0739507Z  [32m✓[39m tests/integration/resolver.test.ts [2m([22m[2m11 tests[22m[2m)[22m[33m 8453[2mms[22m[39m
+2026-10-13T01:03:16.0741993Z    [33m[2m✓[22m[39m real complete twenty second songs pass; preview, truncated, unknown and inconsistent media fail[33m 767[2mms[22m[39m
+2026-10-13T01:03:16.0755973Z    [33m[2m✓[22m[39m expiry during real media verification refreshes once and verifies the fresh bytes[33m 1939[2mms[22m[39m
+2026-10-13T01:03:16.0759554Z    [33m[2m✓[22m[39m expiry refresh is shared across before-check and during-check expiry; ordinary failures do not retry[33m 2418[2mms[22m[39m
+2026-10-13T01:03:16.0761779Z    [33m[2m✓[22m[39m expiry refresh remains within the total budget and responds to cancellation[33m 1893[2mms[22m[39m
+2026-10-13T01:03:16.0763737Z    [33m[2m✓[22m[39m a declared FLAC or Hi-Res label never substitutes for actual media properties[33m 355[2mms[22m[39m
+2026-10-13T01:03:19.2809924Z  [32m✓[39m tests/integration/library.test.ts [2m([22m[2m8 tests[22m[2m)[22m[33m 2818[2mms[22m[39m
+2026-10-13T01:03:19.2811808Z    [33m[2m✓[22m[39m same contents retain identity and removal preserves the original bytes[33m 362[2mms[22m[39m
+2026-10-13T01:03:19.2814042Z    [33m[2m✓[22m[39m folder import preserves same-title versions, metadata, artwork and per-file failures[33m 419[2mms[22m[39m
+2026-10-13T01:03:19.2815937Z    [33m[2m✓[22m[39m concurrent favorites and playlist mutations survive restart with ordered tracks[33m 309[2mms[22m[39m
+2026-10-13T01:03:19.2818247Z    [33m[2m✓[22m[39m actual MP3, FLAC and M4A decode and probe without modifying sources[33m 855[2mms[22m[39m
+2026-10-13T01:03:19.2821879Z    [33m[2m✓[22m[39m Windows long paths and real embedded artwork retain readable opaque assets[33m 423[2mms[22m[39m
+2026-10-13T01:04:03.3090000Z [90mstderr[2m | tests/integration/audio-export.test.ts[2m > [22m[2mreal WAV frames, fades, EQ, reverb, encoders, immutable bytes and safe cancellation
+2026-10-13T01:04:03.3092432Z [22m[39mAudio snapshot creation failed Error: 原音乐文件已更改或丢失，请重新导入
+2026-10-13T01:04:03.3094068Z     at AssetRegistry.checkedSnapshot (D:/a/music-workbench/music-workbench/src/main/assets/asset-registry.ts:123:86)
+2026-10-13T01:04:03.3095685Z     at AudioExportService.process (D:/a/music-workbench/music-workbench/src/main/export/audio-export-service.ts:114:22)
+2026-10-13T01:04:03.3110262Z     at AudioExportService.renderPreview (D:/a/music-workbench/music-workbench/src/main/export/audio-export-service.ts:87:14)
+2026-10-13T01:04:03.3112403Z     at D:/a/music-workbench/music-workbench/tests/integration/audio-export.test.ts:75:5
+2026-10-13T01:04:03.3114186Z     at [90mfile:///D:/a/music-workbench/music-workbench/[39mnode_modules/[4mvitest[24m/dist/chunks/run.BTlFXlnv.js:2783:20
+2026-10-13T01:04:03.3115200Z
+2026-10-13T01:04:03.3588228Z [90mstderr[2m | tests/integration/audio-export.test.ts[2m > [22m[2mreal WAV frames, fades, EQ, reverb, encoders, immutable bytes and safe cancellation
+2026-10-13T01:04:03.3590006Z [22m[39mAudio processing failed Error: 导出不能覆盖原始音乐
+2026-10-13T01:04:03.3591525Z     at AudioExportService.protectDestination (D:/a/music-workbench/music-workbench/src/main/export/audio-export-service.ts:109:68)
+2026-10-13T01:04:03.3593042Z     at AudioExportService.process (D:/a/music-workbench/music-workbench/src/main/export/audio-export-service.ts:120:7)
+2026-10-13T01:04:03.3594676Z     at D:/a/music-workbench/music-workbench/src/main/export/audio-export-service.ts:73:22
+2026-10-13T01:04:03.3595620Z     at D:/a/music-workbench/music-workbench/src/main/jobs/task-service.ts:29:24
+2026-10-13T01:04:03.3596458Z
+2026-10-13T01:04:03.4403081Z [90mstderr[2m | tests/integration/audio-export.test.ts[2m > [22m[2mreal WAV frames, fades, EQ, reverb, encoders, immutable bytes and safe cancellation
+2026-10-13T01:04:03.4404863Z [22m[39mAudio processing failed Error: 导出不能覆盖原始音乐
+2026-10-13T01:04:03.4406331Z     at AudioExportService.protectDestination (D:/a/music-workbench/music-workbench/src/main/export/audio-export-service.ts:110:127)
+2026-10-13T01:04:03.4408156Z     at AudioExportService.process (D:/a/music-workbench/music-workbench/src/main/export/audio-export-service.ts:120:7)
+2026-10-13T01:04:03.4409694Z     at D:/a/music-workbench/music-workbench/src/main/export/audio-export-service.ts:73:22
+2026-10-13T01:04:03.4411011Z     at D:/a/music-workbench/music-workbench/src/main/jobs/task-service.ts:29:24
+2026-10-13T01:04:03.4411645Z
+2026-10-13T01:04:23.5573725Z [90mstderr[2m | tests/integration/audio-export.test.ts[2m > [22m[2mreal WAV frames, fades, EQ, reverb, encoders, immutable bytes and safe cancellation
+2026-10-13T01:04:23.5576468Z [22m[39mAudio snapshot creation failed Error: ENOENT: no such file or directory, realpath 'C:\Users\RUNNER~1\AppData\Local\Temp\audio-export-real-THDk93\中文 空格 🎵.wav'
+2026-10-13T01:04:23.5578729Z [90m    at realpath (node:internal/fs/promises:1173:10)[39m
+2026-10-13T01:04:23.5580266Z     at AssetRegistry.checkedSnapshot (D:/a/music-workbench/music-workbench/src/main/assets/asset-registry.ts:113:28)
+2026-10-13T01:04:23.5582155Z     at AudioExportService.process (D:/a/music-workbench/music-workbench/src/main/export/audio-export-service.ts:114:22)
+2026-10-13T01:04:23.5584361Z     at AudioExportService.renderPreview (D:/a/music-workbench/music-workbench/src/main/export/audio-export-service.ts:87:14)
+2026-10-13T01:04:23.5585650Z     at D:/a/music-workbench/music-workbench/tests/integration/audio-export.test.ts:104:5
+2026-10-13T01:04:23.5587115Z     at [90mfile:///D:/a/music-workbench/music-workbench/[39mnode_modules/[4mvitest[24m/dist/chunks/run.BTlFXlnv.js:2783:20 {
+2026-10-13T01:04:23.5588627Z   errno: [33m-4058[39m,
+2026-10-13T01:04:23.5589187Z   code: [32m'ENOENT'[39m,
+2026-10-13T01:04:23.5590112Z   syscall: [32m'realpath'[39m,
+2026-10-13T01:04:23.5591157Z   path: [32m'C:\\Users\\RUNNER~1\\AppData\\Local\\Temp\\audio-export-real-THDk93\\中文 空格 🎵.wav'[39m
+2026-10-13T01:04:23.5591899Z }
+2026-10-13T01:04:23.5592063Z
+2026-10-13T01:04:23.5650741Z [90mstderr[2m | tests/integration/audio-export.test.ts[2m > [22m[2mreal WAV frames, fades, EQ, reverb, encoders, immutable bytes and safe cancellation
+2026-10-13T01:04:23.5653146Z [22m[39mAudio snapshot allocation failed Error: EEXIST: file already exists, mkdir 'C:\Users\RUNNER~1\AppData\Local\Temp\audio-export-real-THDk93\blocked-private-location'
+2026-10-13T01:04:23.5654647Z [90m    at mkdir (node:internal/fs/promises:861:10)[39m
+2026-10-13T01:04:23.5657091Z     at AssetRegistry.checkedSnapshot (D:/a/music-workbench/music-workbench/src/main/assets/asset-registry.ts:105:11)
+2026-10-13T01:04:23.5673685Z     at D:/a/music-workbench/music-workbench/tests/integration/audio-export.test.ts:108:5
+2026-10-13T01:04:23.5675222Z     at [90mfile:///D:/a/music-workbench/music-workbench/[39mnode_modules/[4mvitest[24m/dist/chunks/run.BTlFXlnv.js:2783:20 {
+2026-10-13T01:04:23.5676102Z   errno: [33m-4075[39m,
+2026-10-13T01:04:23.5677008Z   code: [32m'EEXIST'[39m,
+2026-10-13T01:04:23.5677582Z   syscall: [32m'mkdir'[39m,
+2026-10-13T01:04:23.5678575Z   path: [32m'C:\\Users\\RUNNER~1\\AppData\\Local\\Temp\\audio-export-real-THDk93\\blocked-private-location'[39m
+2026-10-13T01:04:23.5679403Z }
+2026-10-13T01:04:23.5679655Z
+2026-10-13T01:04:23.5680746Z [90mstderr[2m | tests/integration/audio-export.test.ts[2m > [22m[2mreal WAV frames, fades, EQ, reverb, encoders, immutable bytes and safe cancellation
+2026-10-13T01:04:23.5682708Z [22m[39mAudio preview allocation failed Error: EEXIST: file already exists, mkdir 'C:\Users\RUNNER~1\AppData\Local\Temp\audio-export-real-THDk93\blocked-private-location'
+2026-10-13T01:04:23.5684063Z [90m    at mkdir (node:internal/fs/promises:861:10)[39m
+2026-10-13T01:04:23.5685192Z     at AudioExportService.renderPreview (D:/a/music-workbench/music-workbench/src/main/export/audio-export-service.ts:86:13)
+2026-10-13T01:04:23.5686481Z     at D:/a/music-workbench/music-workbench/tests/integration/audio-export.test.ts:110:5
+2026-10-13T01:04:23.5687806Z     at [90mfile:///D:/a/music-workbench/music-workbench/[39mnode_modules/[4mvitest[24m/dist/chunks/run.BTlFXlnv.js:2783:20 {
+2026-10-13T01:04:23.5690028Z   errno: [33m-4075[39m,
+2026-10-13T01:04:23.5690548Z   code: [32m'EEXIST'[39m,
+2026-10-13T01:04:23.5691056Z   syscall: [32m'mkdir'[39m,
+2026-10-13T01:04:23.5692490Z   path: [32m'C:\\Users\\RUNNER~1\\AppData\\Local\\Temp\\audio-export-real-THDk93\\blocked-private-location'[39m
+2026-10-13T01:04:23.5693306Z }
+2026-10-13T01:04:23.5693510Z
+2026-10-13T01:04:23.5705147Z [90mstdout[2m | tests/integration/audio-export.test.ts[2m > [22m[2mreal WAV frames, fades, EQ, reverb, encoders, immutable bytes and safe cancellation
+2026-10-13T01:04:23.5708293Z [22m[39mExport evidence: exact 44100 Hz frames for 0.5/1/2, preservePitch on/off; all 7 encoders reopened; EQ +6 dB ratio [33m1.9952623158097127[39m cancel cleanup and immutable snapshot verified
+2026-10-13T01:04:23.5709148Z
+2026-10-13T01:04:23.5915641Z  [32m✓[39m tests/integration/audio-export.test.ts [2m([22m[2m2 tests[22m[2m)[22m[33m 64008[2mms[22m[39m
+2026-10-13T01:04:23.5917676Z    [33m[2m✓[22m[39m 20 source seconds at double speed render 10 seconds without changing input[33m 18839[2mms[22m[39m
+2026-10-13T01:04:24.5071338Z    [33m[2m✓[22m[39m real WAV frames, fades, EQ, reverb, encoders, immutable bytes and safe cancellation[33m 45166[2mms[22m[39m
+2026-10-13T01:04:24.5073313Z  [32m✓[39m tests/integration/search-adapters.test.ts [2m([22m[2m23 tests[22m[2m)[22m[32m 70[2mms[22m[39m
+2026-10-13T01:04:29.1642468Z [90mstdout[2m | tests/integration/effect-chain.test.ts[2m > [22m[2mreal offline Web Audio changes EQ samples, produces reverb tail, restores bypass and survives a failed effect
+2026-10-13T01:04:29.1661815Z [22m[39mReal offline node measurements: {"flat":{"body":0.07071067799086336,"tail":0,"errors":[],"available":[31,62,125,250,500,1000,2000,4000,8000,16000],"spectrum":[1.0678451884685556e-7,5.769172822701526e-7,5.721500947223562e-7,4.2804720908086386e-7,0.000001629957149218595,0.09995115454496784,3.003351174875278e-7,7.766039546851003e-9,1.5974094691153559e-10,1.6838791253980065e-10],"samples":"[20 samples]"},"boosted":{"body":0.28150422312805856,"tail":0,"errors":[],"available":[31,62,125,250,500,1000,2000,4000,8000,16000],"spectrum":[4.361108080523862e-7,0.0000022958017715178894,0.0000022829242484678913,0.000001703545626575741,0.000006532780907580878,0.3979126337231761,0.0000011996712340332395,3.241724639637365e-8,6.670810569219109e-10,4.148955925891988e-10],"samples":"[20 samples]"},"bypass":{"body":0.07071067799086336,"tail":0,"errors":[],"available":[31,62,125,250,500,1000,2000,4000,8000,16000],"spectrum":[1.0678451884685556e-7,5.769172822701526e-7,5.721500947223562e-7,4.2804720908086386e-7,0.000001629957149218595,0.09995115454496784,3.003351174875278e-7,7.766039546851003e-9,1.5974094691153559e-10,1.6838791253980065e-10],"samples":"[20 samples]"},"reverberated":{"body":0.03456905158432913,"tail":0.005031733892882981,"errors":[],"available":[31,62,125,250,500,1000,2000,4000,8000,16000],"spectrum":[0.00003074300404701828,0.000015699617075373882,0.00001698182213233309,0.00004051396369560102,0.000017691314940454497,0.04896081814479775,0.00001477001903019846,4.4421537222931076e-7,6.70555544899368e-7,2.450193214647523e-7],"samples":"[20 samples]"},"failed":{"body":0.07071067799086336,"tail":0,"errors":["[\n  {\n    \"origin\": \"number\",\n    \"code\": \"too_big\",\n    \"maximum\": 12,\n    \"inclusive\": true,\n    \"path\": [\n      \"gainsDb\",\n      5\n    ],\n    \"message\": \"Too big: expected number to be <=12\"\n  }\n]"],"available":[31,62,125,250,500,1000,2000,4000,8000,16000],"spectrum":[1.0678451884685556e-7,5.769172822701526e-7,5.721500947223562e-7,4.2804720908086386e-7,0.000001629957149218595,0.09995115454496784,3.003351174875278e-7,7.766039546851003e-9,1.5974094691153559e-10,1.6838791253980065e-10],"samples":"[20 samples]"},"lowRate":{"body":0.07071067799086334,"tail":0,"errors":[],"available":[31,62,125,250,500,1000,2000,4000,8000],"spectrum":[],"samples":"[20 samples]"}}
+2026-10-13T01:04:29.1857838Z
+2026-10-13T01:04:29.1883047Z  [32m✓[39m tests/integration/effect-chain.test.ts [2m([22m[2m3 tests[22m[2m)[22m[33m 3586[2mms[22m[39m
+2026-10-13T01:04:29.1884906Z    [33m[2m✓[22m[39m real offline Web Audio changes EQ samples, produces reverb tail, restores bypass and survives a failed effect[33m 3464[2mms[22m[39m
+2026-10-13T01:04:29.1887124Z  [32m✓[39m tests/integration/media-protocol.test.ts [2m([22m[2m1 test[22m[2m)[22m[32m 226[2mms[22m[39m
+2026-10-13T01:04:29.1887963Z
+2026-10-13T01:04:29.1888478Z [2m Test Files [22m [1m[32m7 passed[39m[22m[90m (7)[39m
+2026-10-13T01:04:29.1889456Z [2m      Tests [22m [1m[32m67 passed[39m[22m[90m (67)[39m
+2026-10-13T01:04:29.1890309Z [2m   Start at [22m 01:02:53
+2026-10-13T01:04:29.1891433Z [2m   Duration [22m 96.01s[2m (tests 98%, import 2%, transform 1%)[22m
+2026-10-13T01:04:29.1892274Z
+2026-10-13T01:04:29.2103120Z ##[group]Run npm run test:e2e
+2026-10-13T01:04:29.2104503Z [36;1mnpm run test:e2e[0m
+2026-10-13T01:04:29.2199930Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+2026-10-13T01:04:29.2200660Z ##[endgroup]
+2026-10-13T01:04:33.3774954Z
+2026-10-13T01:04:33.3775634Z > music-workbench@0.1.0 test:e2e
+2026-10-13T01:04:33.3776141Z > playwright test
+2026-10-13T01:04:33.3776380Z
+2026-10-13T01:04:33.3776390Z
+2026-10-13T01:04:33.3776569Z Running 45 tests using 1 worker
+2026-10-13T01:04:33.3776887Z
+2026-10-13T01:04:40.5286640Z Network shutdown evidence: {"mode":"playback","executable":"built Electron","closeMs":392,"events":[{"event":"fetch-aborted","at":1791853478139},{"event":"will-quit","at":1791853478194}],"closedProcessIds":[1860,8664,6536,7728,6636],"remainingProcessCount":0,"temporaryMediaCount":0,"originalBytesPreserved":true}
+2026-10-13T01:04:40.5629437Z   ok  1 tests\e2e\app-regression.spec.ts:12:96 › normal close aborts pending playback resources and waits actual cleanup (6.3s)
+2026-10-13T01:04:44.4670650Z Network shutdown evidence: {"mode":"source-test","executable":"built Electron","closeMs":393,"events":[{"event":"fetch-aborted","at":1791853482659},{"event":"will-quit","at":1791853482712}],"closedProcessIds":[8480,8144,8820,6796,6792],"remainingProcessCount":0,"temporaryMediaCount":0,"originalBytesPreserved":true}
+2026-10-13T01:04:44.4906453Z   ok  2 tests\e2e\app-regression.spec.ts:12:96 › normal close aborts pending source-test resources and waits actual cleanup (3.9s)
+2026-10-13T01:04:48.2121125Z Network shutdown evidence: {"mode":"search","executable":"built Electron","closeMs":898,"events":[{"event":"fetch-aborted","at":1791853485986},{"event":"transport-cleanup-pending","at":1791853486003},{"event":"transport-cleanup-complete","at":1791853486305},{"event":"will-quit","at":1791853486345}],"closedProcessIds":[8816,2556,7632,5432],"remainingProcessCount":0,"temporaryMediaCount":0,"originalBytesPreserved":true}
+2026-10-13T01:04:48.2367056Z   ok  3 tests\e2e\app-regression.spec.ts:12:96 › normal close aborts pending search resources and waits actual cleanup (3.7s)
+2026-10-13T01:04:52.3674678Z Network shutdown evidence: {"mode":"decode","executable":"built Electron","closeMs":743,"events":[{"event":"decode-spawn","at":1791853489835,"pid":5532},{"event":"fetch-aborted","at":1791853490331},{"event":"decode-close","at":1791853490349,"pid":5532},{"event":"cleanup-pending","at":1791853490350},{"event":"cleanup-complete","at":1791853490667},{"event":"will-quit","at":1791853490707}],"closedProcessIds":[3780,5296,7724,1292,480,5532,2304],"remainingProcessCount":0,"temporaryMediaCount":0,"originalBytesPreserved":true}
+2026-10-13T01:04:52.4589413Z   ok  4 tests\e2e\app-regression.spec.ts:12:96 › normal close aborts pending decode resources and waits actual cleanup (4.2s)
+2026-10-13T01:04:57.6424276Z Network shutdown evidence: {"mode":"lx-network","executable":"built Electron","closeMs":876,"events":[{"event":"fetch-aborted","at":1791853495364},{"event":"transport-cleanup-pending","at":1791853495374},{"event":"transport-cleanup-complete","at":1791853495674},{"event":"will-quit","at":1791853495710}],"closedProcessIds":[5300,5388,4872,7124,4076],"remainingProcessCount":0,"temporaryMediaCount":0,"originalBytesPreserved":true}
+2026-10-13T01:04:57.6673842Z   ok  5 tests\e2e\app-regression.spec.ts:12:96 › normal close aborts pending lx-network resources and waits actual cleanup (5.2s)
+2026-10-13T01:04:59.2778308Z Import shutdown evidence: {"executable":"built Electron","acceptedImportCompleted":true,"assetIndexCount":1,"libraryCount":1,"lateUpdateRejected":"应用正在关闭，拒绝新请求","persistedVolume":0.2,"originalBytesPreserved":true}
+2026-10-13T01:04:59.2992061Z   ok  6 tests\e2e\app-regression.spec.ts:18:5 › close completes an accepted import before its index transaction and rejects later preference writes (1.6s)
+2026-10-13T01:05:04.1162230Z Settings shutdown evidence: {"executable":"built Electron","requestedVolume":0.9,"persistedVolume":0.9,"restartVolume":0.9,"events":[{"event":"rename-pending","at":1791853500494},{"event":"rename-committed","at":1791853501505},{"event":"will-quit","at":1791853501546}]}
+2026-10-13T01:05:04.1189632Z   ok  7 tests\e2e\app-regression.spec.ts:24:5 › normal main-window close drains an accepted preference whose atomic rename is still pending (4.8s)
+2026-10-13T01:05:14.4341847Z   ok  8 tests\e2e\app-regression.spec.ts:30:60 › an already open settings page updates source startup success without navigation or saving (10.3s)
+2026-10-13T01:05:34.9205014Z   ok  9 tests\e2e\app-regression.spec.ts:30:60 › an already open settings page updates source startup timeout without navigation or saving (20.3s)
+2026-10-13T01:05:45.7500175Z   ok 10 tests\e2e\app-regression.spec.ts:43:5 › settings persist across actual Electron restart and missing sources leave local editing usable (10.8s)
+2026-10-13T01:05:54.2644556Z   ok 11 tests\e2e\app-regression.spec.ts:59:55 › remembered throw source cannot block the main window or local playback/editor on startup (8.5s)
+2026-10-13T01:06:12.5033645Z   x  12 tests\e2e\app-regression.spec.ts:59:55 › remembered hang source cannot block the main window or local playback/editor on startup (18.2s)
+2026-10-13T01:06:22.6035475Z   ok 13 tests\e2e\audio-editor.spec.ts:9:5 › real Electron editor trims, previews processed audio and exports through save dialog (8.9s)
+2026-10-13T01:06:26.8458704Z Realtime/offline parity measurements: [{"name":"原声","liveBody":0.07071067799086336,"offlineBody":0.0707113695135377,"liveTail":0,"offlineTail":0,"maxSampleError":0.000014513731002807617,"maxSpectrumError":9.771365748201255e-7},{"name":"温暖","liveBody":0.04418265391369102,"offlineBody":0.04418309739260315,"liveTail":0.000606569808028348,"offlineTail":0.0006065553290817998,"maxSampleError":0.00001516193151473999,"maxSpectrumError":0.0000015691252305329906},{"name":"人声","liveBody":0.07175117246492552,"offlineBody":0.07175186264623941,"liveTail":0.001545434342610784,"offlineTail":0.0015454643709953823,"maxSampleError":0.00001019984483718872,"maxSpectrumError":9.790536322912269e-7},{"name":"明亮","liveBody":0.058696013716606016,"offlineBody":0.05869658782445191,"liveTail":0.0004872213130301992,"offlineTail":0.00048722243984873154,"maxSampleError":0.000013716518878936768,"maxSpectrumError":8.111632711221839e-7},{"name":"wet50","liveBody":0.03456905158432913,"offlineBody":0.0345693913696824,"liveTail":0.005031733892882981,"offlineTail":0.005031783799538188,"maxSampleError":0.0000074319541454315186,"maxSpectrumError":4.777157522548037e-7}]
+2026-10-13T01:06:27.4507714Z Stereo convolution impulse maximum error: [2.3283064365386963e-9,2.7939677238464355e-9]
+2026-10-13T01:06:27.6841338Z   ok 14 tests\e2e\audio-editor.spec.ts:59:5 › same presets match actual Web Audio and FFmpeg spectra and unnormalized reverb (5.1s)
+2026-10-13T01:06:30.5261765Z export shutdown timeline: [{"event":"spawn","pid":6012},{"event":"worker-close","pid":6012,"code":null},{"event":"will-quit"}]
+2026-10-13T01:07:18.3066555Z   ok 15 tests\e2e\audio-export-lifecycle.spec.ts:9:56 › closing actual main window drains real export worker before Electron exits (50.6s)
+2026-10-13T01:07:22.8240441Z preview shutdown timeline: [{"event":"spawn","pid":8308},{"event":"worker-close","pid":8308,"code":null},{"event":"will-quit"}]
+2026-10-13T01:08:03.7208451Z   ok 16 tests\e2e\audio-export-lifecycle.spec.ts:9:56 › closing actual main window drains real preview worker before Electron exits (45.4s)
+2026-10-13T01:08:09.1017449Z   ok 17 tests\e2e\audio-export-lifecycle.spec.ts:73:5 › reopened editor reports a destination conflict while the earlier export continues in background (5.4s)
+2026-10-13T01:08:10.7232379Z   ok 18 tests\e2e\boot.spec.ts:7:5 › built desktop opens a Chinese library, fixed player and safe bridge (1.6s)
+2026-10-13T01:08:18.9312383Z   ok 19 tests\e2e\dev.spec.ts:7:5 › npm dev renders the real Electron library with CSP-approved styles (8.2s)
+2026-10-13T01:08:18.9906665Z   -  20 tests\e2e\installed-app.spec.ts:13:96 › actual installed binary aborts pending playback and waits owned cleanup
+2026-10-13T01:08:19.0099090Z   -  21 tests\e2e\installed-app.spec.ts:13:96 › actual installed binary aborts pending source-test and waits owned cleanup
+2026-10-13T01:08:19.0195836Z   -  22 tests\e2e\installed-app.spec.ts:13:96 › actual installed binary aborts pending search and waits owned cleanup
+2026-10-13T01:08:19.0296307Z   -  23 tests\e2e\installed-app.spec.ts:13:96 › actual installed binary aborts pending decode and waits owned cleanup
+2026-10-13T01:08:19.0517367Z   -  24 tests\e2e\installed-app.spec.ts:13:96 › actual installed binary aborts pending lx-network and waits owned cleanup
+2026-10-13T01:08:19.0604871Z   -  25 tests\e2e\installed-app.spec.ts:23:5 › actual installed binary closes accepted import transactions and rejects writes past the close boundary
+2026-10-13T01:08:19.0703806Z   -  26 tests\e2e\installed-app.spec.ts:30:5 › actual installed binary drains accepted slow-IO preferences on normal close and restart
+2026-10-13T01:08:19.0795444Z   -  27 tests\e2e\installed-app.spec.ts:37:5 › actual installed Windows binary imports, plays, seeks, persists settings, exports and starts shipped LX sandbox
+2026-10-13T01:08:23.3653076Z   ok 28 tests\e2e\library.spec.ts:12:5 › real desktop imports WAV, persists favorites and playlist ordering on restart (4.0s)
+2026-10-13T01:08:25.2029492Z   ok 29 tests\e2e\library.spec.ts:54:5 › real Electron folder dialog and webUtils File drop import local files (1.8s)
+2026-10-13T01:08:28.1180500Z   ok 30 tests\e2e\library.spec.ts:78:5 › real library shows raw explicit version evidence after desktop restart (2.9s)
+2026-10-13T01:08:59.3041387Z   ok 31 tests\e2e\lx-isolation.spec.ts:9:5 › hidden LX sandbox resolves real HTTP media, keeps local playback alive after infinite loops and isolates bridges (31.1s)
+2026-10-13T01:09:35.8261644Z   ok 32 tests\e2e\lx-lifecycle.spec.ts:64:5 › same hidden LX source survives online A to B cancellation and late replies; old watchers cannot kill re-enabled runtime (36.4s)
+2026-10-13T01:09:38.2358256Z   ok 33 tests\e2e\lx-lifecycle.spec.ts:91:5 › closing the actual main window exits Electron even while an LX hidden window is enabled (2.4s)
+2026-10-13T01:09:56.9717323Z   ok 34 tests\e2e\lx-lifecycle.spec.ts:100:5 › cancelled infinite-loop source still reaches its external watchdog while local playback and another source survive (18.7s)
+2026-10-13T01:09:59.7923793Z   ok 35 tests\e2e\playback-lifecycle.spec.ts:19:58 › late native ended from A cannot change B while resolving (2.8s)
+2026-10-13T01:10:03.0599317Z   ok 36 tests\e2e\playback-lifecycle.spec.ts:19:58 › late native error from A cannot change B while resolving (3.2s)
+2026-10-13T01:10:12.0665487Z   ok 37 tests\e2e\playback-lifecycle.spec.ts:52:5 › switch after load began ignores retired media events and completes the new selection (9.0s)
+2026-10-13T01:10:20.7792984Z   x  38 tests\e2e\playback-lifecycle.spec.ts:86:5 › removing queued B lets real A finish into C (8.6s)
+2026-10-13T01:10:25.2876495Z   ok 39 tests\e2e\playback-lifecycle.spec.ts:102:5 › removing playing C stops its media and leaves surviving queue playable (3.0s)
+2026-10-13T01:10:28.9140490Z   ok 40 tests\e2e\playback.spec.ts:9:5 › real UI plays a local queue, pauses, seeks source time, controls effects and advances on ended (3.6s)
+2026-10-13T01:10:45.8725618Z Actual media timing and spectrum: [{"rate":0.5,"preservePitch":false,"elapsed":4.015099999999976,"frequency":220.71533203125,"peakDb":-25.879737854003906,"snapshot":{"trackId":"d16ad0b3-ea25-430c-adcf-87acde780105","status":"paused","sourceSeconds":2,"durationSeconds":2,"rate":0.5,"preservePitch":false,"volume":0.75,"repeat":"off","shuffle":false,"actualQuality":"pcm_s16le · 44100 Hz · 16 bit","revisionId":"71f133dd-5170-46cf-869d-23b0e5a2d9ee"}},{"rate":0.5,"preservePitch":true,"elapsed":3.9561999999999533,"frequency":441.4306640625,"peakDb":-26.110456466674805,"snapshot":{"trackId":"d16ad0b3-ea25-430c-adcf-87acde780105","status":"paused","sourceSeconds":2,"durationSeconds":2,"rate":0.5,"preservePitch":true,"volume":0.75,"repeat":"off","shuffle":false,"actualQuality":"pcm_s16le · 44100 Hz · 16 bit","revisionId":"c99e3acf-3450-4e27-83ac-a47d0667fcb3"}},{"rate":1,"preservePitch":false,"elapsed":2.0126999999999535,"frequency":441.4306640625,"peakDb":-26.111385345458984,"snapshot":{"trackId":"d16ad0b3-ea25-430c-adcf-87acde780105","status":"paused","sourceSeconds":2,"durationSeconds":2,"rate":1,"preservePitch":false,"volume":0.75,"repeat":"off","shuffle":false,"actualQuality":"pcm_s16le · 44100 Hz · 16 bit","revisionId":"d9719a0c-2996-47d3-9afd-aafc3bcfa8ec"}},{"rate":1,"preservePitch":true,"elapsed":2.0075,"frequency":441.4306640625,"peakDb":-26.111385345458984,"snapshot":{"trackId":"d16ad0b3-ea25-430c-adcf-87acde780105","status":"paused","sourceSeconds":2,"durationSeconds":2,"rate":1,"preservePitch":true,"volume":0.75,"repeat":"off","shuffle":false,"actualQuality":"pcm_s16le · 44100 Hz · 16 bit","revisionId":"1cb09665-198f-4da4-acf2-2d354b7798b9"}},{"rate":2,"preservePitch":false,"elapsed":0.9986000000000931,"frequency":877.47802734375,"peakDb":-26.76642608642578,"snapshot":{"trackId":"d16ad0b3-ea25-430c-adcf-87acde780105","status":"paused","sourceSeconds":2,"durationSeconds":2,"rate":2,"preservePitch":false,"volume":0.75,"repeat":"off","shuffle":false,"actualQuality":"pcm_s16le · 44100 Hz · 16 bit","revisionId":"37b72768-b0ee-4220-a2b1-a7ac2d9859e4"}},{"rate":2,"preservePitch":true,"elapsed":0.9921000000000931,"frequency":441.4306640625,"peakDb":-26.151081085205078,"snapshot":{"trackId":"d16ad0b3-ea25-430c-adcf-87acde780105","status":"paused","sourceSeconds":2,"durationSeconds":2,"rate":2,"preservePitch":true,"volume":0.75,"repeat":"off","shuffle":false,"actualQuality":"pcm_s16le · 44100 Hz · 16 bit","revisionId":"57ab91ad-6059-4dd1-a755-cfccfec8d793"}}]
+2026-10-13T01:10:46.8074900Z   ok 41 tests\e2e\playback.spec.ts:49:5 › real HTMLMediaElement 440 Hz WAV measures 0.5/1/2 rate duration and preservePitch spectra (17.9s)
+2026-10-13T01:10:57.2974491Z   ok 42 tests\e2e\search.spec.ts:48:5 › real Electron search renders each source immediately, retries failures and paginates independently (10.4s)
+2026-10-13T01:10:58.9133369Z   ok 43 tests\e2e\search.spec.ts:79:5 › a late source completion cannot reset another source independently selected page (1.6s)
+2026-10-13T01:11:00.7169062Z   ok 44 tests\e2e\search.spec.ts:99:5 › switching queries and cancelling ignores late responses through the real bridge (1.8s)
+2026-10-13T01:11:02.7582138Z   ok 45 tests\e2e\search.spec.ts:122:5 › search includes imported local tracks and plays the local result (2.0s)
+2026-10-13T01:11:02.8000665Z
+2026-10-13T01:11:02.8009487Z
+2026-10-13T01:11:02.8029921Z   1) tests\e2e\app-regression.spec.ts:59:55 › remembered hang source cannot block the main window or local playback/editor on startup
+2026-10-13T01:11:02.8031692Z
+2026-10-13T01:11:02.8034155Z     Error: expect(received).toBe(expected) // Object.is equality
+2026-10-13T01:11:02.8036191Z
+2026-10-13T01:11:02.8036877Z     Expected: true
+2026-10-13T01:11:02.8040084Z     Received: false
+2026-10-13T01:11:02.8041056Z
+2026-10-13T01:11:02.8048549Z     Call Log:
+2026-10-13T01:11:02.8049347Z     - Timeout 3000ms exceeded while waiting on the predicate
+2026-10-13T01:11:02.8050347Z
+2026-10-13T01:11:02.8221142Z       65 |     const path = await makeAudioFile({ directory, name: '启动本地音乐.wav', durationSeconds: 20, toneHz: 440 })
+2026-10-13T01:11:02.8223283Z       66 |     app = await _electron.launch({ args: [resolve('out/main/index.js')], env: { ...process.env, MUSIC_APP_USER_DATA_DIR: data } })
+2026-10-13T01:11:02.8230621Z     > 67 |     await expect.poll(() => app!.windows().some(page => page.url().includes('/renderer/index.html')), { timeout: 3000 }).toBe(true)
+2026-10-13T01:11:02.8231843Z          |                                                                                                                          ^
+2026-10-13T01:11:02.8233040Z       68 |     const page = app.windows().find(page => page.url().includes('/renderer/index.html'))!; await page.waitForLoadState('domcontentloaded')
+2026-10-13T01:11:02.8234611Z       69 |     await app.evaluate(({ dialog }, path) => { dialog.showOpenDialog = async () => ({ canceled: false, filePaths: [path] }) }, path)
+2026-10-13T01:11:02.8323882Z       70 |     await page.getByRole('button', { name: '添加音乐', exact: true }).click(); await page.getByRole('button', { name: '播放 启动本地音乐', exact: true }).click(); await expect(page.locator('.player-bar')).toHaveAttribute('data-status', 'playing')
+2026-10-13T01:11:02.8325790Z         at D:\a\music-workbench\music-workbench\tests\e2e\app-regression.spec.ts:67:122
+2026-10-13T01:11:02.8326444Z
+2026-10-13T01:11:02.8327060Z     Error Context: test-results\app-regression-remembered--045c8--playback-editor-on-startup\error-context.md
+2026-10-13T01:11:02.8327493Z
+2026-10-13T01:11:02.8375606Z     attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+2026-10-13T01:11:02.8376773Z     test-results\app-regression-remembered--045c8--playback-editor-on-startup\trace.zip
+2026-10-13T01:11:02.8377548Z     Usage:
+2026-10-13T01:11:02.8377900Z
+2026-10-13T01:11:02.8378495Z         npx playwright show-trace test-results\app-regression-remembered--045c8--playback-editor-on-startup\trace.zip
+2026-10-13T01:11:02.8379015Z
+2026-10-13T01:11:02.8379379Z     ────────────────────────────────────────────────────────────────────────────────────────────────
+2026-10-13T01:11:02.8379704Z
+2026-10-13T01:11:02.8380376Z   2) tests\e2e\playback-lifecycle.spec.ts:86:5 › removing queued B lets real A finish into C ───────
+2026-10-13T01:11:02.8380836Z
+2026-10-13T01:11:02.8381166Z     Error: expect(locator).toBeVisible() failed
+2026-10-13T01:11:02.8381415Z
+2026-10-13T01:11:02.8381696Z     Locator: getByRole('button', { name: '播放 C', exact: true })
+2026-10-13T01:11:02.8382211Z     Expected: visible
+2026-10-13T01:11:02.8382651Z     Timeout: 5000ms
+2026-10-13T01:11:02.8383201Z     Error: element(s) not found
+2026-10-13T01:11:02.8383525Z
+2026-10-13T01:11:02.8383767Z     Call log:
+2026-10-13T01:11:02.8384643Z       - Expect "toBeVisible" getByRole('button', { name: '播放 C', exact: true }) with timeout 5000ms
+2026-10-13T01:11:02.8385481Z       - waiting for getByRole('button', { name: '播放 C', exact: true })
+2026-10-13T01:11:02.8385886Z
+2026-10-13T01:11:02.8385992Z
+2026-10-13T01:11:02.8386737Z       13 |   await desktop.app.evaluate(({ dialog }, selected) => { dialog.showOpenDialog = async () => ({ canceled: false, filePaths: selected }) }, paths)
+2026-10-13T01:11:02.8388239Z       14 |   await desktop.page.getByRole('button', { name: '添加音乐', exact: true }).click()
+2026-10-13T01:11:02.8389389Z     > 15 |   await expect(desktop.page.getByRole('button', { name: '播放 C', exact: true })).toBeVisible()
+2026-10-13T01:11:02.8390326Z          |                                                                                 ^
+2026-10-13T01:11:02.8391467Z       16 |   return { ...desktop, paths, close: async () => { await desktop.app.close(); await rm(directory, { recursive: true, force: true }) } }
+2026-10-13T01:11:02.8392549Z       17 | }
+2026-10-13T01:11:02.8393032Z       18 |
+2026-10-13T01:11:02.8393825Z         at fixture (D:\a\music-workbench\music-workbench\tests\e2e\playback-lifecycle.spec.ts:15:81)
+2026-10-13T01:11:02.8395717Z         at D:\a\music-workbench\music-workbench\tests\e2e\playback-lifecycle.spec.ts:87:19
+2026-10-13T01:11:02.8396385Z
+2026-10-13T01:11:02.8397102Z     Error Context: test-results\playback-lifecycle-removin-05c29-B-lets-real-A-finish-into-C\error-context.md
+2026-10-13T01:11:02.8397958Z
+2026-10-13T01:11:02.8398556Z     attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+2026-10-13T01:11:02.8399264Z     test-results\playback-lifecycle-removin-05c29-B-lets-real-A-finish-into-C\trace.zip
+2026-10-13T01:11:02.8399819Z     Usage:
+2026-10-13T01:11:02.8399974Z
+2026-10-13T01:11:02.8400423Z         npx playwright show-trace test-results\playback-lifecycle-removin-05c29-B-lets-real-A-finish-into-C\trace.zip
+2026-10-13T01:11:02.8400925Z
+2026-10-13T01:11:02.8402251Z     ────────────────────────────────────────────────────────────────────────────────────────────────
+2026-10-13T01:11:02.8402580Z
+2026-10-13T01:11:02.8402728Z   2 failed
+2026-10-13T01:11:02.8403920Z     tests\e2e\app-regression.spec.ts:59:55 › remembered hang source cannot block the main window or local playback/editor on startup
+2026-10-13T01:11:02.8404800Z     tests\e2e\playback-lifecycle.spec.ts:86:5 › removing queued B lets real A finish into C ────────
+2026-10-13T01:11:02.8405330Z   8 skipped
+2026-10-13T01:11:02.8405630Z   35 passed (6.5m)
+2026-10-13T01:11:04.4916206Z ##[error]Process completed with exit code 1.
+2026-10-13T01:11:05.0868967Z Post job cleanup.
+2026-10-13T01:11:10.4709890Z [command]"C:\Program Files\Git\bin\git.exe" version
+2026-10-13T01:11:10.8412865Z git version 2.55.0.windows.5
+2026-10-13T01:11:10.8845572Z Temporarily overriding HOME='D:\a\_temp\d1aaaf83-fd42-470f-b16c-7b7f9be9ac41' before making global git config changes
+2026-10-13T01:11:10.8850105Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-13T01:11:10.8918629Z [command]"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory D:\a\music-workbench\music-workbench
+2026-10-13T01:11:10.9887551Z Removing SSH command configuration
+2026-10-13T01:11:10.9900768Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+2026-10-13T01:11:11.0357774Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+2026-10-13T01:11:12.8947642Z Removing HTTP extra header
+2026-10-13T01:11:12.8950717Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-13T01:11:12.9329301Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+2026-10-13T01:11:14.1863389Z Removing includeIf entries pointing to credentials config files
+2026-10-13T01:11:14.1864632Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-13T01:11:14.1865641Z includeif.gitdir:D:/a/music-workbench/music-workbench/.git.path
+2026-10-13T01:11:14.1866556Z includeif.gitdir:D:/a/music-workbench/music-workbench/.git/worktrees/*.path
+2026-10-13T01:11:14.1867374Z includeif.gitdir:/github/workspace/.git.path
+2026-10-13T01:11:14.1868454Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-10-13T01:11:14.1870191Z [command]"C:\Program Files\Git\bin\git.exe" config --local --get-all includeif.gitdir:D:/a/music-workbench/music-workbench/.git.path
+2026-10-13T01:11:14.1871376Z D:\a\_temp\git-credentials-837dc978-b1d6-4a8e-ad01-b186d630e62b.config
+2026-10-13T01:11:14.1873587Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset includeif.gitdir:D:/a/music-workbench/music-workbench/.git.path D\:\\a\\_temp\\git\-credentials\-837dc978\-b1d6\-4a8e\-ad01\-b186d630e62b\.config
+2026-10-13T01:11:14.1876704Z [command]"C:\Program Files\Git\bin\git.exe" config --local --get-all includeif.gitdir:D:/a/music-workbench/music-workbench/.git/worktrees/*.path
+2026-10-13T01:11:14.1877941Z D:\a\_temp\git-credentials-837dc978-b1d6-4a8e-ad01-b186d630e62b.config
+2026-10-13T01:11:14.1880450Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset includeif.gitdir:D:/a/music-workbench/music-workbench/.git/worktrees/*.path D\:\\a\\_temp\\git\-credentials\-837dc978\-b1d6\-4a8e\-ad01\-b186d630e62b\.config
+2026-10-13T01:11:14.1882713Z [command]"C:\Program Files\Git\bin\git.exe" config --local --get-all includeif.gitdir:/github/workspace/.git.path
+2026-10-13T01:11:14.1883912Z /github/runner_temp/git-credentials-837dc978-b1d6-4a8e-ad01-b186d630e62b.config
+2026-10-13T01:11:14.1892483Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-837dc978\-b1d6\-4a8e\-ad01\-b186d630e62b\.config
+2026-10-13T01:11:14.1895632Z [command]"C:\Program Files\Git\bin\git.exe" config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-10-13T01:11:14.1898501Z /github/runner_temp/git-credentials-837dc978-b1d6-4a8e-ad01-b186d630e62b.config
+2026-10-13T01:11:14.1917871Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-837dc978\-b1d6\-4a8e\-ad01\-b186d630e62b\.config
+2026-10-13T01:11:14.1920692Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
+2026-10-13T01:11:14.5982469Z Removing credentials config 'D:\a\_temp\git-credentials-837dc978-b1d6-4a8e-ad01-b186d630e62b.config'
+2026-10-13T01:11:14.6364721Z Cleaning up orphan processes

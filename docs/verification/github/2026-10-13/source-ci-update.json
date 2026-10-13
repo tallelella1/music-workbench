@@ -1,0 +1,23 @@
+{
+  "legacyCommit": "e172d31f7636625adfbc9166240eb96c0e2e21f5",
+  "sourceParent": "9cf9bc477a8d4100c727b82dc175f21cff0248b8",
+  "sourceCommit": "9492eaa091e77ae9940c1f07e42a5f50de6d2ded",
+  "excluded": [
+    "D\t.superpowers/sdd/2026-10-03-music-player-implementation/task-6-report.md",
+    "D\tresources/bin/avcodec-63.dll",
+    "D\tresources/bin/avdevice-63.dll",
+    "D\tresources/bin/avfilter-12.dll",
+    "D\tresources/bin/avformat-63.dll",
+    "D\tresources/bin/avutil-61.dll",
+    "D\tresources/bin/ffmpeg.exe",
+    "D\tresources/bin/ffprobe.exe",
+    "D\tresources/bin/swresample-7.dll",
+    "D\tresources/bin/swscale-10.dll"
+  ],
+  "changes": [
+    ".github/workflows/windows.yml",
+    "docs/verification/checkpoint/ci-delivery-fix.md",
+    "docs/verification/checkpoint/github-ci-second.log"
+  ],
+  "sourceTree": "a8bfd2bcbaeab922a263320ec8aa6260ededbd88"
+}

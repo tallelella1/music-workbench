@@ -1,0 +1,4 @@
+d125c98f96dfd1eeca94728b5d72b45010697d3fa051e0a2022fff5dbad243f5  MusicWorkbench-0.1.0-Setup.exe
+0c610555e96a4cca2b04edb5cffd9b7aac7a9ec8e53b44e23c909bbcae2c828e  MusicWorkbench-0.1.0-media-sources.7z.001
+d931de3cd81233715b443510f6ca536a178cf60d0e8f15c2ae1789c68e8ffb8a  MusicWorkbench-0.1.0-media-sources.7z.002
+3ad2982011bd7338a54de704d6de346a20e8c4fcf3530b7c4012564574cc5325  MusicWorkbench-0.1.0-media-sources.7z.003
