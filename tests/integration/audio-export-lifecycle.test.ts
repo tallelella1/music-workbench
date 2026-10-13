@@ -36,7 +36,7 @@ const options = { format: 'wav', bitrateKbps: null, bitDepth: 16 } as const
 function deferred() { let resolve!: () => void; const promise = new Promise<void>(accept => { resolve = accept }); return { promise, resolve } }
 function reset() { faults.renameGate = null; faults.renameEntered = null; faults.removeGate = null; faults.removeEntered = null; faults.failRemove = null; faults.failRename = false; faults.calls = []; faults.fileAlias = null; faults.realpathGate = null }
 async function fixture(worker = new FfmpegWorker(), tasks = new TaskService()) {
-  const directory = await mkdtemp(join(tmpdir(), 'export-lifecycle-'))
+  const directory = await realpath(await mkdtemp(join(tmpdir(), 'export-lifecycle-')))
   const sourcePath = await makeAudioFile({ directory, name: '原曲 🎵.wav', durationSeconds: 1, toneHz: 440 })
   const original = await readFile(sourcePath)
   const assets = new AssetRegistry(new StorageRepository(join(directory, 'data')), join(directory, 'assets'))

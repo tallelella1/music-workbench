@@ -1,0 +1,416 @@
+﻿2026-10-12T13:58:37.2676711Z Current runner version: '2.337.0'
+2026-10-12T13:58:37.2715487Z ##[group]Runner Image Provisioner
+2026-10-12T13:58:37.2716779Z Hosted Compute Agent
+2026-10-12T13:58:37.2717812Z Version: 20260901.588
+2026-10-12T13:58:37.2718897Z Commit: f88ec8081b781fac6c440065ac7ff9e710ce3d0b
+2026-10-12T13:58:37.2720206Z Build Date: 2026-09-01T19:56:44Z
+2026-10-12T13:58:37.2721433Z Worker ID: {ce7cb2c0-cb4f-4f90-841d-8302ff3b6f0e}
+2026-10-12T13:58:37.2723572Z Azure Region: northcentralus
+2026-10-12T13:58:37.2724695Z ##[endgroup]
+2026-10-12T13:58:37.2726947Z ##[group]Operating System
+2026-10-12T13:58:37.2728055Z Microsoft Windows Server 2025
+2026-10-12T13:58:37.2729095Z 10.0.26100
+2026-10-12T13:58:37.2730298Z Datacenter
+2026-10-12T13:58:37.2731190Z ##[endgroup]
+2026-10-12T13:58:37.2732127Z ##[group]Runner Image
+2026-10-12T13:58:37.2733153Z Image: windows-2025-vs2026
+2026-10-12T13:58:37.2734314Z Version: 20260925.250.1
+2026-10-12T13:58:37.2736878Z Included Software: https://github.com/actions/runner-images/blob/win25-vs2026/20260925.250/images/windows/Windows2025-VS2026-Readme.md
+2026-10-12T13:58:37.2739988Z Image Release: https://github.com/actions/runner-images/releases/tag/win25-vs2026%2F20260925.250
+2026-10-12T13:58:37.2741799Z ##[endgroup]
+2026-10-12T13:58:37.2743750Z ##[group]GITHUB_TOKEN Permissions
+2026-10-12T13:58:37.2746855Z Contents: read
+2026-10-12T13:58:37.2747926Z Metadata: read
+2026-10-12T13:58:37.2748852Z ##[endgroup]
+2026-10-12T13:58:37.2752094Z Secret source: Actions
+2026-10-12T13:58:37.2753935Z Cache mode: write
+2026-10-12T13:58:37.2755021Z Prepare workflow directory
+2026-10-12T13:58:37.3227086Z Prepare all required actions
+2026-10-12T13:58:37.3300428Z Getting action download info
+2026-10-12T13:58:37.5834761Z Download action repository 'actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+2026-10-12T13:58:37.7528873Z Download action repository 'actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1' (SHA:949feb2413d6458794dcd2491c4babbbce0c15c1)
+2026-10-12T13:58:38.1735434Z Download action repository 'actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9' (SHA:cf430e030ddbb5b0abf93d22962f4752f3646cd9)
+2026-10-12T13:58:38.7193042Z Complete job name: verify
+2026-10-12T13:58:38.9150692Z ##[group]Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+2026-10-12T13:58:38.9153061Z with:
+2026-10-12T13:58:38.9154123Z   repository: tallelella1/music-workbench
+2026-10-12T13:58:38.9163069Z   token: ***
+2026-10-12T13:58:38.9163868Z   ssh-strict: true
+2026-10-12T13:58:38.9164684Z   ssh-user: git
+2026-10-12T13:58:38.9165524Z   persist-credentials: true
+2026-10-12T13:58:38.9166429Z   clean: true
+2026-10-12T13:58:38.9167257Z   sparse-checkout-cone-mode: true
+2026-10-12T13:58:38.9168234Z   fetch-depth: 1
+2026-10-12T13:58:38.9169059Z   fetch-tags: false
+2026-10-12T13:58:38.9170328Z   show-progress: true
+2026-10-12T13:58:38.9171172Z   lfs: false
+2026-10-12T13:58:38.9171941Z   submodules: false
+2026-10-12T13:58:38.9172789Z   set-safe-directory: true
+2026-10-12T13:58:38.9173735Z   allow-unsafe-pr-checkout: false
+2026-10-12T13:58:38.9175107Z ##[endgroup]
+2026-10-12T13:58:41.0421452Z Syncing repository: tallelella1/music-workbench
+2026-10-12T13:58:41.0423051Z ##[group]Getting Git version info
+2026-10-12T13:58:41.0423774Z Working directory is 'D:\a\music-workbench\music-workbench'
+2026-10-12T13:58:41.0424455Z [command]"C:\Program Files\Git\bin\git.exe" version
+2026-10-12T13:58:41.0424849Z git version 2.55.0.windows.5
+2026-10-12T13:58:41.0425849Z ##[endgroup]
+2026-10-12T13:58:41.0429797Z Temporarily overriding HOME='D:\a\_temp\ab1cf9fe-08df-4238-bab9-9a585fe7aca5' before making global git config changes
+2026-10-12T13:58:41.0430579Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-12T13:58:41.0431342Z [command]"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory D:\a\music-workbench\music-workbench
+2026-10-12T13:58:41.0432390Z Deleting the contents of 'D:\a\music-workbench\music-workbench'
+2026-10-12T13:58:41.0435692Z ##[group]Determining repository object format
+2026-10-12T13:58:41.0436192Z ##[endgroup]
+2026-10-12T13:58:41.0436612Z ##[group]Initializing the repository
+2026-10-12T13:58:41.0437126Z [command]"C:\Program Files\Git\bin\git.exe" init D:\a\music-workbench\music-workbench
+2026-10-12T13:58:41.0437734Z Initialized empty Git repository in D:/a/music-workbench/music-workbench/.git/
+2026-10-12T13:58:41.0438810Z [command]"C:\Program Files\Git\bin\git.exe" remote add origin https://github.com/tallelella1/music-workbench
+2026-10-12T13:58:41.0439863Z ##[endgroup]
+2026-10-12T13:58:41.0440264Z ##[group]Disabling automatic garbage collection
+2026-10-12T13:58:41.0440698Z [command]"C:\Program Files\Git\bin\git.exe" config --local gc.auto 0
+2026-10-12T13:58:41.0441762Z ##[endgroup]
+2026-10-12T13:58:41.0442150Z ##[group]Setting up auth
+2026-10-12T13:58:41.0442422Z Removing SSH command configuration
+2026-10-12T13:58:41.0442914Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+2026-10-12T13:58:41.0444516Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+2026-10-12T13:58:41.9987750Z Removing HTTP extra header
+2026-10-12T13:58:41.9988889Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-12T13:58:41.9993132Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+2026-10-12T13:58:42.4927451Z Removing includeIf entries pointing to credentials config files
+2026-10-12T13:58:42.4944029Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-12T13:58:42.5295617Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
+2026-10-12T13:58:43.1192367Z [command]"C:\Program Files\Git\bin\git.exe" config --file D:\a\_temp\git-credentials-08f863cf-0ae0-4dff-8bb8-09630167183f.config http.https://github.com/.extraheader "AUTHORIZATION: basic ***"
+2026-10-12T13:58:43.1528233Z [command]"C:\Program Files\Git\bin\git.exe" config --local includeIf.gitdir:D:/a/music-workbench/music-workbench/.git.path D:\a\_temp\git-credentials-08f863cf-0ae0-4dff-8bb8-09630167183f.config
+2026-10-12T13:58:43.1869119Z [command]"C:\Program Files\Git\bin\git.exe" config --local includeIf.gitdir:D:/a/music-workbench/music-workbench/.git/worktrees/*.path D:\a\_temp\git-credentials-08f863cf-0ae0-4dff-8bb8-09630167183f.config
+2026-10-12T13:58:43.2251231Z [command]"C:\Program Files\Git\bin\git.exe" config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-08f863cf-0ae0-4dff-8bb8-09630167183f.config
+2026-10-12T13:58:43.2630580Z [command]"C:\Program Files\Git\bin\git.exe" config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-08f863cf-0ae0-4dff-8bb8-09630167183f.config
+2026-10-12T13:58:43.2996456Z ##[endgroup]
+2026-10-12T13:58:43.2997047Z ##[group]Fetching the repository
+2026-10-12T13:58:43.2998559Z [command]"C:\Program Files\Git\bin\git.exe" -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +33f66a1a5f2c6b48da1f53f5720c856c5223fc7a:refs/remotes/origin/main
+2026-10-12T13:58:45.8265682Z From https://github.com/tallelella1/music-workbench
+2026-10-12T13:58:45.8267289Z  * [new ref]         33f66a1a5f2c6b48da1f53f5720c856c5223fc7a -> origin/main
+2026-10-12T13:58:45.8320826Z [command]"C:\Program Files\Git\bin\git.exe" branch --list --remote origin/main
+2026-10-12T13:58:45.8717679Z   origin/main
+2026-10-12T13:58:45.8760463Z [command]"C:\Program Files\Git\bin\git.exe" rev-parse refs/remotes/origin/main
+2026-10-12T13:58:45.9032371Z 33f66a1a5f2c6b48da1f53f5720c856c5223fc7a
+2026-10-12T13:58:45.9066347Z ##[endgroup]
+2026-10-12T13:58:45.9067254Z ##[group]Determining the checkout info
+2026-10-12T13:58:45.9068301Z ##[endgroup]
+2026-10-12T13:58:45.9078295Z [command]"C:\Program Files\Git\bin\git.exe" sparse-checkout disable
+2026-10-12T13:58:45.9538536Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset-all extensions.worktreeConfig
+2026-10-12T13:58:45.9909010Z ##[group]Checking out the ref
+2026-10-12T13:58:45.9920759Z [command]"C:\Program Files\Git\bin\git.exe" checkout --progress --force -B main refs/remotes/origin/main
+2026-10-12T13:58:46.1602814Z Switched to a new branch 'main'
+2026-10-12T13:58:46.1678394Z branch 'main' set up to track 'origin/main'.
+2026-10-12T13:58:46.1769062Z ##[endgroup]
+2026-10-12T13:58:46.2232257Z [command]"C:\Program Files\Git\bin\git.exe" log -1 --format=%H
+2026-10-12T13:58:46.2591907Z 33f66a1a5f2c6b48da1f53f5720c856c5223fc7a
+2026-10-12T13:58:46.3341863Z ##[group]Run actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1
+2026-10-12T13:58:46.3342333Z with:
+2026-10-12T13:58:46.3342531Z   node-version: 24.11.1
+2026-10-12T13:58:46.3342741Z   cache: npm
+2026-10-12T13:58:46.3342934Z   check-latest: false
+2026-10-12T13:58:46.3345539Z   token: ***
+2026-10-12T13:58:46.3345759Z   package-manager-cache: true
+2026-10-12T13:58:46.3345997Z ##[endgroup]
+2026-10-12T13:58:46.5071715Z Attempting to download 24.11.1...
+2026-10-12T13:58:47.2009054Z Acquiring 24.11.1 - x64 from https://github.com/actions/node-versions/releases/download/24.11.1-19282993875/node-24.11.1-win32-x64.7z
+2026-10-12T13:58:47.6556344Z Extracting ...
+2026-10-12T13:58:50.2568562Z Adding to the cache ...
+2026-10-12T13:58:55.1618296Z ##[group]Environment details
+2026-10-12T13:58:57.1215472Z node: v24.11.1
+2026-10-12T13:58:57.1216287Z npm: 11.6.2
+2026-10-12T13:58:57.1216822Z yarn: 1.22.22
+2026-10-12T13:58:57.1217735Z ##[endgroup]
+2026-10-12T13:58:57.2268989Z [command]C:\Windows\system32\cmd.exe /D /S /C "C:\hostedtoolcache\windows\node\24.11.1\x64\npm.cmd config get cache"
+2026-10-12T13:58:57.5469097Z C:\npm\cache
+2026-10-12T13:58:57.9363345Z npm cache is not found
+2026-10-12T13:58:57.9764735Z ##[group]Run ./scripts/setup-media.ps1
+2026-10-12T13:58:57.9765304Z ./scripts/setup-media.ps1
+2026-10-12T13:58:58.0859185Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+2026-10-12T13:58:58.0859673Z ##[endgroup]
+2026-10-12T13:58:58.7887819Z Downloading fixed media runtime: n9.0.2-22-g46d8f462ee-20261001
+2026-10-12T13:59:02.4485649Z Installed 9 hash-verified media binaries: n9.0.2-22-g46d8f462ee-20261001 (GPL-3.0-or-later)
+2026-10-12T13:59:02.5979054Z ##[group]Run npm ci
+2026-10-12T13:59:02.5979350Z npm ci
+2026-10-12T13:59:02.6050196Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+2026-10-12T13:59:02.6050550Z ##[endgroup]
+2026-10-12T13:59:10.6587565Z npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+2026-10-12T13:59:10.8861857Z npm warn deprecated rimraf@2.6.3: Rimraf versions prior to v4 are no longer supported
+2026-10-12T13:59:11.3864741Z npm warn deprecated glob@7.2.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+2026-10-12T13:59:13.0985265Z npm warn deprecated boolean@3.2.0: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
+2026-10-12T13:59:22.5736308Z
+2026-10-12T13:59:22.5737647Z added 381 packages, and audited 382 packages in 19s
+2026-10-12T13:59:22.5738451Z
+2026-10-12T13:59:22.5744672Z 71 packages are looking for funding
+2026-10-12T13:59:22.5746118Z   run `npm fund` for details
+2026-10-12T13:59:22.6084730Z
+2026-10-12T13:59:22.6113564Z 9 vulnerabilities (8 moderate, 1 high)
+2026-10-12T13:59:22.6115227Z
+2026-10-12T13:59:22.6121939Z To address issues that do not require attention, run:
+2026-10-12T13:59:22.6127023Z   npm audit fix
+2026-10-12T13:59:22.6141921Z
+2026-10-12T13:59:22.6142563Z To address all issues (including breaking changes), run:
+2026-10-12T13:59:22.6143317Z   npm audit fix --force
+2026-10-12T13:59:22.6143773Z
+2026-10-12T13:59:22.6144113Z Run `npm audit` for details.
+2026-10-12T13:59:24.7162008Z ##[group]Run npm run test:unit
+2026-10-12T13:59:24.7162517Z npm run test:unit
+2026-10-12T13:59:24.7243446Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+2026-10-12T13:59:24.7243814Z ##[endgroup]
+2026-10-12T13:59:25.5250840Z
+2026-10-12T13:59:25.5251595Z > music-workbench@0.1.0 test:unit
+2026-10-12T13:59:25.5278300Z > vitest run --exclude=tests/integration/**
+2026-10-12T13:59:25.5279021Z
+2026-10-12T13:59:26.1798115Z
+2026-10-12T13:59:26.1801369Z  RUN  v5.0.3 D:/a/music-workbench/music-workbench
+2026-10-12T13:59:26.1802745Z
+2026-10-12T13:59:26.9149970Z  ✓ tests/unit/search-service.test.ts (10 tests) 100ms
+2026-10-12T13:59:27.2617405Z  ✓ tests/unit/contracts.test.ts (15 tests) 35ms
+2026-10-12T13:59:28.4042093Z  ✓ tests/unit/settings.test.ts (13 tests) 798ms
+2026-10-12T13:59:28.4043889Z    ✓ concurrent actual imports retain preferences and complete asset index 590ms
+2026-10-12T13:59:28.9403610Z  ✓ tests/unit/storage.test.ts (7 tests) 274ms
+2026-10-12T13:59:29.3008561Z  ✓ tests/unit/player-queue.test.ts (6 tests) 186ms
+2026-10-12T13:59:29.6227946Z  ✓ tests/unit/filter-builder.test.ts (3 tests) 46ms
+2026-10-12T13:59:29.9363098Z  ✓ tests/unit/track-version.test.ts (19 tests) 13ms
+2026-10-12T13:59:34.6102323Z stdout | tests/unit/lx-contracts.test.ts
+2026-10-12T13:59:34.6103457Z Downloading Electron binary...
+2026-10-12T13:59:34.6104746Z
+2026-10-12T13:59:34.7799560Z  ✓ tests/unit/lx-contracts.test.ts (2 tests) 14ms
+2026-10-12T13:59:34.9717766Z  ✓ tests/unit/matcher.test.ts (2 tests) 14ms
+2026-10-12T13:59:35.5530662Z  ✓ tests/unit/playback-renewal.test.ts (1 test) 56ms
+2026-10-12T13:59:35.5541444Z  ✓ tests/unit/source-diagnostics.test.ts (1 test) 5ms
+2026-10-12T13:59:35.5543006Z
+2026-10-12T13:59:35.5543801Z  Test Files  11 passed (11)
+2026-10-12T13:59:35.5545878Z       Tests  79 passed (79)
+2026-10-12T13:59:35.5546591Z    Start at  13:59:26
+2026-10-12T13:59:35.5547473Z    Duration  9.24s (import 71%, tests 21%, transform 7%, worker 1%)
+2026-10-12T13:59:35.5547979Z
+2026-10-12T13:59:35.5548784Z      Import  50 modules were evaluated 70 times · 5.33s total, 71% of tracked time
+2026-10-12T13:59:35.5550527Z              ~1.52s faster with isolate: false — shared modules are evaluated once per worker instead of once per file
+2026-10-12T13:59:35.5552121Z              learn more: https://vitest.dev/guide/improving-performance#test-isolation
+2026-10-12T13:59:35.5552747Z
+2026-10-12T13:59:35.5836618Z ##[group]Run npm run test:integration
+2026-10-12T13:59:35.5837014Z npm run test:integration
+2026-10-12T13:59:35.5906143Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+2026-10-12T13:59:35.5906503Z ##[endgroup]
+2026-10-12T13:59:36.4511791Z
+2026-10-12T13:59:36.4512196Z > music-workbench@0.1.0 test:integration
+2026-10-12T13:59:36.4512891Z > vitest run --passWithNoTests tests/integration
+2026-10-12T13:59:36.4513261Z
+2026-10-12T13:59:37.0577524Z
+2026-10-12T13:59:37.0919765Z  RUN  v5.0.3 D:/a/music-workbench/music-workbench
+2026-10-12T13:59:37.0920402Z
+2026-10-12T13:59:39.6039448Z stdout | tests/integration/audio-export-lifecycle.test.ts > file symlink replacement keeps destination and resolved target reserved through cleanup, then releases both
+2026-10-12T13:59:39.6043365Z File alias mode: actual filesystem symlink
+2026-10-12T13:59:39.6044161Z
+2026-10-12T13:59:39.9814867Z stdout | tests/integration/audio-export-lifecycle.test.ts > file symlink replacement rejects an earlier save choice whose realpath finishes after first commit
+2026-10-12T13:59:39.9817718Z File alias mode: actual filesystem symlink
+2026-10-12T13:59:39.9819193Z
+2026-10-12T13:59:40.2102932Z stdout | tests/integration/audio-export-lifecycle.test.ts > file symlink replacement rejects an earlier save choice whose realpath finishes after first commit
+2026-10-12T13:59:40.2105743Z Alias race: second save selected old D→T; target realpath resumed after first rename; first job still held in cleanup
+2026-10-12T13:59:40.2107005Z
+2026-10-12T13:59:41.2813516Z stdout | tests/integration/audio-export-lifecycle.test.ts > file alias reservations release both keys after rename failure
+2026-10-12T13:59:41.2817068Z File alias mode: actual filesystem symlink
+2026-10-12T13:59:41.2818026Z
+2026-10-12T13:59:42.1928980Z stdout | tests/integration/audio-export-lifecycle.test.ts > file alias reservations release both keys after queued cancellation
+2026-10-12T13:59:42.1932070Z File alias mode: actual filesystem symlink
+2026-10-12T13:59:42.1933361Z
+2026-10-12T13:59:42.9363090Z stdout | tests/integration/audio-export-lifecycle.test.ts > file alias reservations release both keys after processing cancellation
+2026-10-12T13:59:42.9366230Z File alias mode: actual filesystem symlink
+2026-10-12T13:59:42.9367209Z
+2026-10-12T13:59:43.8382336Z stdout | tests/integration/audio-export-lifecycle.test.ts > file alias reservations release both keys after cleanup warning
+2026-10-12T13:59:43.8385734Z File alias mode: actual filesystem symlink
+2026-10-12T13:59:43.8386868Z
+2026-10-12T13:59:50.1318782Z  ❯ tests/integration/audio-export-lifecycle.test.ts (19 tests | 1 failed) 12323ms
+2026-10-12T13:59:50.1322698Z    ✓ cancel during rename retains committed destination and completed result 877ms
+2026-10-12T13:59:50.1325604Z    ✓ cancel during cleanup retains committed destination and completed result 787ms
+2026-10-12T13:59:50.1330690Z    × file symlink replacement keeps destination and resolved target reserved through cleanup, then releases both 376ms
+2026-10-12T13:59:50.1343615Z    ✓ file symlink replacement rejects an earlier save choice whose realpath finishes after first commit 1298ms
+2026-10-12T13:59:50.1367996Z    ✓ file alias reservations release both keys after rename failure 914ms
+2026-10-12T13:59:50.1399808Z    ✓ file alias reservations release both keys after queued cancellation 743ms
+2026-10-12T13:59:50.1411554Z    ✓ file alias reservations release both keys after processing cancellation 907ms
+2026-10-12T13:59:50.1420576Z    ✓ file alias reservations release both keys after cleanup warning 885ms
+2026-10-12T13:59:50.1581161Z    ✓ canonical destination conflict is rejected across Windows case and parent junction aliases, then released 603ms
+2026-10-12T13:59:50.1611854Z    ✓ shutdown aborts uncommitted operations, waits cleanup, and refuses new export or preview 702ms
+2026-10-12T13:59:50.1615183Z    ✓ cleanup failure at output still attempts all resources with safe completed warning and private diagnostics 597ms
+2026-10-12T13:59:50.1672761Z    ✓ cleanup failure at ir still attempts all resources with safe completed warning and private diagnostics 600ms
+2026-10-12T13:59:50.1676068Z    ✓ cleanup failure at snapshot still attempts all resources with safe completed warning and private diagnostics 586ms
+2026-10-12T13:59:50.1678500Z    ✓ failed publication preserves previous bytes, reports safe error and releases the canonical destination 737ms
+2026-10-12T13:59:50.1682108Z    ✓ queued cancellation releases its reservation although processing never starts 362ms
+2026-10-12T13:59:50.1690368Z    ✓ snapshot creation failure and release cleanup never expose host paths and retain diagnostics 140ms
+2026-10-12T13:59:50.1693886Z    ✓ shutdown drains pre-processing even while the native save dialog remains pending 388ms
+2026-10-12T13:59:50.1696847Z    ✓ preview commit finishes registration despite a late cancel and shutdown, without deleting the result 679ms
+2026-10-12T13:59:50.1700416Z    ✓ shutdown interrupts pending runtime capability probes before waiting for operation drain 136ms
+2026-10-12T13:59:59.1092081Z  ✓ tests/integration/resolver.test.ts (11 tests) 8510ms
+2026-10-12T13:59:59.1094463Z    ✓ real complete twenty second songs pass; preview, truncated, unknown and inconsistent media fail 751ms
+2026-10-12T13:59:59.1097530Z    ✓ expiry during real media verification refreshes once and verifies the fresh bytes 1965ms
+2026-10-12T13:59:59.1106416Z    ✓ expiry refresh is shared across before-check and during-check expiry; ordinary failures do not retry 2408ms
+2026-10-12T13:59:59.1108843Z    ✓ expiry refresh remains within the total budget and responds to cancellation 1917ms
+2026-10-12T13:59:59.1110846Z    ✓ a declared FLAC or Hi-Res label never substitutes for actual media properties 335ms
+2026-10-12T14:00:02.6005004Z  ✓ tests/integration/library.test.ts (8 tests) 3098ms
+2026-10-12T14:00:02.6006861Z    ✓ same contents retain identity and removal preserves the original bytes 370ms
+2026-10-12T14:00:02.6008983Z    ✓ folder import preserves same-title versions, metadata, artwork and per-file failures 604ms
+2026-10-12T14:00:02.6011244Z    ✓ concurrent favorites and playlist mutations survive restart with ordered tracks 332ms
+2026-10-12T14:00:02.6030731Z    ✓ actual MP3, FLAC and M4A decode and probe without modifying sources 895ms
+2026-10-12T14:00:02.6032537Z    ✓ Windows long paths and real embedded artwork retain readable opaque assets 429ms
+2026-10-12T14:00:43.4593498Z stderr | tests/integration/audio-export.test.ts > real WAV frames, fades, EQ, reverb, encoders, immutable bytes and safe cancellation
+2026-10-12T14:00:43.4599910Z Audio snapshot creation failed Error: 原音乐文件已更改或丢失，请重新导入
+2026-10-12T14:00:43.4604163Z     at AssetRegistry.checkedSnapshot (D:/a/music-workbench/music-workbench/src/main/assets/asset-registry.ts:123:86)
+2026-10-12T14:00:43.4605909Z     at AudioExportService.process (D:/a/music-workbench/music-workbench/src/main/export/audio-export-service.ts:114:22)
+2026-10-12T14:00:43.4608377Z     at AudioExportService.renderPreview (D:/a/music-workbench/music-workbench/src/main/export/audio-export-service.ts:87:14)
+2026-10-12T14:00:43.4609980Z     at D:/a/music-workbench/music-workbench/tests/integration/audio-export.test.ts:75:5
+2026-10-12T14:00:43.4611697Z     at file:///D:/a/music-workbench/music-workbench/node_modules/vitest/dist/chunks/run.BTlFXlnv.js:2783:20
+2026-10-12T14:00:43.4612990Z
+2026-10-12T14:00:43.5482735Z stderr | tests/integration/audio-export.test.ts > real WAV frames, fades, EQ, reverb, encoders, immutable bytes and safe cancellation
+2026-10-12T14:00:43.5485481Z Audio processing failed Error: 导出不能覆盖原始音乐
+2026-10-12T14:00:43.5487319Z     at AudioExportService.protectDestination (D:/a/music-workbench/music-workbench/src/main/export/audio-export-service.ts:109:68)
+2026-10-12T14:00:43.5489598Z     at AudioExportService.process (D:/a/music-workbench/music-workbench/src/main/export/audio-export-service.ts:120:7)
+2026-10-12T14:00:43.5491377Z     at D:/a/music-workbench/music-workbench/src/main/export/audio-export-service.ts:73:22
+2026-10-12T14:00:43.5492476Z     at D:/a/music-workbench/music-workbench/src/main/jobs/task-service.ts:29:24
+2026-10-12T14:00:43.5493063Z
+2026-10-12T14:00:43.6062374Z stderr | tests/integration/audio-export.test.ts > real WAV frames, fades, EQ, reverb, encoders, immutable bytes and safe cancellation
+2026-10-12T14:00:43.6064593Z Audio processing failed Error: 导出不能覆盖原始音乐
+2026-10-12T14:00:43.6066323Z     at AudioExportService.protectDestination (D:/a/music-workbench/music-workbench/src/main/export/audio-export-service.ts:110:127)
+2026-10-12T14:00:43.6068481Z     at AudioExportService.process (D:/a/music-workbench/music-workbench/src/main/export/audio-export-service.ts:120:7)
+2026-10-12T14:00:43.6069837Z     at D:/a/music-workbench/music-workbench/src/main/export/audio-export-service.ts:73:22
+2026-10-12T14:00:43.6070895Z     at D:/a/music-workbench/music-workbench/src/main/jobs/task-service.ts:29:24
+2026-10-12T14:00:43.6071946Z
+2026-10-12T14:01:04.6220243Z stderr | tests/integration/audio-export.test.ts > real WAV frames, fades, EQ, reverb, encoders, immutable bytes and safe cancellation
+2026-10-12T14:01:04.6223462Z Audio snapshot creation failed Error: ENOENT: no such file or directory, realpath 'C:\Users\RUNNER~1\AppData\Local\Temp\audio-export-real-bwK5se\中文 空格 🎵.wav'
+2026-10-12T14:01:04.6225913Z     at realpath (node:internal/fs/promises:1173:10)
+2026-10-12T14:01:04.6227737Z     at AssetRegistry.checkedSnapshot (D:/a/music-workbench/music-workbench/src/main/assets/asset-registry.ts:113:28)
+2026-10-12T14:01:04.6230319Z     at AudioExportService.process (D:/a/music-workbench/music-workbench/src/main/export/audio-export-service.ts:114:22)
+2026-10-12T14:01:04.6232050Z     at AudioExportService.renderPreview (D:/a/music-workbench/music-workbench/src/main/export/audio-export-service.ts:87:14)
+2026-10-12T14:01:04.6234228Z     at D:/a/music-workbench/music-workbench/tests/integration/audio-export.test.ts:104:5
+2026-10-12T14:01:04.6235889Z     at file:///D:/a/music-workbench/music-workbench/node_modules/vitest/dist/chunks/run.BTlFXlnv.js:2783:20 {
+2026-10-12T14:01:04.6237501Z   errno: -4058,
+2026-10-12T14:01:04.6238121Z   code: 'ENOENT',
+2026-10-12T14:01:04.6238716Z   syscall: 'realpath',
+2026-10-12T14:01:04.6240500Z   path: 'C:\\Users\\RUNNER~1\\AppData\\Local\\Temp\\audio-export-real-bwK5se\\中文 空格 🎵.wav'
+2026-10-12T14:01:04.6241339Z }
+2026-10-12T14:01:04.6241943Z
+2026-10-12T14:01:04.6294025Z stderr | tests/integration/audio-export.test.ts > real WAV frames, fades, EQ, reverb, encoders, immutable bytes and safe cancellation
+2026-10-12T14:01:04.6296951Z Audio snapshot allocation failed Error: EEXIST: file already exists, mkdir 'C:\Users\RUNNER~1\AppData\Local\Temp\audio-export-real-bwK5se\blocked-private-location'
+2026-10-12T14:01:04.6298755Z     at mkdir (node:internal/fs/promises:861:10)
+2026-10-12T14:01:04.6301465Z     at AssetRegistry.checkedSnapshot (D:/a/music-workbench/music-workbench/src/main/assets/asset-registry.ts:105:11)
+2026-10-12T14:01:04.6305532Z     at D:/a/music-workbench/music-workbench/tests/integration/audio-export.test.ts:108:5
+2026-10-12T14:01:04.6315345Z     at file:///D:/a/music-workbench/music-workbench/node_modules/vitest/dist/chunks/run.BTlFXlnv.js:2783:20 {
+2026-10-12T14:01:04.6316685Z   errno: -4075,
+2026-10-12T14:01:04.6317247Z   code: 'EEXIST',
+2026-10-12T14:01:04.6317816Z   syscall: 'mkdir',
+2026-10-12T14:01:04.6318953Z   path: 'C:\\Users\\RUNNER~1\\AppData\\Local\\Temp\\audio-export-real-bwK5se\\blocked-private-location'
+2026-10-12T14:01:04.6319912Z }
+2026-10-12T14:01:04.6320288Z
+2026-10-12T14:01:04.6321559Z stderr | tests/integration/audio-export.test.ts > real WAV frames, fades, EQ, reverb, encoders, immutable bytes and safe cancellation
+2026-10-12T14:01:04.6324020Z Audio preview allocation failed Error: EEXIST: file already exists, mkdir 'C:\Users\RUNNER~1\AppData\Local\Temp\audio-export-real-bwK5se\blocked-private-location'
+2026-10-12T14:01:04.6325653Z     at mkdir (node:internal/fs/promises:861:10)
+2026-10-12T14:01:04.6326927Z     at AudioExportService.renderPreview (D:/a/music-workbench/music-workbench/src/main/export/audio-export-service.ts:86:13)
+2026-10-12T14:01:04.6328375Z     at D:/a/music-workbench/music-workbench/tests/integration/audio-export.test.ts:110:5
+2026-10-12T14:01:04.6329959Z     at file:///D:/a/music-workbench/music-workbench/node_modules/vitest/dist/chunks/run.BTlFXlnv.js:2783:20 {
+2026-10-12T14:01:04.6331263Z   errno: -4075,
+2026-10-12T14:01:04.6332276Z   code: 'EEXIST',
+2026-10-12T14:01:04.6332901Z   syscall: 'mkdir',
+2026-10-12T14:01:04.6337670Z   path: 'C:\\Users\\RUNNER~1\\AppData\\Local\\Temp\\audio-export-real-bwK5se\\blocked-private-location'
+2026-10-12T14:01:04.6338977Z }
+2026-10-12T14:01:04.6340421Z stdout | tests/integration/audio-export.test.ts > real WAV frames, fades, EQ, reverb, encoders, immutable bytes and safe cancellation
+2026-10-12T14:01:04.6341948Z
+2026-10-12T14:01:04.6344410Z Export evidence: exact 44100 Hz frames for 0.5/1/2, preservePitch on/off; all 7 encoders reopened; EQ +6 dB ratio 1.9952623158097127 cancel cleanup and immutable snapshot verified
+2026-10-12T14:01:04.6348317Z
+2026-10-12T14:01:04.6543342Z  ✓ tests/integration/audio-export.test.ts (2 tests) 61735ms
+2026-10-12T14:01:04.6545223Z    ✓ 20 source seconds at double speed render 10 seconds without changing input 17011ms
+2026-10-12T14:01:04.6547205Z    ✓ real WAV frames, fades, EQ, reverb, encoders, immutable bytes and safe cancellation 44721ms
+2026-10-12T14:01:05.1517346Z  ✓ tests/integration/search-adapters.test.ts (23 tests) 96ms
+2026-10-12T14:01:06.1779567Z  ❯ tests/integration/effect-chain.test.ts (3 tests | 1 failed) 155ms
+2026-10-12T14:01:06.1782295Z    ✓ EQ rejects out-of-range gain, wrong version and non-realtime definitions 91ms
+2026-10-12T14:01:06.1784145Z    ✓ shared seeded impulse response is deterministic with finite stereo decay 55ms
+2026-10-12T14:01:06.1786647Z    × real offline Web Audio changes EQ samples, produces reverb tail, restores bypass and survives a failed effect 7ms
+2026-10-12T14:01:06.6622397Z
+2026-10-12T14:01:06.6623950Z  ✓ tests/integration/media-protocol.test.ts (1 test) 188ms
+2026-10-12T14:01:06.6651047Z ⎯⎯⎯⎯⎯⎯⎯ Failed Tests 2 ⎯⎯⎯⎯⎯⎯⎯
+2026-10-12T14:01:06.6680025Z
+2026-10-12T14:01:06.7026841Z  FAIL  tests/integration/audio-export-lifecycle.test.ts > file symlink replacement keeps destination and resolved target reserved through cleanup, then releases both
+2026-10-12T14:01:06.7028242Z
+2026-10-12T14:01:06.7042713Z AssertionError: expected 'C:\Users\runneradmin\AppData\Local\Te…' to be 'C:\Users\RUNNER~1\AppData\Local\Temp\…' // Object.is equality
+2026-10-12T14:01:06.7044561Z  Test Files  2 failed | 5 passed (7)
+2026-10-12T14:01:06.7046012Z       Tests  2 failed | 65 passed (67)
+2026-10-12T14:01:06.7076861Z
+2026-10-12T14:01:06.7077282Z    Start at  13:59:37
+2026-10-12T14:01:06.7093744Z Expected: "C:\Users\RUNNER~1\AppData\Local\Temp\export-lifecycle-0FnYN4\成品.wav"
+2026-10-12T14:01:06.7094915Z    Duration  89.61s (tests 97%, import 2%, transform 1%)
+2026-10-12T14:01:06.7096782Z Received: "C:\Users\runneradmin\AppData\Local\Temp\export-lifecycle-0FnYN4\成品.wav"
+2026-10-12T14:01:06.7097436Z
+2026-10-12T14:01:06.7097596Z
+2026-10-12T14:01:06.7097604Z
+2026-10-12T14:01:06.7098450Z  ❯ tests/integration/audio-export-lifecycle.test.ts:120:43
+2026-10-12T14:01:06.7127822Z ##[error]AssertionError: expected 'C:\Users\runneradmin\AppData\Local\Te…' to be 'C:\Users\RUNNER~1\AppData\Local\Temp\…' // Object.is equality
+
+Expected: "C:\Users\RUNNER~1\AppData\Local\Temp\export-lifecycle-0FnYN4\成品.wav"
+Received: "C:\Users\runneradmin\AppData\Local\Temp\export-lifecycle-0FnYN4\成品.wav"
+
+ ❯ tests/integration/audio-export-lifecycle.test.ts:120:43
+
+
+2026-10-12T14:01:06.7140094Z     118|     expect(currentEntry.ino).not.toBe(previousEntry.ino)
+2026-10-12T14:01:06.7140614Z
+2026-10-12T14:01:06.7141389Z     119|     expect(currentEntry.dev).toBe(previousEntry.dev)
+2026-10-12T14:01:06.7147234Z ##[error]Error: ENOENT: no such file or directory, access 'D:\a\music-workbench\music-workbench\out\main\index.js'
+ ❯ launchApp tests/helpers/desktop.ts:9:3
+ ❯ tests/integration/effect-chain.test.ts:31:15
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯
+Serialized Error: { errno: -4058, code: 'ENOENT', syscall: 'access', path: 'D:\a\music-workbench\music-workbench\out\main\index.js' }
+
+2026-10-12T14:01:06.7151139Z     120|     expect(await realpath(f.destination)).toBe(f.destination)
+2026-10-12T14:01:06.7152193Z        |                                           ^
+2026-10-12T14:01:06.7153304Z     121|     const published = await readFile(f.destination); expect(published.…
+2026-10-12T14:01:06.7154451Z     122|     expect(f.tasks.get(id).status).toBe('running')
+2026-10-12T14:01:06.7155181Z
+2026-10-12T14:01:06.7155893Z ⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/2]⎯
+2026-10-12T14:01:06.7156419Z
+2026-10-12T14:01:06.7157908Z  FAIL  tests/integration/effect-chain.test.ts > real offline Web Audio changes EQ samples, produces reverb tail, restores bypass and survives a failed effect
+2026-10-12T14:01:06.7160614Z Error: ENOENT: no such file or directory, access 'D:\a\music-workbench\music-workbench\out\main\index.js'
+2026-10-12T14:01:06.7163870Z  ❯ launchApp tests/helpers/desktop.ts:9:3
+2026-10-12T14:01:06.7164960Z       7|
+2026-10-12T14:01:06.7167226Z       8| export async function launchApp(userDataDir: string): Promise<{ app: E…
+2026-10-12T14:01:06.7169698Z       9|   await access(resolve('out/main/index.js'))
+2026-10-12T14:01:06.7170524Z        |   ^
+2026-10-12T14:01:06.7171255Z      10|   const app = await _electron.launch({
+2026-10-12T14:01:06.7172498Z      11|     args: [resolve('out/main/index.js')],
+2026-10-12T14:01:06.7173752Z  ❯ tests/integration/effect-chain.test.ts:31:15
+2026-10-12T14:01:06.7174552Z
+2026-10-12T14:01:06.7175157Z ⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/2]⎯
+2026-10-12T14:01:06.7175751Z
+2026-10-12T14:01:06.7872089Z ##[error]Process completed with exit code 1.
+2026-10-12T14:01:06.8175018Z Post job cleanup.
+2026-10-12T14:01:07.0593916Z [command]"C:\Program Files\Git\bin\git.exe" version
+2026-10-12T14:01:07.0908205Z git version 2.55.0.windows.5
+2026-10-12T14:01:07.0991385Z Temporarily overriding HOME='D:\a\_temp\c497e76c-a594-45bd-87d1-ed2e150f2afa' before making global git config changes
+2026-10-12T14:01:07.0992989Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-12T14:01:07.1004369Z [command]"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory D:\a\music-workbench\music-workbench
+2026-10-12T14:01:07.1373923Z Removing SSH command configuration
+2026-10-12T14:01:07.1390482Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+2026-10-12T14:01:07.2032981Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+2026-10-12T14:01:07.8813009Z Removing HTTP extra header
+2026-10-12T14:01:07.8825121Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-12T14:01:07.9142655Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+2026-10-12T14:01:08.4741612Z Removing includeIf entries pointing to credentials config files
+2026-10-12T14:01:08.4754615Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-12T14:01:08.5028403Z includeif.gitdir:D:/a/music-workbench/music-workbench/.git.path
+2026-10-12T14:01:08.5029744Z includeif.gitdir:D:/a/music-workbench/music-workbench/.git/worktrees/*.path
+2026-10-12T14:01:08.5032067Z includeif.gitdir:/github/workspace/.git.path
+2026-10-12T14:01:08.5033436Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-10-12T14:01:08.5071046Z [command]"C:\Program Files\Git\bin\git.exe" config --local --get-all includeif.gitdir:D:/a/music-workbench/music-workbench/.git.path
+2026-10-12T14:01:08.5354856Z D:\a\_temp\git-credentials-08f863cf-0ae0-4dff-8bb8-09630167183f.config
+2026-10-12T14:01:08.5399492Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset includeif.gitdir:D:/a/music-workbench/music-workbench/.git.path D\:\\a\\_temp\\git\-credentials\-08f863cf\-0ae0\-4dff\-8bb8\-09630167183f\.config
+2026-10-12T14:01:08.5709359Z [command]"C:\Program Files\Git\bin\git.exe" config --local --get-all includeif.gitdir:D:/a/music-workbench/music-workbench/.git/worktrees/*.path
+2026-10-12T14:01:08.5976469Z D:\a\_temp\git-credentials-08f863cf-0ae0-4dff-8bb8-09630167183f.config
+2026-10-12T14:01:08.6019823Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset includeif.gitdir:D:/a/music-workbench/music-workbench/.git/worktrees/*.path D\:\\a\\_temp\\git\-credentials\-08f863cf\-0ae0\-4dff\-8bb8\-09630167183f\.config
+2026-10-12T14:01:08.6322171Z [command]"C:\Program Files\Git\bin\git.exe" config --local --get-all includeif.gitdir:/github/workspace/.git.path
+2026-10-12T14:01:08.6596253Z /github/runner_temp/git-credentials-08f863cf-0ae0-4dff-8bb8-09630167183f.config
+2026-10-12T14:01:08.6641280Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-08f863cf\-0ae0\-4dff\-8bb8\-09630167183f\.config
+2026-10-12T14:01:08.6964633Z [command]"C:\Program Files\Git\bin\git.exe" config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-10-12T14:01:08.7305634Z /github/runner_temp/git-credentials-08f863cf-0ae0-4dff-8bb8-09630167183f.config
+2026-10-12T14:01:08.7389762Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-08f863cf\-0ae0\-4dff\-8bb8\-09630167183f\.config
+2026-10-12T14:01:08.7734466Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
+2026-10-12T14:01:09.3883188Z Removing credentials config 'D:\a\_temp\git-credentials-08f863cf-0ae0-4dff-8bb8-09630167183f.config'
+2026-10-12T14:01:09.4045735Z Cleaning up orphan processes

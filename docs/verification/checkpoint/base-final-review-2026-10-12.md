@@ -69,3 +69,13 @@ Critical：无。Important：无。新增阻塞：无。既有 Minor 的处理�
 ## 最终门槛
 
 **Ready to merge / release reviewed base product：Yes。Task 7：Spec compliant / Quality approved。完整基础播放器 Tasks 1–7：Approved，无需新增产品修复后才能交付。** 最终退出缺陷已解决，固定产品的安装证据同时证明网络取消、资源清理和持久化保留；交叉模块及打包/恢复流程没有发现新的 Critical/Important。按已授权私有交付继续保存源码对应关系和发行附件结果即可，不因本报告再重跑已通过测试或重建相同产品。
+
+## 首次远端 CI 修正的定向静态复审
+
+日期：2026-10-12；范围：`41505b7..ec7da6d`。**Verdict：Approved，两个已记录失败的静态修正均 ADDRESSED，无新增阻塞。** 此处不是远端 GREEN 声明；修正后的实际 workflow 结果仍待控制端记录。
+
+已读取首次远端日志 `github-ci-first.log`：integration 为 65 passed / 2 failed。effect-chain 在 `tests/helpers/desktop.ts:9` 访问尚未生成的 `out/main/index.js` 时 ENOENT；另一个失败在 `audio-export-lifecycle.test.ts:120`，实际 canonical `runneradmin` 路径与 TEMP 返回的 `RUNNER~1` 别名字符串不等。日志中的其它故障注入 stderr 不被误计为额外失败。
+
+`.github/workflows/windows.yml` 将既有 integration 步骤移到既有 dist:win 和 package 检查后，确保 Electron integration 所需构建产物存在；没有增加重复 build、跳过测试或改变超时。`tests/integration/audio-export-lifecycle.test.ts:39` 仅用 realpath 规范化刚创建的 fixture 根目录；现有 realpath wrapper 在此目录上落入实际文件系统调用，目标别名/inode 行为保持原样。第 120 行严格相等断言、rename/inode/dev、目标占用、源/目标字节和清理断言均未削弱或删除。
+
+提交只有上述 workflow、fixture 表达式和说明报告三份文件，没有产品源码、依赖或安装运行时修改；此前基础产品和安装包 gate 继续有效。本轮只读检查，不运行任何测试或构建，唯一写入是本段审查结论。
